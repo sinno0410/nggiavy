@@ -26,5 +26,11 @@
   "source-code": "Mã nguồn",
   "switch-to-project": "Chuyển đến dự án {project}",
   "version": "Phiên bản",
-  "view-project": "Xem dự án"
+  "view-project": "Xem dự án",
+  "view-cv": "Xem CV",
+  "journey": "Hành trình",
+  "education-awards": "Học vấn & Giải thưởng",
+  "education": "Học vấn",
+  "awards": "Giải thưởng",
+  "view-more": "Xem thêm"
 }

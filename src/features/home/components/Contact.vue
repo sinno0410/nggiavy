@@ -3,6 +3,9 @@ import { ref, onMounted, onUnmounted } from "vue";
 import { transitions } from "../../../animations";
 import { t } from "../../../i18n/utils/translate";
 import Social from "../../../components/Social.vue";
+import Button from "../../../components/Button.vue";
+import { locale } from "../../../i18n/store";
+import { cvLinks } from "../../../content/cv";
 
 const contactElement = ref<HTMLElement | null>(null);
 
@@ -22,6 +25,19 @@ onUnmounted(() => {
     <div class="contact-content">
       <h2 class="contact-title" v-html="t('lets-work-together')"></h2>
       <Social variant="background" />
+      <Button
+        v-if="locale"
+        renderAs="a"
+        variant="accent"
+        class="contact-cv"
+        :href="cvLinks[locale]"
+        target="_blank"
+        rel="noopener"
+        data-cursor="circle-white"
+        data-sound="click"
+        data-hoversound="hover"
+        >{{ t("view-cv") }}</Button
+      >
     </div>
   </div>
 </template>
@@ -60,6 +76,10 @@ onUnmounted(() => {
     @include mixins.mq("lg") {
       grid-column: 2 / 6;
     }
+  }
+
+  &-cv {
+    width: fit-content;
   }
 
   &-title {

@@ -3,7 +3,8 @@ import Button from "../../../components/Button.vue";
 import Banner from "../../../components/Banner.vue";
 import { preloaderVisible } from "../../../composables/usePreloader";
 import { t } from "../../../i18n/utils/translate";
-import AppearingText from "../../../components/AppearingText.vue";
+import { locale } from "../../../i18n/store";
+import { cvLinks } from "../../../content/cv";
 </script>
 
 <template>
@@ -14,6 +15,19 @@ import AppearingText from "../../../components/AppearingText.vue";
           <h1 class="hero-title">Nguyễn Trần<br />Da Vỹ</h1>
           <Banner class="hero-banner" :copy="t('job-title')" v-if="!preloaderVisible" animated />
         </div>
+        <Button
+          v-if="!preloaderVisible && locale"
+          renderAs="a"
+          variant="accent"
+          class="hero-content-button"
+          :href="cvLinks[locale]"
+          target="_blank"
+          rel="noopener"
+          data-cursor="circle-white"
+          data-sound="click"
+          data-hoversound="hover"
+          >{{ t("view-cv") }}</Button
+        >
       </div>
     </div>
   </div>

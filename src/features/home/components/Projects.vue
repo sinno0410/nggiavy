@@ -5,6 +5,7 @@ import { locale } from "../../../i18n/store";
 import PreviewCard from "../../projects/components/PreviewCard.vue";
 import NotchSection from "../../../components/NotchSection.vue";
 import Banner from "../../../components/Banner.vue";
+import Achievements from "./Achievements.vue";
 import { t } from "../../../i18n/utils/translate";
 import { isFeatureEnabled } from "../../../utils/features";
 
@@ -46,6 +47,7 @@ onMounted(loadPreviews);
         <PreviewCard v-if="isFeatureEnabled('startProject')" />
       </div>
     </div>
+    <Achievements id="achievements" />
   </div>
 </template>
 
