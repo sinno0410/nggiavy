@@ -8,7 +8,8 @@ import type { Locale } from "../types";
 
 export const useTranslations = () => {
   onMounted(() => {
-    locale.value = window.localStorage.getItem("portfolio-locale") as Locale;
+    const storedLocale = window.localStorage.getItem("portfolio-locale");
+    locale.value = storedLocale && storedLocale in LOCALES ? (storedLocale as Locale) : null;
     if (!locale.value) {
       const preferredLocale = navigator.language.split("-")[0] as Locale;
 
@@ -23,6 +24,7 @@ export const useTranslations = () => {
   watch(locale, () => {
     if (!locale.value) return;
     window.localStorage.setItem("portfolio-locale", locale.value);
+    document.documentElement.lang = locale.value;
   });
 
   watch(

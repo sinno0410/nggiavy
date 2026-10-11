@@ -11,8 +11,14 @@ html {
   background: var(--color-background-400);
   color: var(--color-text-400);
   --icon-color: var(--color-text-400);
-  font-family: "Urbanist";
+  font-family: "Be Vietnam Pro", sans-serif;
   letter-spacing: 0.02em;
+  // Pixel font: ProFontWindows for English, VT323 fills in Vietnamese glyphs
+  --font-pixel: "ProFontWindows", "VT323", monospace;
+
+  &[lang="vi"] {
+    --font-pixel: "VT323", "ProFontWindows", monospace;
+  }
   overflow-y: scroll !important;
 
   --vh: 1vh;

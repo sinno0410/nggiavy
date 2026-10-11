@@ -114,16 +114,16 @@ const SERVICES_EN = [
   { name: "Real-time Multiplayer" },
 ] as const satisfies { name: string }[];
 
-const SERVICES_DE = [
+const SERVICES_VI = [
   { name: "Three.js & WebGL" },
   { name: "Node.js & WebSockets" },
   { name: "React & Vue" },
   { name: "Kubernetes & Redis" },
-  { name: "Echtzeit-Mehrspieler" },
+  { name: "Multiplayer thời gian thực" },
 ] as const satisfies { name: string }[];
 
 const services = computed(() => {
-  return locale.value === "en" ? SERVICES_EN : SERVICES_DE;
+  return locale.value === "en" ? SERVICES_EN : SERVICES_VI;
 });
 </script>
 
