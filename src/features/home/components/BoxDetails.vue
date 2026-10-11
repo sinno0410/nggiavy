@@ -206,8 +206,9 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
     align-items: center;
     gap: var(--space-xs);
     flex-direction: row;
-    white-space: nowrap;
-    height: var(--icon-size-sm);
+    // allow longer locations (e.g. "Ho Chi Minh City, Vietnam") to wrap inside the box
+    white-space: normal;
+    min-height: var(--icon-size-sm);
   }
 
   &-icon {

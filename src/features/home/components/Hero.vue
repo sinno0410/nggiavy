@@ -92,6 +92,7 @@ import { cvLinks } from "../../../content/cv";
 
     &-button {
       width: fit-content;
+      align-self: flex-start;
     }
   }
 
