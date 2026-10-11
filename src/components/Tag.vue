@@ -27,69 +27,54 @@ const classes = computed(() => ["tag", `tag-variant-${props.variant}`]);
   }
 
   &-variant {
-    &-three {
-      background-color: #ed9c55;
-      color: #492708;
-    }
-
-    &-react {
-      background-color: #61dafb;
-      color: #0f2e36;
-    }
-
-    &-websockets {
-      background-color: #2674a4;
-      color: white;
-    }
-
-    &-redis {
-      background-color: #ce4036;
-      color: white;
-    }
-
-    &-html {
+    &-gray {
       color: var(--color-text-400);
       border-color: var(--color-grayscale-400);
     }
 
-    &-css {
-      color: var(--color-text-400);
-      border-color: var(--color-grayscale-400);
+    &-social {
+      background-color: #1877f2;
+      color: white;
     }
 
-    &-javascript {
+    &-content {
       background-color: #ffdf4f;
       color: #362d03;
     }
 
-    &-node {
+    &-ads {
+      background-color: #ed9c55;
+      color: #492708;
+    }
+
+    &-seo {
       background-color: #237d23;
       color: white;
     }
 
-    &-next {
-      background-color: white;
-      color: black;
-    }
-
-    &-kubernetes {
-      background-color: #326ce5;
+    &-strategy {
+      background-color: #ce4036;
       color: white;
     }
 
-    &-postgresql {
+    &-event {
+      background-color: #61dafb;
+      color: #0f2e36;
+    }
+
+    &-tiktok {
+      background-color: #111111;
+      color: white;
+    }
+
+    &-analytics {
       background-color: #2f6c92;
       color: white;
     }
 
-    &-ogl {
-      background-color: #0e5495;
-      color: white;
-    }
-
-    &-glsl {
-      background-color: #95630e;
-      color: white;
+    &-research {
+      color: var(--color-text-400);
+      border-color: var(--color-grayscale-400);
     }
   }
 }

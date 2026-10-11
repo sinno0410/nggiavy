@@ -1,8 +1,9 @@
-// TODO: điền email và các mạng xã hội của bạn
+// TODO: thêm link LinkedIn
 export const social = [
-  { url: "mailto:", name: "mail" },
-  { url: "https://github.com/sinno0410", name: "github" },
+  { url: "mailto:nggiavy.0410@gmail.com", name: "mail" },
   //{ url: "https://www.linkedin.com/in/your-name/", name: "linkedin" },
-  //{ url: "https://x.com/your-name", name: "x" },
-  //{ url: "https://www.instagram.com/your-name/", name: "instagram" },
-] as const satisfies { url: string; name: "mail" | "github" | "instagram" | "linkedin" | "x" }[];
+  { url: "https://zalo.me/0349649247", name: "zalo" },
+] as const satisfies {
+  url: string;
+  name: "mail" | "github" | "instagram" | "linkedin" | "x" | "zalo";
+}[];

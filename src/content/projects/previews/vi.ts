@@ -1,40 +1,33 @@
-import thumbnailCubeWar from "../../../assets/thumbnails/cubewar.webp";
-import thumbnailQuibbo from "../../../assets/thumbnails/quibbo.webp";
-import thumbnailParticles from "../../../assets/thumbnails/particles.webp";
-import thumbnailPokedex from "../../../assets/thumbnails/pokedex.webp";
-import thumbnailSharkie from "../../../assets/thumbnails/sharkie.webp";
+import thumbnail_mekong from "../../../assets/thumbnails/mekong.webp";
+import thumbnail_hatmuoi from "../../../assets/thumbnails/hatmuoi.webp";
+import thumbnail_semtek from "../../../assets/thumbnails/semtek.webp";
+import thumbnail_timeo from "../../../assets/thumbnails/timeo.webp";
 
 import type { ProjectPreview } from "../../types";
 
 export default [
   {
-    title: "CubeWar",
-    slug: "cubewar",
-    thumbnail: thumbnailCubeWar,
-    description: "Game chiến thuật nhiều người chơi",
+    title: "Mekong Petrochem – SK ZIC Vietnam",
+    slug: "mekong",
+    thumbnail: thumbnail_mekong,
+    description: "Social media & chiến dịch digital",
   },
   {
-    title: "Quibbo",
-    slug: "quibbo",
-    thumbnail: thumbnailQuibbo,
-    description: "Nền tảng game nhiều người chơi",
+    title: "Hạt Muối Của Biển",
+    slug: "hatmuoi",
+    thumbnail: thumbnail_hatmuoi,
+    description: "Xây dựng kênh TikTok (freelance)",
   },
   {
-    title: "Sharkie",
-    slug: "sharkie",
-    thumbnail: thumbnailSharkie,
-    description: "Game phiêu lưu 2D",
+    title: "SEMTEK Agency",
+    slug: "semtek",
+    thumbnail: thumbnail_semtek,
+    description: "SEO on-page",
   },
   {
-    title: "WebGL Partikel",
-    slug: "particles",
-    thumbnail: thumbnailParticles,
-    description: "Hiệu ứng hạt 3D",
-  },
-  {
-    title: "Pokédex",
-    slug: "pokedex",
-    thumbnail: thumbnailPokedex,
-    description: "Dự án học tập mã nguồn mở",
+    title: "TIMEO – Tufting Studio",
+    slug: "timeo",
+    thumbnail: thumbnail_timeo,
+    description: "Digital marketing cho studio workshop",
   },
 ] as const satisfies ProjectPreview[];
