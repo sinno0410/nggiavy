@@ -26,7 +26,7 @@ export interface AchievementsContent {
   awards: AwardItem[];
 }
 
-export const achievements = {
+export const achievements: Record<Locale, AchievementsContent> = {
   en: {
     education: [
       {
@@ -87,4 +87,4 @@ export const achievements = {
       },
     ],
   },
-} satisfies Record<Locale, AchievementsContent>;
+};

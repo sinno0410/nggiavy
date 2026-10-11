@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, computed, onMounted, onUnmounted } from "vue";
 import { transitions } from "../../../animations";
 import { t } from "../../../i18n/utils/translate";
 import Social from "../../../components/Social.vue";
@@ -8,6 +8,7 @@ import { locale } from "../../../i18n/store";
 import { cvLinks } from "../../../content/cv";
 
 const contactElement = ref<HTMLElement | null>(null);
+const cvLink = computed(() => (locale.value ? cvLinks[locale.value] : null));
 
 onMounted(() => {
   if (contactElement.value) {
@@ -26,11 +27,11 @@ onUnmounted(() => {
       <h2 class="contact-title" v-html="t('lets-work-together')"></h2>
       <Social variant="background" />
       <Button
-        v-if="locale"
+        v-if="cvLink"
         renderAs="a"
         variant="accent"
         class="contact-cv"
-        :href="cvLinks[locale]"
+        :href="cvLink"
         target="_blank"
         rel="noopener"
         data-cursor="circle-white"
