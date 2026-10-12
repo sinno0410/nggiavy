@@ -6,6 +6,9 @@ import earth01 from "../../../assets/images/projects/mekong/earth-01.webp";
 import earth02 from "../../../assets/images/projects/mekong/earth-02.webp";
 import earth03 from "../../../assets/images/projects/mekong/earth-03.webp";
 import earth04 from "../../../assets/images/projects/mekong/earth-04.webp";
+import earthvideo01 from "../../../assets/images/projects/mekong/earth-video-01.webp";
+import earthvideo02 from "../../../assets/images/projects/mekong/earth-video-02.webp";
+import earthvideo03 from "../../../assets/images/projects/mekong/earth-video-03.webp";
 import green01 from "../../../assets/images/projects/mekong/green-01.webp";
 import green02 from "../../../assets/images/projects/mekong/green-02.webp";
 import green03 from "../../../assets/images/projects/mekong/green-03.webp";
@@ -42,6 +45,9 @@ import zalo03 from "../../../assets/images/projects/mekong/zalo-03.webp";
 import zalo04 from "../../../assets/images/projects/mekong/zalo-04.webp";
 import zalo05 from "../../../assets/images/projects/mekong/zalo-05.webp";
 import zalo06 from "../../../assets/images/projects/mekong/zalo-06.webp";
+import earthvideo01Video from "../../../assets/videos/earth-video-01.mp4";
+import earthvideo02Video from "../../../assets/videos/earth-video-02.mp4";
+import earthvideo03Video from "../../../assets/videos/earth-video-03.mp4";
 
 import type { ProjectContent } from "../../types";
 
@@ -191,6 +197,18 @@ export default {
           { src: earth02, caption: "Double the good, spread the green vibe" },
           { src: earth03, caption: "Trade recyclables for green gifts" },
           { src: earth04, caption: "ZIC Green Station x Faith in Nature" },
+        ],
+      },
+    },
+    {
+      type: "gallery",
+      props: {
+        title: "Booth videos",
+        columns: 3,
+        images: [
+          { src: earthvideo01, caption: "Reel: how to use the sprout pencil", video: earthvideo01Video },
+          { src: earthvideo02, caption: "Bottles and batteries visitors traded in", video: earthvideo02Video },
+          { src: earthvideo03, caption: "Gifts at the booth: succulents & sprout pencils", video: earthvideo03Video },
         ],
       },
     },

@@ -2,7 +2,8 @@
 export interface Props {
   title?: string;
   text?: string;
-  images: { src: string; caption?: string }[];
+  /** `src` is the image (or the poster when `video` is set). */
+  images: { src: string; caption?: string; video?: string }[];
   /** Columns on desktop (2 on mobile). */
   columns?: 2 | 3 | 4;
 }
@@ -17,18 +18,32 @@ const props = defineProps<Props>();
       <p v-if="props.text" class="project-gallery-text" v-html="props.text"></p>
     </div>
     <div class="project-gallery-grid" :style="{ '--gallery-columns': props.columns ?? 3 }">
-      <a
-        v-for="(image, index) in props.images"
-        :key="index"
-        :href="image.src"
-        target="_blank"
-        rel="noopener"
-        class="project-gallery-item"
-        data-cursor="arrow-external"
-      >
-        <img :src="image.src" :alt="image.caption ?? ''" loading="lazy" decoding="async" />
-        <span v-if="image.caption" class="project-gallery-caption">{{ image.caption }}</span>
-      </a>
+      <template v-for="(image, index) in props.images" :key="index">
+        <div v-if="image.video" class="project-gallery-item project-gallery-item-video">
+          <video
+            :src="image.video"
+            :poster="image.src"
+            controls
+            playsinline
+            muted
+            loop
+            preload="none"
+            :aria-label="image.caption"
+          ></video>
+          <span v-if="image.caption" class="project-gallery-caption">{{ image.caption }}</span>
+        </div>
+        <a
+          v-else
+          :href="image.src"
+          target="_blank"
+          rel="noopener"
+          class="project-gallery-item"
+          data-cursor="arrow-external"
+        >
+          <img :src="image.src" :alt="image.caption ?? ''" loading="lazy" decoding="async" />
+          <span v-if="image.caption" class="project-gallery-caption">{{ image.caption }}</span>
+        </a>
+      </template>
     </div>
   </div>
 </template>
@@ -86,11 +101,18 @@ const props = defineProps<Props>();
       margin-bottom: var(--space-md);
     }
 
-    img {
+    img,
+    video {
       display: block;
       width: 100%;
       height: auto;
       transition: transform 0.4s ease;
+    }
+
+    video {
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      background-color: #000;
     }
 
     @include mixins.hover {

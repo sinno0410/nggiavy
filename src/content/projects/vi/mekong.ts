@@ -6,6 +6,9 @@ import earth01 from "../../../assets/images/projects/mekong/earth-01.webp";
 import earth02 from "../../../assets/images/projects/mekong/earth-02.webp";
 import earth03 from "../../../assets/images/projects/mekong/earth-03.webp";
 import earth04 from "../../../assets/images/projects/mekong/earth-04.webp";
+import earthvideo01 from "../../../assets/images/projects/mekong/earth-video-01.webp";
+import earthvideo02 from "../../../assets/images/projects/mekong/earth-video-02.webp";
+import earthvideo03 from "../../../assets/images/projects/mekong/earth-video-03.webp";
 import green01 from "../../../assets/images/projects/mekong/green-01.webp";
 import green02 from "../../../assets/images/projects/mekong/green-02.webp";
 import green03 from "../../../assets/images/projects/mekong/green-03.webp";
@@ -42,6 +45,9 @@ import zalo03 from "../../../assets/images/projects/mekong/zalo-03.webp";
 import zalo04 from "../../../assets/images/projects/mekong/zalo-04.webp";
 import zalo05 from "../../../assets/images/projects/mekong/zalo-05.webp";
 import zalo06 from "../../../assets/images/projects/mekong/zalo-06.webp";
+import earthvideo01Video from "../../../assets/videos/earth-video-01.mp4";
+import earthvideo02Video from "../../../assets/videos/earth-video-02.mp4";
+import earthvideo03Video from "../../../assets/videos/earth-video-03.mp4";
 
 import type { ProjectContent } from "../../types";
 
@@ -191,6 +197,18 @@ export default {
           { src: earth02, caption: "Gấp đôi sự lành – Lan tỏa vibe xanh" },
           { src: earth03, caption: "Gửi đồ cũ – Nhận đôi quà xanh" },
           { src: earth04, caption: "ZIC Green Station x Faith in Nature" },
+        ],
+      },
+    },
+    {
+      type: "gallery",
+      props: {
+        title: "Video tại booth",
+        columns: 3,
+        images: [
+          { src: earthvideo01, caption: "Reels hướng dẫn dùng bút chì mầm cây", video: earthvideo01Video },
+          { src: earthvideo02, caption: "Chai nhựa và pin khách mang đến đổi quà", video: earthvideo02Video },
+          { src: earthvideo03, caption: "Quà tặng tại booth: sen đá và bút chì mầm cây", video: earthvideo03Video },
         ],
       },
     },
