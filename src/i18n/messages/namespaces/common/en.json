@@ -33,5 +33,6 @@
   "education": "Education",
   "awards": "Awards",
   "view-more": "View more",
-  "view-source-file": "Open the original Google Sheet"
+  "view-source-file": "Open the original Google Sheet",
+  "swipe-table": "← Swipe sideways to see the full table →"
 }

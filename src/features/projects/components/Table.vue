@@ -22,6 +22,7 @@ const props = defineProps<Props>();
       <h3 v-if="props.title" class="project-table-title">{{ props.title }}</h3>
       <p v-if="props.text" class="project-table-text" v-html="props.text"></p>
     </div>
+    <p class="project-table-hint">{{ t("swipe-table") }}</p>
     <div class="project-table-scroll" data-lenis-prevent-horizontal tabindex="0" :aria-label="props.title">
       <table :style="{ minWidth: `${props.minWidth ?? 720}px` }">
         <thead>
@@ -133,6 +134,16 @@ const props = defineProps<Props>();
 
   tbody tr:nth-child(even) {
     background-color: var(--color-background-300);
+  }
+
+  &-hint {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-300);
+    margin-bottom: calc(var(--space-xs) * -1);
+
+    @include mixins.mq("lg") {
+      display: none;
+    }
   }
 
   &-source {
