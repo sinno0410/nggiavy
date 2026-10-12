@@ -1,13 +1,56 @@
-import mekong2 from "../../../assets/images/projects/mekong/mekong-2.webp";
+import ashura01 from "../../../assets/images/projects/mekong/ashura-01.webp";
+import ashura02 from "../../../assets/images/projects/mekong/ashura-02.webp";
+import ashura03 from "../../../assets/images/projects/mekong/ashura-03.webp";
+import ashura04 from "../../../assets/images/projects/mekong/ashura-04.webp";
+import earth01 from "../../../assets/images/projects/mekong/earth-01.webp";
+import earth02 from "../../../assets/images/projects/mekong/earth-02.webp";
+import earth03 from "../../../assets/images/projects/mekong/earth-03.webp";
+import earth04 from "../../../assets/images/projects/mekong/earth-04.webp";
+import green01 from "../../../assets/images/projects/mekong/green-01.webp";
+import green02 from "../../../assets/images/projects/mekong/green-02.webp";
+import green03 from "../../../assets/images/projects/mekong/green-03.webp";
+import green04 from "../../../assets/images/projects/mekong/green-04.webp";
+import green05 from "../../../assets/images/projects/mekong/green-05.webp";
+import green06 from "../../../assets/images/projects/mekong/green-06.webp";
+import lanh01 from "../../../assets/images/projects/mekong/lanh-01.webp";
+import lanh02 from "../../../assets/images/projects/mekong/lanh-02.webp";
+import lanh03 from "../../../assets/images/projects/mekong/lanh-03.webp";
+import lanh04 from "../../../assets/images/projects/mekong/lanh-04.webp";
+import lanh05 from "../../../assets/images/projects/mekong/lanh-05.webp";
+import lanh06 from "../../../assets/images/projects/mekong/lanh-06.webp";
+import lanh07 from "../../../assets/images/projects/mekong/lanh-07.webp";
+import lanh08 from "../../../assets/images/projects/mekong/lanh-08.webp";
+import mk01 from "../../../assets/images/projects/mekong/mk-01.webp";
+import mk02 from "../../../assets/images/projects/mekong/mk-02.webp";
+import mk03 from "../../../assets/images/projects/mekong/mk-03.webp";
+import mk04 from "../../../assets/images/projects/mekong/mk-04.webp";
+import mk05 from "../../../assets/images/projects/mekong/mk-05.webp";
+import mk06 from "../../../assets/images/projects/mekong/mk-06.webp";
+import mk07 from "../../../assets/images/projects/mekong/mk-07.webp";
+import page01 from "../../../assets/images/projects/mekong/page-01.webp";
+import page02 from "../../../assets/images/projects/mekong/page-02.webp";
+import page03 from "../../../assets/images/projects/mekong/page-03.webp";
+import page04 from "../../../assets/images/projects/mekong/page-04.webp";
+import page05 from "../../../assets/images/projects/mekong/page-05.webp";
+import page06 from "../../../assets/images/projects/mekong/page-06.webp";
+import page07 from "../../../assets/images/projects/mekong/page-07.webp";
+import page08 from "../../../assets/images/projects/mekong/page-08.webp";
+import page09 from "../../../assets/images/projects/mekong/page-09.webp";
+import zalo01 from "../../../assets/images/projects/mekong/zalo-01.webp";
+import zalo02 from "../../../assets/images/projects/mekong/zalo-02.webp";
+import zalo03 from "../../../assets/images/projects/mekong/zalo-03.webp";
+import zalo04 from "../../../assets/images/projects/mekong/zalo-04.webp";
+import zalo05 from "../../../assets/images/projects/mekong/zalo-05.webp";
+import zalo06 from "../../../assets/images/projects/mekong/zalo-06.webp";
 
 import type { ProjectContent } from "../../types";
 
 export default {
   title: "Mekong Petrochem – SK ZIC Vietnam",
   theme: "light",
-  tags: ["social", "content", "ads", "strategy", "event"],
+  tags: ["social", "content", "ads", "event"],
   description:
-    "Social Media Marketing · Apr 2025 – May 2026<br/><br/>In-house social media for the lubricant brands SK ZIC and Mekong Petrochem (SK Group): integrated channel strategy, the Zalo Mini App Tet campaign and brand event communication.",
+    "Social Media Marketing · Apr 2025 – May 2026<br/><br/>In-house social media for the lubricant brands SK ZIC and Mekong Petrochem (SK Group): integrated channel strategy, digital campaigns (Zalo Mini App, “Nhớt lành cho lái sành”), always-on fanpage content and brand event communication.",
   components: [
     {
       type: "text",
@@ -54,6 +97,36 @@ export default {
       },
     },
     {
+      type: "gallery",
+      props: {
+        title: "Campaign posts",
+        columns: 3,
+        images: [
+          { src: zalo01, caption: "Mini App launch" },
+          { src: zalo02, caption: "Tet motion & Mini App" },
+          { src: zalo03, caption: "Sign-up how-to reel" },
+          { src: zalo04, caption: "Early sign-up rewards" },
+          { src: zalo05, caption: "How to collect points" },
+          { src: zalo06, caption: "Oil-change reminders" },
+        ],
+      },
+    },
+    {
+      type: "gallery",
+      props: {
+        title: "Campaign posts",
+        columns: 3,
+        images: [
+          { src: zalo01, caption: "Mini App launch" },
+          { src: zalo02, caption: "Tet motion & Mini App" },
+          { src: zalo03, caption: "Sign-up how-to reel" },
+          { src: zalo04, caption: "Early sign-up rewards" },
+          { src: zalo05, caption: "How to collect points" },
+          { src: zalo06, caption: "Oil-change reminders" },
+        ],
+      },
+    },
+    {
       type: "stats",
       props: {
         title: "Results",
@@ -85,18 +158,201 @@ export default {
     {
       type: "text",
       props: {
-        title: "03 · Event activation",
-        text: "Responsible for event communication: planning and executing promotional content across digital channels to support event activation and increase audience engagement.",
+        title: "03 · “Nhớt lành cho lái sành” campaign",
+        text: "A campaign around ZIC's “clean oil” message: VHVI-technology lubricants that help reduce carbon emissions and urban air pollution. It combined a social post series with two green activations where riders could experience the brand in person.",
       },
     },
     {
-      type: "media",
-      props: { type: "image", src: mekong2, alt: "Event Activation", caption: "Event Activation" },
+      type: "gallery",
+      props: {
+        title: "Post series",
+        columns: 4,
+        images: [
+          { src: lanh01, caption: "Quality in motion, a sustainable future" },
+          { src: lanh02, caption: "Campaign key visual" },
+          { src: lanh03, caption: "ZIC M9 – full green vibe" },
+          { src: lanh04, caption: "Earth Day – choose green living" },
+          { src: lanh05, caption: "Month-end sale with a sprout-pencil gift" },
+          { src: lanh06, caption: "Busy bikes need tough oil" },
+          { src: lanh07, caption: "Holiday post – I choose joy" },
+          { src: lanh08, caption: "Summer post – cooling solution" },
+        ],
+      },
+    },
+    {
+      type: "gallery",
+      props: {
+        title: "Green Pop Up – Earth Day 2025",
+        text: "Parc Mall, District 8, HCMC · 19–22/04/2025, with Ve Chai Ơi. I handled communication before, during and after the event on the fanpage and website, and staffed the booth.",
+        columns: 3,
+        images: [
+          { src: green01, caption: "Facebook event page" },
+          { src: green02, caption: "Gift teaser post" },
+          { src: green03, caption: "Weekend activity post" },
+          { src: green04, caption: "Live event check-in" },
+          { src: green05, caption: "Me at the ZIC booth" },
+          { src: green06, caption: "Article on the ZIC website" },
+        ],
+      },
+    },
+    {
+      type: "gallery",
+      props: {
+        title: "ZIC Green Station – Earth Day 2026",
+        text: "13–24/04/2026, with Ve Chai Ơi, equo and Faith in Nature. Visitors brought 7 batteries, 10 cans or 10 plastic bottles to swap for a succulent or a sprout pencil.",
+        columns: 4,
+        images: [
+          { src: earth01, caption: "Choose clean oil, get a seedling" },
+          { src: earth02, caption: "Double the good, spread the green vibe" },
+          { src: earth03, caption: "Trade recyclables for green gifts" },
+          { src: earth04, caption: "ZIC Green Station x Faith in Nature" },
+        ],
+      },
+    },
+    {
+      type: "text",
+      props: {
+        title: "04 · Always-on fanpage content",
+        text: "Day-to-day content for the SK ZIC Vietnam fanpage: product posts, trend-jacking, memes and community posts that keep the brand close to riders between campaigns.",
+      },
+    },
+    {
+      type: "gallery",
+      props: {
+        columns: 3,
+        images: [
+          { src: page01, caption: "“3 types of people when changing oil” meme" },
+          { src: page02, caption: "Winter Shopee deal" },
+          { src: page03, caption: "“I choose ZIC!”" },
+          { src: page04, caption: "The brand of many journeys" },
+          { src: page05, caption: "“9 out of 10 say ZIC runs smooth”" },
+          { src: page06, caption: "Trend-jacking post" },
+          { src: page07, caption: "Which ZIC “profile” are you?" },
+          { src: page08, caption: "ZIC M9 – crowned" },
+          { src: page09, caption: "Bike care before the national concert" },
+        ],
+      },
+    },
+    {
+      type: "text",
+      props: {
+        title: "03 · “Nhớt lành cho lái sành” campaign",
+        text: "A campaign around ZIC's “clean oil” message: VHVI-technology lubricants that help reduce carbon emissions and urban air pollution. It combined a social post series with two green activations where riders could experience the brand in person.",
+      },
+    },
+    {
+      type: "gallery",
+      props: {
+        title: "Post series",
+        columns: 4,
+        images: [
+          { src: lanh01, caption: "Quality in motion, a sustainable future" },
+          { src: lanh02, caption: "Campaign key visual" },
+          { src: lanh03, caption: "ZIC M9 – full green vibe" },
+          { src: lanh04, caption: "Earth Day – choose green living" },
+          { src: lanh05, caption: "Month-end sale with a sprout-pencil gift" },
+          { src: lanh06, caption: "Busy bikes need tough oil" },
+          { src: lanh07, caption: "Holiday post – I choose joy" },
+          { src: lanh08, caption: "Summer post – cooling solution" },
+        ],
+      },
+    },
+    {
+      type: "gallery",
+      props: {
+        title: "Green Pop Up – Earth Day 2025",
+        text: "Parc Mall, District 8, HCMC · 19–22/04/2025, with Ve Chai Ơi. I handled communication before, during and after the event on the fanpage and website, and staffed the booth.",
+        columns: 3,
+        images: [
+          { src: green01, caption: "Facebook event page" },
+          { src: green02, caption: "Gift teaser post" },
+          { src: green03, caption: "Weekend activity post" },
+          { src: green04, caption: "Live event check-in" },
+          { src: green05, caption: "Me at the ZIC booth" },
+          { src: green06, caption: "Article on the ZIC website" },
+        ],
+      },
+    },
+    {
+      type: "gallery",
+      props: {
+        title: "ZIC Green Station – Earth Day 2026",
+        text: "13–24/04/2026, with Ve Chai Ơi, equo and Faith in Nature. Visitors brought 7 batteries, 10 cans or 10 plastic bottles to swap for a succulent or a sprout pencil.",
+        columns: 4,
+        images: [
+          { src: earth01, caption: "Choose clean oil, get a seedling" },
+          { src: earth02, caption: "Double the good, spread the green vibe" },
+          { src: earth03, caption: "Trade recyclables for green gifts" },
+          { src: earth04, caption: "ZIC Green Station x Faith in Nature" },
+        ],
+      },
+    },
+    {
+      type: "text",
+      props: {
+        title: "04 · Always-on fanpage content",
+        text: "Day-to-day content for the SK ZIC Vietnam fanpage: product posts, trend-jacking, memes and community posts that keep the brand close to riders between campaigns.",
+      },
+    },
+    {
+      type: "gallery",
+      props: {
+        columns: 3,
+        images: [
+          { src: page01, caption: "“3 types of people when changing oil” meme" },
+          { src: page02, caption: "Winter Shopee deal" },
+          { src: page03, caption: "“I choose ZIC!”" },
+          { src: page04, caption: "The brand of many journeys" },
+          { src: page05, caption: "“9 out of 10 say ZIC runs smooth”" },
+          { src: page06, caption: "Trend-jacking post" },
+          { src: page07, caption: "Which ZIC “profile” are you?" },
+          { src: page08, caption: "ZIC M9 – crowned" },
+          { src: page09, caption: "Bike care before the national concert" },
+        ],
+      },
+    },
+    {
+      type: "text",
+      props: {
+        title: "05 · Brand events",
+        text: "Event communication from announcement to recap: event pages, teasers, on-site content and follow-up posts.",
+      },
+    },
+    {
+      type: "gallery",
+      props: {
+        title: "ZIC x Ashura – Vietnam Sport Show 2025",
+        text: "16/08/2025, SECC Hall B, with Decathlon and Coolmate.",
+        columns: 4,
+        images: [
+          { src: ashura01, caption: "Key visual & announcement" },
+          { src: ashura02, caption: "Mini-game teaser at the booth" },
+          { src: ashura03, caption: "ZIC gifts at the event" },
+          { src: ashura04, caption: "Event recap" },
+        ],
+      },
+    },
+    {
+      type: "gallery",
+      props: {
+        title: "Mekong Petrochem – Autumn Fair 2025",
+        text: "National Exhibition Center, 26/10/2025.",
+        columns: 3,
+        images: [
+          { src: mk01, caption: "Welcome video – Autumn Fair 2025" },
+          { src: mk02, caption: "Facebook event page" },
+          { src: mk03, caption: "Company capability post" },
+          { src: mk04, caption: "Mekong booth at the fair" },
+          { src: mk05, caption: "Brand video launch" },
+          { src: mk06, caption: "Booth recap video" },
+          { src: mk07, caption: "Booth photo post" },
+        ],
+      },
     },
     {
       type: "list",
       props: {
-        title: "Events",
+        title: "Press & event links",
         items: ["<a href=\"https://skzic.com.vn/vn/green-pop-up-2025.html\" target=\"_blank\" rel=\"noopener\">Green Pop Up – ZIC x Ve Chai Ơi</a>", "<a href=\"https://skzic.com.vn/vn/sk-zic-tai-ashura-calisthenics-battle-2025.html\" target=\"_blank\" rel=\"noopener\">ZIC x Ashura Calisthenics Battle</a>", "<a href=\"https://mekongpetro.com/vn/hoa-dau-mekong-tai-business-va-library-lan-thu-7.html\" target=\"_blank\" rel=\"noopener\">Mekong x YBA – Business & Library #7</a>", "<a href=\"https://tuoitre.vn/hoa-dau-mekong-tao-dau-an-tai-hoi-cho-mua-thu-2025-20251102140843013.htm\" target=\"_blank\" rel=\"noopener\">Mekong x Autumn Fair 2025</a>", "<a href=\"https://skzic.com.vn/vn/sk-zic-tai-cho-tet-cong-doan-xuan-2026.html\" target=\"_blank\" rel=\"noopener\">Trade Union Tet Fair 2026</a>"],
       },
     },
