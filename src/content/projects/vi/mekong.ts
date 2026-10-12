@@ -112,21 +112,6 @@ export default {
       },
     },
     {
-      type: "gallery",
-      props: {
-        title: "Bài đăng trong chiến dịch",
-        columns: 3,
-        images: [
-          { src: zalo01, caption: "Ra mắt Mini App Chăm Xe" },
-          { src: zalo02, caption: "Motion Tết & Mini App" },
-          { src: zalo03, caption: "Reels hướng dẫn đăng ký" },
-          { src: zalo04, caption: "Lợi ích khi đăng ký sớm" },
-          { src: zalo05, caption: "Hướng dẫn tích điểm đổi quà" },
-          { src: zalo06, caption: "Lợi ích: nhắc lịch thay nhớt" },
-        ],
-      },
-    },
-    {
       type: "stats",
       props: {
         title: "Kết quả",
@@ -153,84 +138,6 @@ export default {
         minWidth: 640,
         source: "https://docs.google.com/spreadsheets/d/1HUdr9yKnHrq64t7XiJX8VyP1Ui0to8lgl5cJNfRECuE/edit?usp=sharing",
         rows: [["ZIC · Facebook", "12,000,000", "2,010", "301", "39,810"], ["Mekong · Facebook", "10,000,000", "3,963", "532", "18,801"], ["Mekong · YouTube", "13,000,000", "125", "125", "693,333"]],
-      },
-    },
-    {
-      type: "text",
-      props: {
-        title: "03 · Chiến dịch “Nhớt lành cho lái sành”",
-        text: "Chiến dịch truyền thông thông điệp nhớt “lành”: dầu nhớt ZIC công nghệ VHVI giúp giảm khí thải carbon và ô nhiễm không khí đô thị. Chiến dịch kết hợp chuỗi bài đăng social với hai hoạt động xanh để người dùng trải nghiệm thương hiệu trực tiếp.",
-      },
-    },
-    {
-      type: "gallery",
-      props: {
-        title: "Chuỗi bài đăng",
-        columns: 4,
-        images: [
-          { src: lanh01, caption: "Chuyển động chất lượng – Bền vững tương lai" },
-          { src: lanh02, caption: "Key visual chiến dịch" },
-          { src: lanh03, caption: "ZIC M9 – Tỏa trọn vibe xanh" },
-          { src: lanh04, caption: "Ngày Trái Đất – Chọn lối sống xanh" },
-          { src: lanh05, caption: "Sale cuối tháng – tặng bút chì nảy mầm" },
-          { src: lanh06, caption: "Xe bận rộn cần nhớt “lì đòn”" },
-          { src: lanh07, caption: "Lễ này tôi chọn niềm vui" },
-          { src: lanh08, caption: "“Say hi” nắng hè – Giải pháp mát máy" },
-        ],
-      },
-    },
-    {
-      type: "gallery",
-      props: {
-        title: "Green Pop Up – Earth Day 2025",
-        text: "Parc Mall, Q.8, TP.HCM · 19–22/04/2025, kết hợp Ve Chai Ơi. Tôi phụ trách truyền thông trước, trong và sau sự kiện trên fanpage và website, đồng thời trực booth tại sự kiện.",
-        columns: 3,
-        images: [
-          { src: green01, caption: "Tạo sự kiện trên fanpage" },
-          { src: green02, caption: "Post hé lộ quà tặng" },
-          { src: green03, caption: "Gợi ý hoạt động cuối tuần cùng ZIC" },
-          { src: green04, caption: "Check-in khi sự kiện đang diễn ra" },
-          { src: green05, caption: "Tôi trực booth tại sự kiện" },
-          { src: green06, caption: "Bài đăng trên website ZIC" },
-        ],
-      },
-    },
-    {
-      type: "gallery",
-      props: {
-        title: "ZIC Green Station – Ngày Trái Đất 2026",
-        text: "13–24/04/2026, kết hợp Ve Chai Ơi, equo và Faith in Nature. Người tham gia mang 7 viên pin, 10 lon nhôm hoặc 10 chai nhựa để đổi sen đá hoặc bút chì nảy mầm.",
-        columns: 4,
-        images: [
-          { src: earth01, caption: "Chọn nhớt lành – Nhận mầm xanh" },
-          { src: earth02, caption: "Gấp đôi sự lành – Lan tỏa vibe xanh" },
-          { src: earth03, caption: "Gửi đồ cũ – Nhận đôi quà xanh" },
-          { src: earth04, caption: "ZIC Green Station x Faith in Nature" },
-        ],
-      },
-    },
-    {
-      type: "text",
-      props: {
-        title: "04 · Nội dung fanpage SK ZIC",
-        text: "Nội dung thường xuyên cho fanpage SK ZIC Vietnam: bài sản phẩm, bắt trend, meme và bài tương tác cộng đồng, giữ thương hiệu gần gũi với người chạy xe giữa các chiến dịch.",
-      },
-    },
-    {
-      type: "gallery",
-      props: {
-        columns: 3,
-        images: [
-          { src: page01, caption: "Meme “Luôn có 3 kiểu người khi thay nhớt”" },
-          { src: page02, caption: "Ưu đãi Shopee mùa lạnh" },
-          { src: page03, caption: "“Tui chọn ZIC!”" },
-          { src: page04, caption: "Thương hiệu của nhiều hành trình" },
-          { src: page05, caption: "“9 người 10 ý khen ZIC êm”" },
-          { src: page06, caption: "Bài bắt trend" },
-          { src: page07, caption: "Bạn thuộc “profile” nào trong team ZIC?" },
-          { src: page08, caption: "ZIC M9 – “Oppa” vương miện" },
-          { src: page09, caption: "Chăm xe chuẩn bị đi “Concert Quốc gia”" },
-        ],
       },
     },
     {

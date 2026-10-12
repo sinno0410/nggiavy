@@ -112,21 +112,6 @@ export default {
       },
     },
     {
-      type: "gallery",
-      props: {
-        title: "Campaign posts",
-        columns: 3,
-        images: [
-          { src: zalo01, caption: "Mini App launch" },
-          { src: zalo02, caption: "Tet motion & Mini App" },
-          { src: zalo03, caption: "Sign-up how-to reel" },
-          { src: zalo04, caption: "Early sign-up rewards" },
-          { src: zalo05, caption: "How to collect points" },
-          { src: zalo06, caption: "Oil-change reminders" },
-        ],
-      },
-    },
-    {
       type: "stats",
       props: {
         title: "Results",
@@ -153,84 +138,6 @@ export default {
         minWidth: 640,
         source: "https://docs.google.com/spreadsheets/d/1HUdr9yKnHrq64t7XiJX8VyP1Ui0to8lgl5cJNfRECuE/edit?usp=sharing",
         rows: [["ZIC · Facebook", "12,000,000", "2,010", "301", "39,810"], ["Mekong · Facebook", "10,000,000", "3,963", "532", "18,801"], ["Mekong · YouTube", "13,000,000", "125", "125", "693,333"]],
-      },
-    },
-    {
-      type: "text",
-      props: {
-        title: "03 · “Nhớt lành cho lái sành” campaign",
-        text: "A campaign around ZIC's “clean oil” message: VHVI-technology lubricants that help reduce carbon emissions and urban air pollution. It combined a social post series with two green activations where riders could experience the brand in person.",
-      },
-    },
-    {
-      type: "gallery",
-      props: {
-        title: "Post series",
-        columns: 4,
-        images: [
-          { src: lanh01, caption: "Quality in motion, a sustainable future" },
-          { src: lanh02, caption: "Campaign key visual" },
-          { src: lanh03, caption: "ZIC M9 – full green vibe" },
-          { src: lanh04, caption: "Earth Day – choose green living" },
-          { src: lanh05, caption: "Month-end sale with a sprout-pencil gift" },
-          { src: lanh06, caption: "Busy bikes need tough oil" },
-          { src: lanh07, caption: "Holiday post – I choose joy" },
-          { src: lanh08, caption: "Summer post – cooling solution" },
-        ],
-      },
-    },
-    {
-      type: "gallery",
-      props: {
-        title: "Green Pop Up – Earth Day 2025",
-        text: "Parc Mall, District 8, HCMC · 19–22/04/2025, with Ve Chai Ơi. I handled communication before, during and after the event on the fanpage and website, and staffed the booth.",
-        columns: 3,
-        images: [
-          { src: green01, caption: "Facebook event page" },
-          { src: green02, caption: "Gift teaser post" },
-          { src: green03, caption: "Weekend activity post" },
-          { src: green04, caption: "Live event check-in" },
-          { src: green05, caption: "Me at the ZIC booth" },
-          { src: green06, caption: "Article on the ZIC website" },
-        ],
-      },
-    },
-    {
-      type: "gallery",
-      props: {
-        title: "ZIC Green Station – Earth Day 2026",
-        text: "13–24/04/2026, with Ve Chai Ơi, equo and Faith in Nature. Visitors brought 7 batteries, 10 cans or 10 plastic bottles to swap for a succulent or a sprout pencil.",
-        columns: 4,
-        images: [
-          { src: earth01, caption: "Choose clean oil, get a seedling" },
-          { src: earth02, caption: "Double the good, spread the green vibe" },
-          { src: earth03, caption: "Trade recyclables for green gifts" },
-          { src: earth04, caption: "ZIC Green Station x Faith in Nature" },
-        ],
-      },
-    },
-    {
-      type: "text",
-      props: {
-        title: "04 · Always-on fanpage content",
-        text: "Day-to-day content for the SK ZIC Vietnam fanpage: product posts, trend-jacking, memes and community posts that keep the brand close to riders between campaigns.",
-      },
-    },
-    {
-      type: "gallery",
-      props: {
-        columns: 3,
-        images: [
-          { src: page01, caption: "“3 types of people when changing oil” meme" },
-          { src: page02, caption: "Winter Shopee deal" },
-          { src: page03, caption: "“I choose ZIC!”" },
-          { src: page04, caption: "The brand of many journeys" },
-          { src: page05, caption: "“9 out of 10 say ZIC runs smooth”" },
-          { src: page06, caption: "Trend-jacking post" },
-          { src: page07, caption: "Which ZIC “profile” are you?" },
-          { src: page08, caption: "ZIC M9 – crowned" },
-          { src: page09, caption: "Bike care before the national concert" },
-        ],
       },
     },
     {
