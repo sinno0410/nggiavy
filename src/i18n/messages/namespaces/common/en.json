@@ -34,5 +34,7 @@
   "awards": "Awards",
   "view-more": "View more",
   "view-source-file": "Open the original Google Sheet",
-  "swipe-table": "← Swipe sideways to see the full table →"
+  "swipe-table": "← Swipe sideways to see the full table →",
+  "certificates": "Certificates",
+  "verify-certificate": "Verify on Coursera"
 }

@@ -13,12 +13,6 @@ export default [
     description: "Social media & chiến dịch digital",
   },
   {
-    title: "Hạt Muối Của Biển",
-    slug: "hatmuoi",
-    thumbnail: thumbnail_hatmuoi,
-    description: "Xây dựng kênh TikTok (freelance)",
-  },
-  {
     title: "SEMTEK Agency",
     slug: "semtek",
     thumbnail: thumbnail_semtek,
@@ -29,5 +23,11 @@ export default [
     slug: "timeo",
     thumbnail: thumbnail_timeo,
     description: "Digital marketing cho studio workshop",
+  },
+  {
+    title: "Hạt Muối Của Biển",
+    slug: "hatmuoi",
+    thumbnail: thumbnail_hatmuoi,
+    description: "Xây dựng kênh TikTok (freelance)",
   },
 ] as const satisfies ProjectPreview[];

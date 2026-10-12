@@ -53,6 +53,37 @@ const content = computed(() => (locale.value ? achievements[locale.value] : null
             </article>
           </div>
         </section>
+
+        <section class="achievements-group">
+          <h3 class="achievements-group-title">{{ t("certificates") }}</h3>
+          <div class="achievements-list achievements-list-certificates">
+            <article v-for="item in content.certificates" :key="item.title" class="achievements-cert">
+              <a
+                :href="item.image"
+                target="_blank"
+                rel="noopener"
+                class="achievements-cert-image"
+                data-cursor="arrow-external"
+                :aria-label="item.title"
+              >
+                <img :src="item.image" :alt="`${item.title} – ${item.issuer}`" loading="lazy" decoding="async" />
+              </a>
+              <div class="achievements-cert-body">
+                <p class="achievements-card-meta">{{ item.issuer }} · {{ item.date }}</p>
+                <h4 class="achievements-cert-title">{{ item.title }}</h4>
+                <a
+                  v-if="item.verify"
+                  :href="item.verify"
+                  target="_blank"
+                  rel="noopener"
+                  class="achievements-card-link"
+                  data-cursor="arrow-external"
+                  >{{ t("verify-certificate") }} ↗</a
+                >
+              </div>
+            </article>
+          </div>
+        </section>
       </div>
     </div>
   </div>
@@ -143,6 +174,42 @@ const content = computed(() => (locale.value ? achievements[locale.value] : null
 
     @include mixins.mq("xl") {
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+  }
+
+  &-cert {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background-color: var(--color-beige-500);
+    border: var(--stroke-md) solid var(--color-beige-700);
+
+    &-image {
+      display: block;
+      background-color: var(--color-white-400);
+      border-bottom: var(--stroke-md) solid var(--color-beige-700);
+
+      img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1210 / 935;
+        object-fit: contain;
+      }
+    }
+
+    &-body {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+      padding: var(--space-md) var(--space-lg) var(--space-lg);
+      flex: 1;
+    }
+
+    &-title {
+      font-size: var(--font-size-lg);
+      font-weight: 900;
+      line-height: 1.3;
     }
   }
 
