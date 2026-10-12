@@ -2,12 +2,16 @@ import type { Props as ImageTextProps } from "./components/ImageText.vue";
 import type { Props as TextProps } from "./components/Text.vue";
 import type { Props as ListProps } from "./components/List.vue";
 import type { Props as MediaProps } from "./components/Media.vue";
+import type { Props as TableProps } from "./components/Table.vue";
+import type { Props as StatsProps } from "./components/Stats.vue";
 
 export interface ProjectComponents {
   imageText: ImageTextProps;
   text: TextProps;
   list: ListProps;
   media: Omit<MediaProps, "index">;
+  table: TableProps;
+  stats: StatsProps;
 }
 
 export type ProjectComponent = {
