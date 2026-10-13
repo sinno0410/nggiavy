@@ -6,6 +6,7 @@ import Media from "./Media.vue";
 import Table from "./Table.vue";
 import Stats from "./Stats.vue";
 import Gallery from "./Gallery.vue";
+import Calendar from "./Calendar.vue";
 
 import type { ProjectComponents, ProjectComponentProps } from "../types";
 
@@ -23,6 +24,7 @@ const components = {
   table: Table,
   stats: Stats,
   gallery: Gallery,
+  calendar: Calendar,
 } as const satisfies Record<keyof ProjectComponents, any>;
 
 const Component = components[type];

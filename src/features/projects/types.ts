@@ -5,6 +5,7 @@ import type { Props as MediaProps } from "./components/Media.vue";
 import type { Props as TableProps } from "./components/Table.vue";
 import type { Props as StatsProps } from "./components/Stats.vue";
 import type { Props as GalleryProps } from "./components/Gallery.vue";
+import type { Props as CalendarProps } from "./components/Calendar.vue";
 
 export interface ProjectComponents {
   imageText: ImageTextProps;
@@ -14,6 +15,7 @@ export interface ProjectComponents {
   table: TableProps;
   stats: StatsProps;
   gallery: GalleryProps;
+  calendar: CalendarProps;
 }
 
 export type ProjectComponent = {
