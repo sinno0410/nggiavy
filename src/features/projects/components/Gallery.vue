@@ -2,8 +2,8 @@
 export interface Props {
   title?: string;
   text?: string;
-  /** `src` is the image (or the poster when `video` is set). */
-  images: { src: string; caption?: string; video?: string }[];
+  /** `src` is the image (or the poster when `video` is set); `href` overrides where an image links to. */
+  images: { src: string; caption?: string; video?: string; href?: string }[];
   /** Columns on desktop (2 on mobile). */
   columns?: 2 | 3 | 4;
 }
@@ -34,7 +34,7 @@ const props = defineProps<Props>();
         </div>
         <a
           v-else
-          :href="image.src"
+          :href="image.href ?? image.src"
           target="_blank"
           rel="noopener"
           class="project-gallery-item"
