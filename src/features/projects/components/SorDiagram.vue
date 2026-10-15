@@ -29,8 +29,11 @@ const S = { x: 30, w: 220, h: 78, ys: [110, 230, 350, 470] };
 const O = { x: 375, w: 270, h: 92, ys: [150, 396] };
 const R = { x: 720, w: 220, h: 130, y: 263 };
 
-const sMid = (i: number) => S.ys[i] + S.h / 2;
-const oMid = (i: number) => O.ys[i] + O.h / 2;
+const sY = (i: number) => S.ys[i] ?? 0;
+const oY = (j: number) => O.ys[j] ?? 0;
+const sMid = (i: number) => sY(i) + S.h / 2;
+const oMid = (j: number) => oY(j) + O.h / 2;
+const colX = [S.x + S.w / 2, O.x + O.w / 2, R.x + R.w / 2];
 const rMid = R.y + R.h / 2;
 
 const isSupported = (id: string) => props.supported?.includes(id) ?? false;
@@ -60,13 +63,13 @@ const outcome = [0, 1].map((j) => {
 const midX = O.x + O.w / 2;
 const rX = R.x + R.w / 2;
 const mediation = [
-  { id: "H11", label: "H11 a–d", d: `M${midX} ${O.ys[0]} V${O.ys[0] - 48} H${rX} V${R.y - 4}`, lx: (midX + rX) / 2, ly: O.ys[0] - 48 },
+  { id: "H11", label: "H11 a–d", d: `M${midX} ${oY(0)} V${oY(0) - 48} H${rX} V${R.y - 4}`, lx: (midX + rX) / 2, ly: oY(0) - 48 },
   {
     id: "H12",
     label: "H12 a–d",
-    d: `M${midX} ${O.ys[1] + O.h} V${O.ys[1] + O.h + 48} H${rX} V${R.y + R.h + 4}`,
+    d: `M${midX} ${oY(1) + O.h} V${oY(1) + O.h + 48} H${rX} V${R.y + R.h + 4}`,
     lx: (midX + rX) / 2,
-    ly: O.ys[1] + O.h + 48,
+    ly: oY(1) + O.h + 48,
   },
 ];
 </script>
@@ -92,7 +95,7 @@ const mediation = [
         <!-- column guides -->
         <line :x1="(S.x + S.w + O.x) / 2" y1="60" :x2="(S.x + S.w + O.x) / 2" :y2="H - 40" class="sor-guide" />
         <line :x1="(O.x + O.w + R.x) / 2" y1="60" :x2="(O.x + O.w + R.x) / 2" :y2="H - 40" class="sor-guide" />
-        <text v-for="(col, k) in props.columns" :key="col" :x="[S.x + S.w / 2, O.x + O.w / 2, R.x + R.w / 2][k]" y="36" class="sor-col">{{ col }}</text>
+        <text v-for="(col, k) in props.columns" :key="col" :x="colX[k]" y="36" class="sor-col">{{ col }}</text>
 
         <!-- paths -->
         <g v-for="edge in [...direct, ...outcome]" :key="edge.id">
@@ -123,14 +126,14 @@ const mediation = [
 
         <!-- nodes -->
         <g v-for="(node, i) in props.stimuli" :key="node[0]">
-          <rect :x="S.x" :y="S.ys[i]" :width="S.w" :height="S.h" rx="16" class="sor-node" />
-          <text :x="S.x + S.w / 2" :y="S.ys[i] + 34" class="sor-node-main">{{ node[0] }}</text>
-          <text :x="S.x + S.w / 2" :y="S.ys[i] + 56" class="sor-node-sub">{{ node[1] }}</text>
+          <rect :x="S.x" :y="sY(i)" :width="S.w" :height="S.h" rx="16" class="sor-node" />
+          <text :x="S.x + S.w / 2" :y="sY(i) + 34" class="sor-node-main">{{ node[0] }}</text>
+          <text :x="S.x + S.w / 2" :y="sY(i) + 56" class="sor-node-sub">{{ node[1] }}</text>
         </g>
         <g v-for="(node, j) in props.organisms" :key="node[0]">
-          <rect :x="O.x" :y="O.ys[j]" :width="O.w" :height="O.h" rx="18" class="sor-node sor-node-o" />
-          <text :x="O.x + O.w / 2" :y="O.ys[j] + 40" class="sor-node-main">{{ node[0] }}</text>
-          <text :x="O.x + O.w / 2" :y="O.ys[j] + 62" class="sor-node-sub">{{ node[1] }}</text>
+          <rect :x="O.x" :y="oY(j)" :width="O.w" :height="O.h" rx="18" class="sor-node sor-node-o" />
+          <text :x="O.x + O.w / 2" :y="oY(j) + 40" class="sor-node-main">{{ node[0] }}</text>
+          <text :x="O.x + O.w / 2" :y="oY(j) + 62" class="sor-node-sub">{{ node[1] }}</text>
         </g>
         <rect :x="R.x" :y="R.y" :width="R.w" :height="R.h" rx="22" class="sor-node sor-node-r" />
         <text
