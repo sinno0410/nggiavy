@@ -49,61 +49,29 @@ export default {
       },
     },
     {
-      type: "model",
+      type: "sor",
       props: {
         title: "02 · Mô hình nghiên cứu (S-O-R)",
-        text: "Kích thích → Trạng thái → Phản hồi: streamer làm gì, người xem cảm nhận ra sao, và họ hành động thế nào.",
-        stages: [
-          {
-            code: "S",
-            title: "Sự hiện diện xã hội của streamer",
-            subtitle: "Kích thích",
-            items: [
-              {
-                label: "Sức hút cá nhân",
-              },
-              {
-                label: "Sự chuyên nghiệp",
-                highlight: true,
-              },
-              {
-                label: "Tính tương tác",
-              },
-              {
-                label: "Tính giải trí",
-                highlight: true,
-              },
-            ],
-          },
-          {
-            code: "O",
-            title: "Trạng thái người xem",
-            subtitle: "Trạng thái",
-            items: [
-              {
-                label: "Lòng tin người tiêu dùng",
-                highlight: true,
-              },
-              {
-                label: "Trạng thái dòng chảy",
-                highlight: true,
-              },
-            ],
-          },
-          {
-            code: "R",
-            title: "Hành vi",
-            subtitle: "Phản hồi",
-            items: [
-              {
-                label: "Mua hàng ngẫu hứng",
-                highlight: true,
-              },
-            ],
-          },
+        text: "12 giả thuyết: bốn yếu tố của streamer (H1–H8) tác động đến lòng tin và trạng thái dòng chảy; hai trạng thái này dẫn đến mua hàng ngẫu hứng (H9–H10) và đóng vai trò trung gian (H11–H12).",
+        columns: ["Kích thích (S)", "Chủ thể (O)", "Phản ứng (R)"],
+        stimuli: [
+          ["Sức hút cá nhân", "Personal Charisma"],
+          ["Sự chuyên nghiệp", "Professionalism"],
+          ["Tính tương tác", "Interactivity"],
+          ["Tính giải trí", "Entertainment"],
         ],
-        legend: "Tác động tích cực được kết quả nghiên cứu xác nhận",
-        note: "Lòng tin và trạng thái dòng chảy vừa tác động trực tiếp đến hành vi mua hàng ngẫu hứng, vừa đóng vai trò trung gian giữa sự hiện diện của streamer và quyết định mua.",
+        organisms: [
+          ["Lòng tin người tiêu dùng", "Consumer Trust"],
+          ["Trạng thái dòng chảy", "Flow State"],
+        ],
+        response: ["Hành vi mua hàng", "ngẫu hứng", "Impulsive Buying Behavior"],
+        supported: ["H3", "H4", "H7", "H8", "H9", "H10", "H11", "H12"],
+        legend: {
+          direct: "Tác động trực tiếp",
+          mediation: "Tác động trung gian",
+          supported: "Tác động tích cực theo kết quả nghiên cứu",
+        },
+        note: "Sự chuyên nghiệp và tính giải trí nâng cả lòng tin lẫn trạng thái dòng chảy; hai yếu tố này vừa thúc đẩy trực tiếp hành vi mua ngẫu hứng, vừa truyền tải ảnh hưởng của streamer đến quyết định mua.",
       },
     },
     {

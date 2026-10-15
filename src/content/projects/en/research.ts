@@ -49,61 +49,29 @@ export default {
       },
     },
     {
-      type: "model",
+      type: "sor",
       props: {
         title: "02 · Research model (S-O-R)",
-        text: "Stimulus → Organism → Response: what the streamer does, what it does to the viewer, and what the viewer then does.",
-        stages: [
-          {
-            code: "S",
-            title: "Streamer social presence",
-            subtitle: "Stimulus",
-            items: [
-              {
-                label: "Attractiveness",
-              },
-              {
-                label: "Professionalism",
-                highlight: true,
-              },
-              {
-                label: "Interactivity",
-              },
-              {
-                label: "Entertainment",
-                highlight: true,
-              },
-            ],
-          },
-          {
-            code: "O",
-            title: "Viewer's inner state",
-            subtitle: "Organism",
-            items: [
-              {
-                label: "Consumer trust",
-                highlight: true,
-              },
-              {
-                label: "Flow state",
-                highlight: true,
-              },
-            ],
-          },
-          {
-            code: "R",
-            title: "Behaviour",
-            subtitle: "Response",
-            items: [
-              {
-                label: "Impulse buying",
-                highlight: true,
-              },
-            ],
-          },
+        text: "Twelve hypotheses: four streamer traits (H1–H8) shape consumer trust and flow, which drive impulse buying (H9–H10) and mediate the effect (H11–H12).",
+        columns: ["Stimulus (S)", "Organism (O)", "Response (R)"],
+        stimuli: [
+          ["Personal charisma", "Sức hút cá nhân"],
+          ["Professionalism", "Sự chuyên nghiệp"],
+          ["Interactivity", "Tính tương tác"],
+          ["Entertainment", "Tính giải trí"],
         ],
-        legend: "Positive effects confirmed by the results",
-        note: "Trust and flow both drive impulse buying directly and act as mediators between the streamer's presence and the purchase.",
+        organisms: [
+          ["Consumer trust", "Lòng tin người tiêu dùng"],
+          ["Flow state", "Trạng thái dòng chảy"],
+        ],
+        response: ["Impulsive buying", "behaviour", "Hành vi mua hàng ngẫu hứng"],
+        supported: ["H3", "H4", "H7", "H8", "H9", "H10", "H11", "H12"],
+        legend: {
+          direct: "Direct effect",
+          mediation: "Mediating effect",
+          supported: "Positive effect found in the results",
+        },
+        note: "Professionalism and entertainment lift both trust and flow; trust and flow drive impulse buying directly and carry the streamer's influence through to the purchase.",
       },
     },
     {

@@ -13,7 +13,7 @@ import Embed from "./Embed.vue";
 import Bento from "./Bento.vue";
 import Dashboard from "./Dashboard.vue";
 import LiveBanner from "./LiveBanner.vue";
-import Model from "./Model.vue";
+import SorDiagram from "./SorDiagram.vue";
 
 import type { ProjectComponents, ProjectComponentProps } from "../types";
 
@@ -38,7 +38,7 @@ const components = {
   bento: Bento,
   dashboard: Dashboard,
   live: LiveBanner,
-  model: Model,
+  sor: SorDiagram,
 } as const satisfies Record<keyof ProjectComponents, any>;
 
 const Component = components[type];

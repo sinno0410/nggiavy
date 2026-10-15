@@ -12,7 +12,7 @@ import type { Props as EmbedProps } from "./components/Embed.vue";
 import type { Props as BentoProps } from "./components/Bento.vue";
 import type { Props as DashboardProps } from "./components/Dashboard.vue";
 import type { Props as LiveProps } from "./components/LiveBanner.vue";
-import type { Props as ModelProps } from "./components/Model.vue";
+import type { Props as SorProps } from "./components/SorDiagram.vue";
 
 export interface ProjectComponents {
   imageText: ImageTextProps;
@@ -29,7 +29,7 @@ export interface ProjectComponents {
   bento: BentoProps;
   dashboard: DashboardProps;
   live: LiveProps;
-  model: ModelProps;
+  sor: SorProps;
 }
 
 export type ProjectComponent = {
