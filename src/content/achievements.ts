@@ -6,6 +6,7 @@ import certMetaMeasure from "../assets/images/certificates/meta-measure-optimize
 import certMetaSocial from "../assets/images/certificates/meta-social-media-management.webp";
 import certMetaAnalytics from "../assets/images/certificates/meta-marketing-analytics.webp";
 import awardEbuzz from "../assets/images/projects/ebuzz/award.webp";
+import awardSic from "../assets/images/projects/sic/pitch.webp";
 
 // Để thêm ảnh cho một giải thưởng:
 // 1. đặt ảnh vào src/assets/images/achievements/
@@ -64,10 +65,13 @@ export const achievements: Record<Locale, AchievementsContent> = {
         link: "/project/ebuzz",
       },
       {
-        title: "Top 8",
-        event: "Swiss Innovation Challenge 2025",
+        title: "Top 20",
+        event: "Vietnam Swiss Innovation Challenge 2025",
         year: "2025",
-        description: "International innovation contest.",
+        description:
+          "International innovation competition by Van Lang University with FHNW (Switzerland). Our circular-fashion idea Lop Loop made the Top 20 and pitched in English in the Idea Innovation round.",
+        image: awardSic,
+        link: "/project/sic",
       },
       {
         title: "Top 3",
@@ -138,10 +142,13 @@ export const achievements: Record<Locale, AchievementsContent> = {
         link: "/project/ebuzz",
       },
       {
-        title: "Top 8",
-        event: "Swiss Innovation Challenge 2025",
+        title: "Top 20",
+        event: "Vietnam Swiss Innovation Challenge 2025",
         year: "2025",
-        description: "Cuộc thi đổi mới sáng tạo quốc tế.",
+        description:
+          "Cuộc thi đổi mới sáng tạo quốc tế của ĐH Văn Lang cùng FHNW (Thụy Sĩ). Ý tưởng thời trang tuần hoàn Lop Loop lọt Top 20 và pitching bằng tiếng Anh tại vòng Idea Innovation.",
+        image: awardSic,
+        link: "/project/sic",
       },
       {
         title: "Top 3",

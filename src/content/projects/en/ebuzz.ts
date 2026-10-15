@@ -1,4 +1,5 @@
 import ebuzz_award from "../../../assets/images/projects/ebuzz/award.webp";
+import ebuzz_award_me from "../../../assets/images/projects/ebuzz/award-me.webp";
 import ebuzz_bts_round1_video from "../../../assets/videos/ebuzz-bts-round1.mp4";
 import ebuzz_bts_video from "../../../assets/videos/ebuzz-bts.mp4";
 import ebuzz_coming_soon_video from "../../../assets/videos/ebuzz-coming-soon.mp4";
@@ -202,8 +203,12 @@ export default {
         columns: 2,
         images: [
           {
+            src: ebuzz_award_me,
+            caption: "Me with the High-Quality Video award",
+          },
+          {
             src: ebuzz_award,
-            caption: "High-Quality Video award",
+            caption: "Team Đẹp receiving the award",
           },
           {
             src: ebuzz_stage_results,

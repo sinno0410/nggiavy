@@ -26,7 +26,7 @@ const props = defineProps<Props>();
       <p v-if="props.text" class="project-rounds-text" v-html="props.text"></p>
     </div>
 
-    <ol class="project-rounds-list">
+    <ol class="project-rounds-list" :style="{ '--rounds-count': props.rounds.length }">
       <li
         v-for="(round, index) in props.rounds"
         :key="index"
@@ -91,7 +91,7 @@ const props = defineProps<Props>();
     position: relative;
 
     @include mixins.mq("lg") {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(var(--rounds-count, 4), minmax(0, 1fr));
     }
   }
 
