@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import Banner from "../../../components/Banner.vue";
+import Link from "../../../components/Link.vue";
 import { t } from "../../../i18n/utils/translate";
 import { locale } from "../../../i18n/store";
 import { achievements } from "../../../content/achievements";
@@ -41,8 +42,15 @@ const content = computed(() => (locale.value ? achievements[locale.value] : null
                 <span class="achievements-card-rank">{{ item.title }}</span> · {{ item.event }}
               </h4>
               <p v-if="item.description" class="achievements-card-text">{{ item.description }}</p>
+              <Link
+                v-if="item.link && item.link.startsWith('/')"
+                :to="item.link"
+                class="achievements-card-link"
+                data-cursor="arrow"
+                >{{ t("view-more") }} →</Link
+              >
               <a
-                v-if="item.link"
+                v-else-if="item.link"
                 :href="item.link"
                 target="_blank"
                 rel="noopener"

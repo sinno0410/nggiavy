@@ -7,6 +7,7 @@ import Table from "./Table.vue";
 import Stats from "./Stats.vue";
 import Gallery from "./Gallery.vue";
 import Calendar from "./Calendar.vue";
+import Rounds from "./Rounds.vue";
 
 import type { ProjectComponents, ProjectComponentProps } from "../types";
 
@@ -25,6 +26,7 @@ const components = {
   stats: Stats,
   gallery: Gallery,
   calendar: Calendar,
+  rounds: Rounds,
 } as const satisfies Record<keyof ProjectComponents, any>;
 
 const Component = components[type];

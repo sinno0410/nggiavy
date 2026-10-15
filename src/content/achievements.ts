@@ -5,6 +5,7 @@ import certHubspotContent from "../assets/images/certificates/hubspot-content-ma
 import certMetaMeasure from "../assets/images/certificates/meta-measure-optimize.webp";
 import certMetaSocial from "../assets/images/certificates/meta-social-media-management.webp";
 import certMetaAnalytics from "../assets/images/certificates/meta-marketing-analytics.webp";
+import awardEbuzz from "../assets/images/projects/ebuzz/award.webp";
 
 // Để thêm ảnh cho một giải thưởng:
 // 1. đặt ảnh vào src/assets/images/achievements/
@@ -55,9 +56,12 @@ export const achievements: Record<Locale, AchievementsContent> = {
     awards: [
       {
         title: "Top 4",
-        event: "Ebuzz 2025",
+        event: "E-Buzz Media 2025",
         year: "2025",
-        description: "High-caliber short video competition.",
+        description:
+          "Short video competition by Van Lang University with Laneige Vietnam & TikTok. Made it through 4 rounds to the overall Top 4 and won the High-Quality Video award.",
+        image: awardEbuzz,
+        link: "/project/ebuzz",
       },
       {
         title: "Top 8",
@@ -126,9 +130,12 @@ export const achievements: Record<Locale, AchievementsContent> = {
     awards: [
       {
         title: "Top 4",
-        event: "Ebuzz 2025",
+        event: "E-Buzz Media 2025",
         year: "2025",
-        description: "Cuộc thi video ngắn chất lượng cao.",
+        description:
+          "Cuộc thi video ngắn của ĐH Văn Lang cùng Laneige Vietnam & TikTok. Vượt qua 4 vòng thi, vào Top 4 chung cuộc và nhận giải Video chất lượng cao.",
+        image: awardEbuzz,
+        link: "/project/ebuzz",
       },
       {
         title: "Top 8",
