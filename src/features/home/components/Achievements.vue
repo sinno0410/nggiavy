@@ -183,6 +183,15 @@ const content = computed(() => (locale.value ? achievements[locale.value] : null
     @include mixins.mq("xl") {
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     }
+    &-certificates {
+      @include mixins.mq("md") {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      @include mixins.mq("xl") {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
   }
 
   &-cert {

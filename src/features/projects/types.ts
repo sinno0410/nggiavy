@@ -7,6 +7,7 @@ import type { Props as StatsProps } from "./components/Stats.vue";
 import type { Props as GalleryProps } from "./components/Gallery.vue";
 import type { Props as CalendarProps } from "./components/Calendar.vue";
 import type { Props as RoundsProps } from "./components/Rounds.vue";
+import type { Props as JobsProps } from "./components/Jobs.vue";
 
 export interface ProjectComponents {
   imageText: ImageTextProps;
@@ -18,6 +19,7 @@ export interface ProjectComponents {
   gallery: GalleryProps;
   calendar: CalendarProps;
   rounds: RoundsProps;
+  jobs: JobsProps;
 }
 
 export type ProjectComponent = {

@@ -13,6 +13,8 @@ export interface ProjectContent {
   videoBorder?: boolean;
   live?: string;
   source?: string;
+  /** Slug of a hub project (e.g. "freelance") this page belongs to; shown as the "back to" link. */
+  parent?: string;
   components?: ProjectComponent[];
 }
 

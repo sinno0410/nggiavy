@@ -7,6 +7,7 @@ import type { ProjectContent } from "../../types";
 export default {
   title: "Hạt Muối Của Biển",
   theme: "light",
+  parent: "freelance",
   tags: ["tiktok", "social", "content", "analytics"],
   description:
     "Freelance Social Marketing Executive · 07/2025 – 01/2026<br/><br/>Hạt Muối Của Biển (@_ngththuyz) là kênh TikTok thời trang về check-in chụp ảnh, mẹo tạo dáng, phối đồ và du lịch biển, hướng đến nữ giới trẻ yêu thời trang, nhiếp ảnh và lối sống chill, tích cực. Phụ trách quản lý kênh toàn diện.",

@@ -4,8 +4,10 @@ import { t } from "../../../i18n/utils/translate";
 
 import type { ProjectPreview } from "../../../content/types";
 
-const { project } = defineProps<{
+const { project, prefix } = defineProps<{
   project: ProjectPreview;
+  /** Overrides the "Next project" label. */
+  prefix?: string;
 }>();
 </script>
 
@@ -13,7 +15,7 @@ const { project } = defineProps<{
   <div class="next-project children-unclickable" data-hoversound="hover">
     <img :src="project.thumbnail" :alt="project.title" class="next-project-image" />
     <div class="next-project-content">
-      <p class="next-project-prefix">{{ t("next-project") }}:</p>
+      <p class="next-project-prefix">{{ prefix ?? t("next-project") }}:</p>
       <h3 class="next-project-title">{{ project.title }}</h3>
     </div>
     <ArrowRight class="next-project-arrow" />

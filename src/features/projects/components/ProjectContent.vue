@@ -5,6 +5,7 @@ import ProjectComponent from "./ProjectComponent.vue";
 import Link from "../../../components/Link.vue";
 import NextProject from "./NextProject.vue";
 import { locale } from "../../../i18n/store";
+import { t } from "../../../i18n/utils/translate";
 import { previews } from "../../../content/projects/previews";
 import { ref, computed, watch, onMounted } from "vue";
 
@@ -27,12 +28,17 @@ const nextProject = computed(() => {
   if (!previews) return null;
 
   const currentIndex = previews.findIndex((p) => p.slug === projectId);
-  if (currentIndex === -1) return null;
+  if (currentIndex === -1) {
+    // A sub-page (e.g. one freelance job) links back to its hub instead.
+    return previews.find((p) => p.slug === content.parent) ?? null;
+  }
 
   const nextIndex = (currentIndex + 1) % previews.length;
 
   return previews[nextIndex];
 });
+
+const isBackLink = computed(() => !!loadedPreviews.value && !loadedPreviews.value.some((p) => p.slug === projectId));
 
 watch(locale, loadPreviews);
 
@@ -60,7 +66,7 @@ onMounted(loadPreviews);
         data-cursor="arrow"
         data-sound="click"
       >
-        <NextProject :project="nextProject" />
+        <NextProject :project="nextProject" :prefix="isBackLink ? t('back-to') : undefined" />
       </Link>
     </div>
   </Layout>
