@@ -12,7 +12,6 @@ import hm_photo_06 from "../../../assets/images/projects/hatmuoi/photo-06.webp";
 import hm_photo_07 from "../../../assets/images/projects/hatmuoi/photo-07.webp";
 import hm_photo_08 from "../../../assets/images/projects/hatmuoi/photo-08.webp";
 import hm_photo_09 from "../../../assets/images/projects/hatmuoi/photo-09.webp";
-import hm_tiktok_analytics from "../../../assets/images/projects/hatmuoi/tiktok-analytics.webp";
 import hm_tiktok_profile from "../../../assets/images/projects/hatmuoi/tiktok-profile.webp";
 import hm_video_1 from "../../../assets/images/projects/hatmuoi/video-1.webp";
 import hm_video_2 from "../../../assets/images/projects/hatmuoi/video-2.webp";
@@ -38,33 +37,44 @@ export default {
       },
     },
     {
-      type: "stats",
+      type: "bento",
       props: {
         title: "Results",
-        items: [
+        tiles: [
+          {
+            value: "50M",
+            label: "total post views on TikTok",
+            span: "big",
+            tone: "accent",
+          },
+          {
+            image: hm_photo_08,
+            span: "tall",
+            tag: "@_ngththuyz",
+          },
           {
             value: "24K",
             label: "new TikTok followers",
           },
           {
-            value: "50M",
-            label: "total post views",
-          },
-          {
             value: "2.3M",
             label: "engagement growth",
+            tone: "soft",
+          },
+          {
+            value: "53 brand bookings",
+            label: "collaborations brought to the channel",
+            span: "wide",
+            tone: "dark",
           },
           {
             value: "531.5K",
             label: "profile visits",
           },
           {
-            value: "53",
-            label: "brand bookings",
-          },
-          {
-            value: "21K",
-            label: "new Instagram followers",
+            value: "+21K",
+            label: "Instagram followers",
+            tone: "soft",
           },
         ],
         note: "TikTok data as of January 2026 — about +4,000 followers per month on average.",
@@ -81,11 +91,14 @@ export default {
       type: "gallery",
       props: {
         columns: 2,
+        mobileColumns: 2,
+        aspect: "16 / 10",
+        focus: "top",
         images: [
           {
             src: hm_tiktok_profile,
             href: "https://www.tiktok.com/@_ngththuyz",
-            caption: "TikTok · 157.4K followers, 8.6M likes",
+            caption: "TikTok · 180.5K followers, 9.5M likes",
           },
           {
             src: hm_instagram_profile,
@@ -154,9 +167,19 @@ export default {
       },
     },
     {
+      type: "embed",
+      props: {
+        title: "04 · Content calendar (August 2025)",
+        text: "The working timeline for the month: pillar, idea, script, location, shot plan, brand booking, deadline, status, target KPI and actual result for each video.",
+        src: "https://drive.google.com/file/d/1Qnf7rJmuCmadiRjDFNiRcHWKVtMp-OYE/preview",
+        href: "https://docs.google.com/spreadsheets/d/1Qnf7rJmuCmadiRjDFNiRcHWKVtMp-OYE/edit?usp=sharing",
+        height: 620,
+      },
+    },
+    {
       type: "list",
       props: {
-        title: "04 · Content pillars",
+        title: "05 · Content pillars",
         items: [
           "<b>Style & outfit inspiration:</b> outfit pairings for different occasions and seasons, building a distinctive aesthetic.",
           "<b>Posing & photography guides:</b> practical, valuable content that gives viewers a reason to come back.",
@@ -168,7 +191,9 @@ export default {
     {
       type: "gallery",
       props: {
-        columns: 3,
+        columns: 9,
+        mobileColumns: 3,
+        aspect: "3 / 4",
         images: [
           {
             src: hm_photo_01,
@@ -203,7 +228,7 @@ export default {
     {
       type: "gallery",
       props: {
-        title: "05 · Featured videos",
+        title: "06 · Featured videos",
         text: "Beach sunsets, posing tips and camera tricks — the formats that drove the channel's growth. <a href=\"https://www.tiktok.com/@_ngththuyz\" target=\"_blank\" rel=\"noopener\">See more on TikTok ↗</a>",
         columns: 3,
         images: [
@@ -226,33 +251,67 @@ export default {
       },
     },
     {
-      type: "embed",
-      props: {
-        title: "06 · Content calendar (August 2025)",
-        text: "The working timeline for the month: pillar, idea, script, location, shot plan, brand booking, deadline, status, target KPI and actual result for each video.",
-        src: "https://drive.google.com/file/d/1Qnf7rJmuCmadiRjDFNiRcHWKVtMp-OYE/preview",
-        href: "https://docs.google.com/spreadsheets/d/1Qnf7rJmuCmadiRjDFNiRcHWKVtMp-OYE/edit?usp=sharing",
-        height: 620,
-      },
-    },
-    {
-      type: "list",
+      type: "dashboard",
       props: {
         title: "07 · Data-driven optimisation",
-        items: [
-          "<b>60%</b> of traffic comes from For You → optimise the first three seconds and the completion rate to win algorithmic distribution.",
-          "<b>80%</b> of viewers are female → adjust camera angles, lighting and tone to their aesthetic preferences.",
-          "<b>18.8%</b> of traffic comes from the profile page → optimise the bio and profile picture to convert visitors into followers.",
+        text: "Every week I read the channel's analytics and turned what the numbers said into the next round of content.",
+        panel: "TikTok analytics · @_ngththuyz",
+        period: "7 Jul – 10 Nov 2025",
+        kpis: [
+          {
+            label: "Total followers",
+            value: "155,364",
+          },
+          {
+            label: "Net followers",
+            value: "+20.4K",
+            highlight: true,
+          },
+          {
+            label: "Post views",
+            value: "20.3M",
+            highlight: true,
+          },
+          {
+            label: "Profile views",
+            value: "461.3K",
+          },
+          {
+            label: "Likes",
+            value: "1.4M",
+          },
+          {
+            label: "Comments",
+            value: "7.2K",
+          },
+          {
+            label: "Shares",
+            value: "173.6K",
+          },
+          {
+            label: "Brand bookings",
+            value: "53",
+          },
         ],
-      },
-    },
-    {
-      type: "media",
-      props: {
-        type: "image",
-        src: hm_tiktok_analytics,
-        alt: "TikTok analytics",
-        caption: "TikTok analytics · 7 Jul – 10 Nov 2025: +20.4K net followers, 20.3M post views, 461.3K profile views",
+        insightsTitle: "What the data said → what I changed",
+        insights: [
+          {
+            percent: 60,
+            label: "of traffic comes from For You",
+            action: "Sharpened the first 3 seconds and pushed completion rate to win distribution.",
+          },
+          {
+            percent: 80,
+            label: "of viewers are female",
+            action: "Adjusted camera angles, lighting and tone to their aesthetic.",
+          },
+          {
+            percent: 18.8,
+            display: "18.8%",
+            label: "of traffic comes from the profile page",
+            action: "Reworked the bio and profile picture to turn visits into follows.",
+          },
+        ],
       },
     },
   ],

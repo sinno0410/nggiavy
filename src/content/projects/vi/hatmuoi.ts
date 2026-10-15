@@ -12,7 +12,6 @@ import hm_photo_06 from "../../../assets/images/projects/hatmuoi/photo-06.webp";
 import hm_photo_07 from "../../../assets/images/projects/hatmuoi/photo-07.webp";
 import hm_photo_08 from "../../../assets/images/projects/hatmuoi/photo-08.webp";
 import hm_photo_09 from "../../../assets/images/projects/hatmuoi/photo-09.webp";
-import hm_tiktok_analytics from "../../../assets/images/projects/hatmuoi/tiktok-analytics.webp";
 import hm_tiktok_profile from "../../../assets/images/projects/hatmuoi/tiktok-profile.webp";
 import hm_video_1 from "../../../assets/images/projects/hatmuoi/video-1.webp";
 import hm_video_2 from "../../../assets/images/projects/hatmuoi/video-2.webp";
@@ -38,33 +37,44 @@ export default {
       },
     },
     {
-      type: "stats",
+      type: "bento",
       props: {
         title: "Kết quả",
-        items: [
+        tiles: [
+          {
+            value: "50M",
+            label: "tổng lượt xem bài đăng trên TikTok",
+            span: "big",
+            tone: "accent",
+          },
+          {
+            image: hm_photo_08,
+            span: "tall",
+            tag: "@_ngththuyz",
+          },
           {
             value: "24K",
             label: "follower TikTok mới",
           },
           {
-            value: "50M",
-            label: "tổng lượt xem bài đăng",
-          },
-          {
             value: "2,3M",
             label: "tăng trưởng tương tác",
+            tone: "soft",
+          },
+          {
+            value: "53 booking",
+            label: "hợp tác từ nhãn hàng về kênh",
+            span: "wide",
+            tone: "dark",
           },
           {
             value: "531,5K",
             label: "lượt truy cập trang",
           },
           {
-            value: "53",
-            label: "booking từ nhãn hàng",
-          },
-          {
-            value: "21K",
-            label: "follower Instagram mới",
+            value: "+21K",
+            label: "follower Instagram",
+            tone: "soft",
           },
         ],
         note: "Số liệu TikTok tính đến tháng 01/2026 — trung bình tăng khoảng 4.000 follower mỗi tháng.",
@@ -81,11 +91,14 @@ export default {
       type: "gallery",
       props: {
         columns: 2,
+        mobileColumns: 2,
+        aspect: "16 / 10",
+        focus: "top",
         images: [
           {
             src: hm_tiktok_profile,
             href: "https://www.tiktok.com/@_ngththuyz",
-            caption: "TikTok · 157,4K follower, 8,6 triệu lượt thích",
+            caption: "TikTok · 180,5K follower, 9,5 triệu lượt thích",
           },
           {
             src: hm_instagram_profile,
@@ -154,9 +167,19 @@ export default {
       },
     },
     {
+      type: "embed",
+      props: {
+        title: "04 · Lịch nội dung (tháng 8/2025)",
+        text: "Timeline làm việc trong tháng: pillar, ý tưởng, kịch bản, địa điểm, kịch bản quay, brand booking, deadline, trạng thái, KPI mục tiêu và kết quả thực tế của từng video.",
+        src: "https://drive.google.com/file/d/1Qnf7rJmuCmadiRjDFNiRcHWKVtMp-OYE/preview",
+        href: "https://docs.google.com/spreadsheets/d/1Qnf7rJmuCmadiRjDFNiRcHWKVtMp-OYE/edit?usp=sharing",
+        height: 620,
+      },
+    },
+    {
       type: "list",
       props: {
-        title: "04 · Content pillars",
+        title: "05 · Content pillars",
         items: [
           "<b>Gợi ý phong cách & phối đồ:</b> cách phối trang phục theo dịp và mùa, tạo nét thẩm mỹ riêng cho thương hiệu cá nhân.",
           "<b>Hướng dẫn tạo dáng & chụp ảnh:</b> nội dung thực tế, hữu ích để người xem có lý do quay lại kênh.",
@@ -168,7 +191,9 @@ export default {
     {
       type: "gallery",
       props: {
-        columns: 3,
+        columns: 9,
+        mobileColumns: 3,
+        aspect: "3 / 4",
         images: [
           {
             src: hm_photo_01,
@@ -203,7 +228,7 @@ export default {
     {
       type: "gallery",
       props: {
-        title: "05 · Video tiêu biểu",
+        title: "06 · Video tiêu biểu",
         text: "Hoàng hôn biển, mẹo tạo dáng và mẹo chụp ảnh — những dạng nội dung giúp kênh tăng trưởng. <a href=\"https://www.tiktok.com/@_ngththuyz\" target=\"_blank\" rel=\"noopener\">Xem thêm trên TikTok ↗</a>",
         columns: 3,
         images: [
@@ -226,33 +251,67 @@ export default {
       },
     },
     {
-      type: "embed",
-      props: {
-        title: "06 · Lịch nội dung (tháng 8/2025)",
-        text: "Timeline làm việc trong tháng: pillar, ý tưởng, kịch bản, địa điểm, kịch bản quay, brand booking, deadline, trạng thái, KPI mục tiêu và kết quả thực tế của từng video.",
-        src: "https://drive.google.com/file/d/1Qnf7rJmuCmadiRjDFNiRcHWKVtMp-OYE/preview",
-        href: "https://docs.google.com/spreadsheets/d/1Qnf7rJmuCmadiRjDFNiRcHWKVtMp-OYE/edit?usp=sharing",
-        height: 620,
-      },
-    },
-    {
-      type: "list",
+      type: "dashboard",
       props: {
         title: "07 · Tối ưu dựa trên dữ liệu",
-        items: [
-          "<b>60%</b> lượt xem đến từ For You → tối ưu 3 giây đầu và tỷ lệ xem hết video để được thuật toán phân phối.",
-          "<b>80%</b> người xem là nữ → điều chỉnh góc máy, ánh sáng và tone nội dung theo gu thẩm mỹ của họ.",
-          "<b>18,8%</b> lượt xem đến từ trang cá nhân → tối ưu bio và ảnh đại diện để chuyển đổi thành follower.",
+        text: "Mỗi tuần tôi đọc số liệu của kênh và biến những gì dữ liệu cho thấy thành đợt nội dung tiếp theo.",
+        panel: "TikTok analytics · @_ngththuyz",
+        period: "07/07 – 10/11/2025",
+        kpis: [
+          {
+            label: "Tổng follower",
+            value: "155.364",
+          },
+          {
+            label: "Follower ròng",
+            value: "+20,4K",
+            highlight: true,
+          },
+          {
+            label: "Lượt xem bài đăng",
+            value: "20,3M",
+            highlight: true,
+          },
+          {
+            label: "Lượt xem hồ sơ",
+            value: "461,3K",
+          },
+          {
+            label: "Lượt thích",
+            value: "1,4M",
+          },
+          {
+            label: "Bình luận",
+            value: "7,2K",
+          },
+          {
+            label: "Lượt chia sẻ",
+            value: "173,6K",
+          },
+          {
+            label: "Booking nhãn hàng",
+            value: "53",
+          },
         ],
-      },
-    },
-    {
-      type: "media",
-      props: {
-        type: "image",
-        src: hm_tiktok_analytics,
-        alt: "TikTok analytics",
-        caption: "TikTok analytics · 07/07 – 10/11/2025: +20,4K follower ròng, 20,3 triệu lượt xem, 461,3K lượt xem hồ sơ",
+        insightsTitle: "Dữ liệu nói gì → tôi đã làm gì",
+        insights: [
+          {
+            percent: 60,
+            label: "lượt xem đến từ For You",
+            action: "Tối ưu 3 giây đầu và tỷ lệ xem hết video để được thuật toán phân phối.",
+          },
+          {
+            percent: 80,
+            label: "người xem là nữ",
+            action: "Điều chỉnh góc máy, ánh sáng và tone nội dung theo gu thẩm mỹ của họ.",
+          },
+          {
+            percent: 18.8,
+            display: "18,8%",
+            label: "lượt xem đến từ trang cá nhân",
+            action: "Tối ưu bio và ảnh đại diện để chuyển lượt ghé thăm thành follow.",
+          },
+        ],
       },
     },
   ],

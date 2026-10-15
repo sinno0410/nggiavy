@@ -10,6 +10,8 @@ import Calendar from "./Calendar.vue";
 import Rounds from "./Rounds.vue";
 import Jobs from "./Jobs.vue";
 import Embed from "./Embed.vue";
+import Bento from "./Bento.vue";
+import Dashboard from "./Dashboard.vue";
 
 import type { ProjectComponents, ProjectComponentProps } from "../types";
 
@@ -31,6 +33,8 @@ const components = {
   rounds: Rounds,
   jobs: Jobs,
   embed: Embed,
+  bento: Bento,
+  dashboard: Dashboard,
 } as const satisfies Record<keyof ProjectComponents, any>;
 
 const Component = components[type];

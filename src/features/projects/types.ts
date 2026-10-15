@@ -9,6 +9,8 @@ import type { Props as CalendarProps } from "./components/Calendar.vue";
 import type { Props as RoundsProps } from "./components/Rounds.vue";
 import type { Props as JobsProps } from "./components/Jobs.vue";
 import type { Props as EmbedProps } from "./components/Embed.vue";
+import type { Props as BentoProps } from "./components/Bento.vue";
+import type { Props as DashboardProps } from "./components/Dashboard.vue";
 
 export interface ProjectComponents {
   imageText: ImageTextProps;
@@ -22,6 +24,8 @@ export interface ProjectComponents {
   rounds: RoundsProps;
   jobs: JobsProps;
   embed: EmbedProps;
+  bento: BentoProps;
+  dashboard: DashboardProps;
 }
 
 export type ProjectComponent = {

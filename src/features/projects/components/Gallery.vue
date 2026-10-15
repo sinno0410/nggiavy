@@ -4,8 +4,13 @@ export interface Props {
   text?: string;
   /** `src` is the image (or the poster when `video` is set); `href` overrides where an image links to. */
   images: { src: string; caption?: string; video?: string; href?: string }[];
-  /** Columns on desktop (2 on mobile). */
-  columns?: 2 | 3 | 4;
+  /** Columns on desktop (2 on mobile unless `mobileColumns` is set). */
+  columns?: 2 | 3 | 4 | 5 | 6 | 9;
+  mobileColumns?: 2 | 3;
+  /** Crop every image to the same ratio (e.g. "3 / 4") and lay them out on an even grid instead of masonry. */
+  aspect?: string;
+  /** Where to anchor the crop, e.g. "top". */
+  focus?: string;
 }
 
 const props = defineProps<Props>();
@@ -17,7 +22,15 @@ const props = defineProps<Props>();
       <h3 v-if="props.title" class="project-gallery-title">{{ props.title }}</h3>
       <p v-if="props.text" class="project-gallery-text" v-html="props.text"></p>
     </div>
-    <div class="project-gallery-grid" :style="{ '--gallery-columns': props.columns ?? 3 }">
+    <div
+      :class="['project-gallery-grid', { 'project-gallery-grid-uniform': !!props.aspect }]"
+      :style="{
+        '--gallery-columns': props.columns ?? 3,
+        '--gallery-mobile-columns': props.mobileColumns ?? 2,
+        '--gallery-aspect': props.aspect,
+        '--gallery-focus': props.focus ?? 'center',
+      }"
+    >
       <template v-for="(image, index) in props.images" :key="index">
         <div v-if="image.video" class="project-gallery-item project-gallery-item-video">
           <video
@@ -83,6 +96,30 @@ const props = defineProps<Props>();
     @include mixins.mq("md") {
       columns: var(--gallery-columns);
       column-gap: var(--space-md);
+    }
+  }
+
+  &-grid-uniform {
+    columns: auto;
+    display: grid;
+    grid-template-columns: repeat(var(--gallery-mobile-columns), minmax(0, 1fr));
+    gap: var(--space-xs);
+
+    @include mixins.mq("md") {
+      columns: auto;
+      grid-template-columns: repeat(var(--gallery-columns), minmax(0, 1fr));
+      gap: var(--space-sm);
+    }
+
+    .project-gallery-item {
+      margin-bottom: 0;
+      border-radius: var(--radius-md);
+    }
+
+    .project-gallery-item img {
+      aspect-ratio: var(--gallery-aspect);
+      object-fit: cover;
+      object-position: var(--gallery-focus);
     }
   }
 
