@@ -7,7 +7,7 @@
  * Trang dùng History API khi chuyển project, nên GA4 (Enhanced measurement →
  * "Page changes based on browser history events") tự ghi nhận mỗi trang project là một page_view.
  */
-export const GA_MEASUREMENT_ID = "";
+export const GA_MEASUREMENT_ID = "G-4JQF5JEJKJ";
 
 declare global {
   interface Window {
