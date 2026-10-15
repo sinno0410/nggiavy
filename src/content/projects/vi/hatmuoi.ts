@@ -1,4 +1,3 @@
-import hm_hatmuoi_0 from "../../../assets/images/projects/hatmuoi/hatmuoi-0.webp";
 import hm_hatmuoi_v1_video from "../../../assets/videos/hatmuoi-v1.mp4";
 import hm_hatmuoi_v2_video from "../../../assets/videos/hatmuoi-v2.mp4";
 import hm_hatmuoi_v3_video from "../../../assets/videos/hatmuoi-v3.mp4";
@@ -27,15 +26,6 @@ export default {
   description:
     "Freelance Social Marketing Executive · 07/2025 – 01/2026<br/><br/>Hạt Muối Của Biển (@_ngththuyz) là kênh TikTok thời trang về check-in chụp ảnh, mẹo tạo dáng, phối đồ và du lịch biển, hướng đến nữ giới trẻ yêu thời trang, nhiếp ảnh và lối sống chill, tích cực. Tôi quản lý kênh toàn diện — từ chiến lược, sản xuất đến dữ liệu.",
   components: [
-    {
-      type: "media",
-      props: {
-        type: "image",
-        src: hm_hatmuoi_0,
-        alt: "TikTok & Instagram",
-        caption: "TikTok & Instagram",
-      },
-    },
     {
       type: "bento",
       props: {
