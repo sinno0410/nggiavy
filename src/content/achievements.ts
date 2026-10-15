@@ -7,6 +7,7 @@ import certMetaSocial from "../assets/images/certificates/meta-social-media-mana
 import certMetaAnalytics from "../assets/images/certificates/meta-marketing-analytics.webp";
 import awardEbuzz from "../assets/images/projects/ebuzz/award.webp";
 import awardSic from "../assets/images/projects/sic/pitch.webp";
+import awardResearch from "../assets/images/projects/research/presenting.webp";
 
 // Để thêm ảnh cho một giải thưởng:
 // 1. đặt ảnh vào src/assets/images/achievements/
@@ -76,6 +77,9 @@ export const achievements: Record<Locale, AchievementsContent> = {
       {
         title: "Top 3",
         event: "Scientific Research",
+        year: "2024",
+        image: awardResearch,
+        link: "/project/research",
         description:
           "“Research on Streamer Social Presence and Impulsive Buying Behavior” received the highest score from the defense panel, placed in the overall Top 3 and was selected for presentation at the research conference.",
       },
@@ -153,6 +157,9 @@ export const achievements: Record<Locale, AchievementsContent> = {
       {
         title: "Top 3",
         event: "Nghiên cứu khoa học",
+        year: "2024",
+        image: awardResearch,
+        link: "/project/research",
         description:
           "Đề tài “Research on Streamer Social Presence and Impulsive Buying Behavior” đạt điểm cao nhất hội đồng, lọt Top 3 chung cuộc và được chọn trình bày tại hội nghị khoa học.",
       },

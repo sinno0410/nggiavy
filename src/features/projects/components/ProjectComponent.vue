@@ -12,6 +12,8 @@ import Jobs from "./Jobs.vue";
 import Embed from "./Embed.vue";
 import Bento from "./Bento.vue";
 import Dashboard from "./Dashboard.vue";
+import LiveBanner from "./LiveBanner.vue";
+import Model from "./Model.vue";
 
 import type { ProjectComponents, ProjectComponentProps } from "../types";
 
@@ -35,6 +37,8 @@ const components = {
   embed: Embed,
   bento: Bento,
   dashboard: Dashboard,
+  live: LiveBanner,
+  model: Model,
 } as const satisfies Record<keyof ProjectComponents, any>;
 
 const Component = components[type];

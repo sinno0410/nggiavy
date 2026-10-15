@@ -11,6 +11,8 @@ import type { Props as JobsProps } from "./components/Jobs.vue";
 import type { Props as EmbedProps } from "./components/Embed.vue";
 import type { Props as BentoProps } from "./components/Bento.vue";
 import type { Props as DashboardProps } from "./components/Dashboard.vue";
+import type { Props as LiveProps } from "./components/LiveBanner.vue";
+import type { Props as ModelProps } from "./components/Model.vue";
 
 export interface ProjectComponents {
   imageText: ImageTextProps;
@@ -26,6 +28,8 @@ export interface ProjectComponents {
   embed: EmbedProps;
   bento: BentoProps;
   dashboard: DashboardProps;
+  live: LiveProps;
+  model: ModelProps;
 }
 
 export type ProjectComponent = {
