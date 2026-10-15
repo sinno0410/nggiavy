@@ -8,6 +8,7 @@ import type { Props as GalleryProps } from "./components/Gallery.vue";
 import type { Props as CalendarProps } from "./components/Calendar.vue";
 import type { Props as RoundsProps } from "./components/Rounds.vue";
 import type { Props as JobsProps } from "./components/Jobs.vue";
+import type { Props as EmbedProps } from "./components/Embed.vue";
 
 export interface ProjectComponents {
   imageText: ImageTextProps;
@@ -20,6 +21,7 @@ export interface ProjectComponents {
   calendar: CalendarProps;
   rounds: RoundsProps;
   jobs: JobsProps;
+  embed: EmbedProps;
 }
 
 export type ProjectComponent = {
