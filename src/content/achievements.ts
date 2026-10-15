@@ -69,7 +69,7 @@ export const achievements: Record<Locale, AchievementsContent> = {
         event: "Vietnam Swiss Innovation Challenge 2025",
         year: "2025",
         description:
-          "International innovation competition by Van Lang University with FHNW (Switzerland). Our circular-fashion idea Lop Loop made the Top 20 and pitched in English in the Idea Innovation round.",
+          "International innovation competition by Van Lang University with FHNW (Switzerland). Our circular-fashion idea LopLoop made the Top 20 and pitched in English in the Idea Innovation round.",
         image: awardSic,
         link: "/project/sic",
       },
@@ -146,7 +146,7 @@ export const achievements: Record<Locale, AchievementsContent> = {
         event: "Vietnam Swiss Innovation Challenge 2025",
         year: "2025",
         description:
-          "Cuộc thi đổi mới sáng tạo quốc tế của ĐH Văn Lang cùng FHNW (Thụy Sĩ). Ý tưởng thời trang tuần hoàn Lop Loop lọt Top 20 và pitching bằng tiếng Anh tại vòng Idea Innovation.",
+          "Cuộc thi đổi mới sáng tạo quốc tế của ĐH Văn Lang cùng FHNW (Thụy Sĩ). Ý tưởng thời trang tuần hoàn LopLoop lọt Top 20 và pitching bằng tiếng Anh tại vòng Idea Innovation.",
         image: awardSic,
         link: "/project/sic",
       },
