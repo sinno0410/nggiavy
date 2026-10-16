@@ -5,28 +5,81 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-beige-400);
+  background: radial-gradient(ellipse at 50% 42%, #fbf8f2 0%, var(--color-beige-400) 45%, #eadfce 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   transition: opacity 0.3s ease-in-out;
   opacity: 1;
 
-  &-svg {
-    width: 120px;
-    height: 120px;
+  &-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
     transition:
-      transform 0.2s var(--ease-power2-in),
-      opacity 0.2s var(--ease-power2-in);
+      transform 0.3s var(--ease-power2-in),
+      opacity 0.3s var(--ease-power2-in);
+  }
+
+  &-svg {
+    width: min(72vw, 620px);
+    height: auto;
+    overflow: visible;
+  }
+
+  &-stroke {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &-ink {
+    fill: var(--color-text-400);
+    transition: opacity 0.5s ease;
+  }
+
+  &-name,
+  &-role {
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    text-align: center;
+  }
+
+  &-name {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.6em;
+    margin-right: -0.6em;
+    color: var(--color-text-400);
+  }
+
+  &-role {
+    margin-top: -8px;
+    font-size: 10px;
+    letter-spacing: 0.45em;
+    margin-right: -0.45em;
+    color: var(--color-text-300);
+    transition-delay: 0.15s;
+  }
+
+  &-bar {
+    margin-top: 6px;
+    width: 120px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.08);
+    overflow: hidden;
   }
 
   &-rect {
-    transform-origin: bottom center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-text-400);
+    transform-origin: left center;
     transition: transform 0.3s ease-in-out;
-  }
-
-  &-path {
-    fill: var(--color-text-400);
   }
 
   &-hidden {
@@ -37,9 +90,18 @@
       pointer-events: none !important;
     }
 
-    svg {
-      transform: scale(0.4);
+    .preloader-inner {
+      transform: scale(0.92);
       opacity: 0;
     }
   }
+}
+
+.preloader-signed .preloader-name,
+.preloader-signed .preloader-role {
+  opacity: 1;
+}
+
+.preloader-fade .preloader-ink {
+  opacity: 0;
 }

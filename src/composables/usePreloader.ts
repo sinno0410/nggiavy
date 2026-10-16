@@ -28,14 +28,19 @@ export const usePreloader = () => {
       const rect = document.querySelector(".preloader-rect") as HTMLElement;
       const preloader = document.querySelector(".preloader") as HTMLElement;
       if (newProgress === 1) {
-        gsap.delayedCall(0.2, () => {
-          document.body.classList.remove("is-loading");
-          preloader.classList.add("preloader-hidden");
-          preloaderVisible.value = false;
+        // Let the signature finish its first pass before revealing the page (max ~4s).
+        const signed = (window as unknown as { __signatureFirstPass?: Promise<void> }).__signatureFirstPass;
+        const timeout = new Promise<void>((resolve) => setTimeout(resolve, 4000));
+        Promise.race([signed ?? Promise.resolve(), timeout]).then(() => {
+          gsap.delayedCall(0.2, () => {
+            document.body.classList.remove("is-loading");
+            preloader.classList.add("preloader-hidden");
+            preloaderVisible.value = false;
+          });
         });
       }
 
-      if (rect) rect.style.transform = `scaleY(${newProgress})`;
+      if (rect) rect.style.transform = `scaleX(${newProgress})`;
     },
     { immediate: true },
   );
