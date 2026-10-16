@@ -15,6 +15,8 @@ export interface Props {
   organisms: [string, string][];
   /** Response box: main lines…, last item is the sub-label. */
   response: string[];
+  /** Labels for the two mediation paths (default "H11 a–d", "H12 a–d"). */
+  mediationLabels?: [string, string];
   /** Hypothesis ids drawn as supported, e.g. ["H3", "H4", "H9", "H11"]. */
   supported?: string[];
   legend: { direct: string; mediation: string; supported?: string; rejected?: string };
@@ -63,10 +65,10 @@ const outcome = [0, 1].map((j) => {
 const midX = O.x + O.w / 2;
 const rX = R.x + R.w / 2;
 const mediation = [
-  { id: "H11", label: "H11 a–d", d: `M${midX} ${oY(0)} V${oY(0) - 48} H${rX} V${R.y - 4}`, lx: (midX + rX) / 2, ly: oY(0) - 48 },
+  { id: "H11", label: props.mediationLabels?.[0] ?? "H11 a–d", d: `M${midX} ${oY(0)} V${oY(0) - 48} H${rX} V${R.y - 4}`, lx: (midX + rX) / 2, ly: oY(0) - 48 },
   {
     id: "H12",
-    label: "H12 a–d",
+    label: props.mediationLabels?.[1] ?? "H12 a–d",
     d: `M${midX} ${oY(1) + O.h} V${oY(1) + O.h + 48} H${rX} V${R.y + R.h + 4}`,
     lx: (midX + rX) / 2,
     ly: oY(1) + O.h + 48,
@@ -119,7 +121,7 @@ const mediation = [
             :marker-end="isSupported(m.id) ? 'url(#sor-arrow-on)' : 'url(#sor-arrow)'"
           />
           <g :transform="`translate(${m.lx} ${m.ly})`">
-            <rect x="-34" y="-11" width="68" height="22" rx="11" :class="['sor-tag', { 'sor-tag-on': isSupported(m.id) }]" />
+            <rect x="-52" y="-11" width="104" height="22" rx="11" :class="['sor-tag', { 'sor-tag-on': isSupported(m.id) }]" />
             <text y="4" :class="['sor-tag-text', { 'sor-tag-text-on': isSupported(m.id) }]">{{ m.label }}</text>
           </g>
         </g>

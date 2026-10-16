@@ -5,7 +5,9 @@ import ebuzz_bts_video from "../../../assets/videos/ebuzz-bts.mp4";
 import ebuzz_coming_soon_video from "../../../assets/videos/ebuzz-coming-soon.mp4";
 import ebuzz_ebuzz_bts from "../../../assets/images/projects/ebuzz/ebuzz-bts.webp";
 import ebuzz_ebuzz_coming_soon from "../../../assets/images/projects/ebuzz/ebuzz-coming-soon.webp";
+import ebuzz_ebuzz_round1 from "../../../assets/images/projects/ebuzz/ebuzz-round1.webp";
 import ebuzz_ebuzz_trailer from "../../../assets/images/projects/ebuzz/ebuzz-trailer.webp";
+import ebuzz_round1_video from "../../../assets/videos/ebuzz-round1.mp4";
 import ebuzz_stage_final from "../../../assets/images/projects/ebuzz/stage-final.webp";
 import ebuzz_stage_present from "../../../assets/images/projects/ebuzz/stage-present.webp";
 import ebuzz_stage_results from "../../../assets/images/projects/ebuzz/stage-results.webp";
@@ -89,10 +91,6 @@ export default {
             title: "The Awakening",
             subtitle: "Khai Mở",
             text: "Video 45–60 giây <i>“Vùng an toàn vs Vùng tỏa sáng”</i>: một buổi sáng uể oải được “bật sáng” khi nhân vật chăm da cùng Laneige Water Bank.",
-            link: {
-              label: "Xem video vòng 1",
-              href: "https://drive.google.com/file/d/1yE4xeHj0Q5ew2dzOWVttyT4OUdkvrjMA/view?usp=sharing",
-            },
           },
           {
             label: "Vòng 2",
@@ -110,8 +108,8 @@ export default {
             subtitle: "Tinh Hoa",
             text: "Quay dựng phim <b>“Ánh Sáng”</b> và ra mắt bằng chiến dịch 5 bước: Poster → Coming soon → Trailer → Official → BTS.",
             link: {
-              label: "Xem phim",
-              href: "https://drive.google.com/file/d/1Uf2y3ym9hxSQsQDzKjeh4qPksroUV0fF/view?usp=sharing",
+              label: "Xem phim trên TikTok",
+              href: "https://www.tiktok.com/@poeoenty_/video/7509836124106296584",
             },
           },
           {
@@ -120,6 +118,26 @@ export default {
             subtitle: "Giải Video chất lượng cao",
             text: "Thuyết trình ý tưởng, kế hoạch thực thi, kế hoạch và kết quả truyền thông trên sân khấu — đạt <b>Top 4 chung cuộc</b> và giải <b>Video chất lượng cao</b>.",
             highlight: true,
+          },
+        ],
+      },
+    },
+    {
+      type: "reels",
+      props: {
+        title: "Video dự thi",
+        text: "Video sản phẩm vòng 1 và phim chính thức đưa Team Đẹp vào Chung kết — bấm để xem có âm thanh.",
+        reels: [
+          {
+            src: ebuzz_round1_video,
+            poster: ebuzz_ebuzz_round1,
+            caption: "Vòng 1 · Vùng an toàn vs Vùng tỏa sáng",
+          },
+          {
+            embed: "https://www.tiktok.com/player/v1/7509836124106296584",
+            caption: "Phim chính thức · Ánh Sáng",
+            href: "https://www.tiktok.com/@poeoenty_/video/7509836124106296584",
+            hrefLabel: "TikTok",
           },
         ],
       },
@@ -174,7 +192,7 @@ export default {
       type: "gallery",
       props: {
         title: "05 · Chiến dịch ra mắt phim",
-        text: "Chuỗi 5 nội dung tạo tò mò trước và sau khi phim chính thức lên sóng: Poster → Coming soon → Trailer → Official → BTS. <a href=\"https://drive.google.com/file/d/1Uf2y3ym9hxSQsQDzKjeh4qPksroUV0fF/view?usp=sharing\" target=\"_blank\" rel=\"noopener\">Xem phim đầy đủ ↗</a>",
+        text: "Chuỗi 5 nội dung tạo tò mò trước và sau khi phim chính thức lên sóng: Poster → Coming soon → Trailer → Official → BTS. <a href=\"https://www.tiktok.com/@poeoenty_/video/7509836124106296584\" target=\"_blank\" rel=\"noopener\">Xem phim đầy đủ trên TikTok ↗</a>",
         columns: 3,
         images: [
           {

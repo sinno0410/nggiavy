@@ -5,7 +5,9 @@ import ebuzz_bts_video from "../../../assets/videos/ebuzz-bts.mp4";
 import ebuzz_coming_soon_video from "../../../assets/videos/ebuzz-coming-soon.mp4";
 import ebuzz_ebuzz_bts from "../../../assets/images/projects/ebuzz/ebuzz-bts.webp";
 import ebuzz_ebuzz_coming_soon from "../../../assets/images/projects/ebuzz/ebuzz-coming-soon.webp";
+import ebuzz_ebuzz_round1 from "../../../assets/images/projects/ebuzz/ebuzz-round1.webp";
 import ebuzz_ebuzz_trailer from "../../../assets/images/projects/ebuzz/ebuzz-trailer.webp";
+import ebuzz_round1_video from "../../../assets/videos/ebuzz-round1.mp4";
 import ebuzz_stage_final from "../../../assets/images/projects/ebuzz/stage-final.webp";
 import ebuzz_stage_present from "../../../assets/images/projects/ebuzz/stage-present.webp";
 import ebuzz_stage_results from "../../../assets/images/projects/ebuzz/stage-results.webp";
@@ -89,10 +91,6 @@ export default {
             title: "The Awakening",
             subtitle: "Khai Mở",
             text: "A 45–60s video, <i>“Comfort zone vs. Spotlight zone”</i>: a sluggish morning turns around once she cares for her skin with Laneige Water Bank.",
-            link: {
-              label: "Watch the round 1 video",
-              href: "https://drive.google.com/file/d/1yE4xeHj0Q5ew2dzOWVttyT4OUdkvrjMA/view?usp=sharing",
-            },
           },
           {
             label: "Round 2",
@@ -110,8 +108,8 @@ export default {
             subtitle: "Tinh Hoa",
             text: "Shooting and editing the film <b>“Ánh Sáng”</b>, launched with a five-step campaign: Poster → Coming soon → Trailer → Official → BTS.",
             link: {
-              label: "Watch the film",
-              href: "https://drive.google.com/file/d/1Uf2y3ym9hxSQsQDzKjeh4qPksroUV0fF/view?usp=sharing",
+              label: "Watch on TikTok",
+              href: "https://www.tiktok.com/@poeoenty_/video/7509836124106296584",
             },
           },
           {
@@ -120,6 +118,26 @@ export default {
             subtitle: "High-Quality Video award",
             text: "Presenting the creative idea, execution plan, communication plan and results on stage — finishing <b>Top 4 overall</b> and winning the <b>High-Quality Video</b> award.",
             highlight: true,
+          },
+        ],
+      },
+    },
+    {
+      type: "reels",
+      props: {
+        title: "The competition videos",
+        text: "Round 1's product video and the official film that took Team Đẹp to the final — both with sound.",
+        reels: [
+          {
+            src: ebuzz_round1_video,
+            poster: ebuzz_ebuzz_round1,
+            caption: "Round 1 · Comfort zone vs. Spotlight zone",
+          },
+          {
+            embed: "https://www.tiktok.com/player/v1/7509836124106296584",
+            caption: "Official film · Ánh Sáng",
+            href: "https://www.tiktok.com/@poeoenty_/video/7509836124106296584",
+            hrefLabel: "TikTok",
           },
         ],
       },
@@ -174,7 +192,7 @@ export default {
       type: "gallery",
       props: {
         title: "05 · Launch campaign",
-        text: "Five posts built anticipation before and after the official film: Poster → Coming soon → Trailer → Official → BTS. <a href=\"https://drive.google.com/file/d/1Uf2y3ym9hxSQsQDzKjeh4qPksroUV0fF/view?usp=sharing\" target=\"_blank\" rel=\"noopener\">Watch the full film ↗</a>",
+        text: "Five posts built anticipation before and after the official film: Poster → Coming soon → Trailer → Official → BTS. <a href=\"https://www.tiktok.com/@poeoenty_/video/7509836124106296584\" target=\"_blank\" rel=\"noopener\">Watch the full film on TikTok ↗</a>",
         columns: 3,
         images: [
           {
