@@ -13,6 +13,8 @@ export interface Props {
   src: string;
   alt?: string;
   caption?: string;
+  /** Video only: show player controls with the original audio instead of a muted autoplay loop. */
+  controls?: boolean;
   index: number;
 }
 
@@ -65,6 +67,17 @@ onMounted(async () => {
         ref="mediaRef"
       />
       <video
+        v-else-if="props.controls"
+        :src="props.src"
+        controls
+        playsinline
+        preload="metadata"
+        class="project-media-video"
+        ref="mediaRef"
+      >
+        <source :src="props.src" type="video/mp4" />
+      </video>
+      <video
         v-else
         :src="props.src"
         autoplay
@@ -78,7 +91,7 @@ onMounted(async () => {
         <source :src="props.src" type="video/mp4" />
       </video>
     </div>
-    <div class="project-media-caption" v-if="props.caption">
+    <div class="project-media-caption" v-if="props.caption && !props.controls">
       <Notch class="project-media-caption-notch project-media-caption-notch-left" />
       <Notch class="project-media-caption-notch project-media-caption-notch-top" />
       <p class="project-media-caption-copy">{{ props.caption }}</p>
@@ -98,10 +111,7 @@ onMounted(async () => {
 
   @include mixins.mq("md") {
     grid-column: 2 / 12;
-  }
-
-  @include mixins.mq("lg") {
-    grid-column: 3 / 11;
+    max-width: none;
   }
 
   &-caption {

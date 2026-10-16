@@ -81,7 +81,7 @@ export const achievements: Record<Locale, AchievementsContent> = {
         image: awardResearch,
         link: "/project/research",
         description:
-          "“Research on Streamer Social Presence and Impulsive Buying Behavior” received the highest score from the defense panel, placed in the overall Top 3 and was selected for presentation at the research conference.",
+          "“Research on Streamer Social Presence and Impulsive Buying Behavior” received the highest score from the defense panel. It was carried out over 5 months, with me working hands-on on every research task to keep the study scientifically sound and practical.",
       },
     ],
     certificates: [
@@ -161,7 +161,7 @@ export const achievements: Record<Locale, AchievementsContent> = {
         image: awardResearch,
         link: "/project/research",
         description:
-          "Đề tài “Research on Streamer Social Presence and Impulsive Buying Behavior” đạt điểm cao nhất hội đồng, lọt Top 3 chung cuộc và được chọn trình bày tại hội nghị khoa học.",
+          "Đề tài “Research on Streamer Social Presence and Impulsive Buying Behavior” đạt điểm cao nhất hội đồng. Nghiên cứu thực hiện trong 5 tháng, tôi trực tiếp triển khai và từng bước hoàn thiện nội dung, kết quả để đảm bảo tính khoa học và thực tiễn.",
       },
     ],
     certificates: [

@@ -42,19 +42,10 @@ const classes = computed(() => {
       }
     }
 
-    &-md {
-      @include mixins.mq("md") {
-        grid-column: 3 / 11;
-      }
-
-      @include mixins.mq("lg") {
-        grid-column: 4 / 10;
-      }
-    }
-
+    &-md,
     &-lg {
       @include mixins.mq("md") {
-        grid-column: 3 / 11;
+        grid-column: 2 / 12;
       }
     }
   }
@@ -65,6 +56,7 @@ const classes = computed(() => {
   }
 
   &-items {
+    max-width: 820px;
     list-style-type: disc;
     padding-left: 1.4em;
   }

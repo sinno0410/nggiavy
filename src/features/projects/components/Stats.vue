@@ -34,7 +34,7 @@ const props = defineProps<Props>();
   }
 
   @include mixins.mq("lg") {
-    grid-column: 3 / 11;
+    grid-column: 2 / 12;
   }
 
   &-title {

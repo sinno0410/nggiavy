@@ -9,7 +9,7 @@ export default {
   theme: "light",
   tags: ["research", "tiktok", "analytics"],
   description:
-    "Student research · Faculty of Commerce, Van Lang University · 2024<br/><br/>Author, under the direct supervision of MSc. Nguyễn Hữu Lan Thuỷ. The study received the highest score from the defense panel, placed in the <b>overall Top 3</b> and was selected for presentation at the research conference.",
+    "Student research · Faculty of Commerce, Van Lang University · 2024<br/><br/>Author, under the direct supervision of MSc. Nguyễn Hữu Lan Thuỷ. The study received the highest score from the defense panel. It was carried out over 5 months, during which I worked hands-on on every research task, refining the content and results step by step to keep the study scientifically sound and practically useful.",
   components: [
     {
       type: "live",
@@ -27,8 +27,8 @@ export default {
             label: "social-presence factors",
           },
           {
-            value: "Top 3",
-            label: "overall, highest panel score",
+            value: "5 months",
+            label: "of hands-on research",
           },
         ],
         image: rs_presenting_portrait,
@@ -112,7 +112,7 @@ export default {
           "<b>Professionalism</b> and <b>entertainment</b> are the streamer traits that build both trust and flow.",
           "<b>Trust</b> and <b>flow</b> push impulse buying directly and carry the streamer's influence through to the purchase.",
           "<b>For produce sellers:</b> pair product expertise with an engaging, entertaining stream to turn viewers into buyers.",
-          "<b>Recognition:</b> highest score from the defense panel, overall Top 3, and selected for presentation at the research conference.",
+          "<b>Recognition:</b> highest score from the defense panel.",
         ],
       },
     },

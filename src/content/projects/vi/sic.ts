@@ -358,6 +358,7 @@ export default {
       props: {
         type: "video",
         src: sicPitchVideo,
+        controls: true,
         caption: "Pitching tại vòng Idea Innovation",
       },
     },

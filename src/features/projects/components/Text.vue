@@ -30,11 +30,12 @@ const classes = computed(() => {
   grid-column: 1 / 13;
 
   @include mixins.mq("md") {
-    grid-column: 3 / 11;
+    grid-column: 2 / 12;
   }
 
-  @include mixins.mq("lg") {
-    grid-column: 4 / 10;
+  // keep long copy readable while staying aligned with the other blocks
+  &-content {
+    max-width: 820px;
   }
 
   &-with-title {
@@ -47,5 +48,9 @@ const classes = computed(() => {
     font-size: var(--font-size-title-sm);
     line-height: var(--line-height-title);
   }
+}
+
+p.text {
+  max-width: 820px;
 }
 </style>

@@ -9,7 +9,7 @@ export default {
   theme: "light",
   tags: ["research", "tiktok", "analytics"],
   description:
-    "Nghiên cứu khoa học sinh viên · Khoa Thương mại, ĐH Văn Lang · 2024<br/><br/>Tác giả, dưới sự hướng dẫn trực tiếp của ThS. Nguyễn Hữu Lan Thuỷ. Đề tài đạt điểm cao nhất từ hội đồng phản biện, lọt <b>Top 3 chung cuộc</b> và được chọn trình bày tại hội nghị khoa học.",
+    "Nghiên cứu khoa học sinh viên · Khoa Thương mại, ĐH Văn Lang · 2024<br/><br/>Tác giả, dưới sự hướng dẫn trực tiếp của ThS. Nguyễn Hữu Lan Thuỷ. Đề tài đạt điểm cao nhất từ hội đồng phản biện. Nghiên cứu được thực hiện trong vòng 5 tháng. Trong suốt quá trình này, tôi trực tiếp tham gia triển khai các công việc nghiên cứu, từng bước hoàn thiện nội dung và kết quả nhằm đảm bảo tính khoa học, tính thực tiễn của đề tài.",
   components: [
     {
       type: "live",
@@ -27,8 +27,8 @@ export default {
             label: "yếu tố hiện diện xã hội",
           },
           {
-            value: "Top 3",
-            label: "chung cuộc, điểm cao nhất hội đồng",
+            value: "5 tháng",
+            label: "thực hiện nghiên cứu",
           },
         ],
         image: rs_presenting_portrait,
@@ -112,7 +112,7 @@ export default {
           "<b>Sự chuyên nghiệp</b> và <b>tính giải trí</b> của streamer là hai yếu tố tạo ra cả lòng tin lẫn trạng thái dòng chảy.",
           "<b>Lòng tin</b> và <b>trạng thái dòng chảy</b> thúc đẩy trực tiếp hành vi mua ngẫu hứng và truyền tải ảnh hưởng của streamer đến quyết định mua.",
           "<b>Với người bán nông sản:</b> kết hợp hiểu biết sản phẩm với cách dẫn dắt cuốn hút, giải trí để biến người xem thành người mua.",
-          "<b>Ghi nhận:</b> điểm cao nhất từ hội đồng phản biện, Top 3 chung cuộc và được chọn trình bày tại hội nghị khoa học.",
+          "<b>Ghi nhận:</b> điểm cao nhất từ hội đồng phản biện.",
         ],
       },
     },
