@@ -17,7 +17,7 @@ export interface Props {
   response: string[];
   /** Hypothesis ids drawn as supported, e.g. ["H3", "H4", "H9", "H11"]. */
   supported?: string[];
-  legend: { direct: string; mediation: string; supported?: string };
+  legend: { direct: string; mediation: string; supported?: string; rejected?: string };
   note?: string;
 }
 
@@ -152,6 +152,7 @@ const mediation = [
       <span class="sor-legend-item"><i class="sor-legend-line"></i>{{ props.legend.direct }}</span>
       <span class="sor-legend-item"><i class="sor-legend-line sor-legend-line-dash"></i>{{ props.legend.mediation }}</span>
       <span v-if="props.legend.supported" class="sor-legend-item"><i class="sor-legend-line sor-legend-line-on"></i>{{ props.legend.supported }}</span>
+      <span v-if="props.legend.rejected" class="sor-legend-item"><i class="sor-legend-line sor-legend-line-off"></i>{{ props.legend.rejected }}</span>
     </div>
     <p v-if="props.note" class="sor-note" v-html="props.note"></p>
   </div>
@@ -325,6 +326,10 @@ const mediation = [
 
       &-on {
         border-top-color: var(--color-accent-400);
+      }
+
+      &-off {
+        border-top-color: #b9c2b4;
       }
     }
   }
