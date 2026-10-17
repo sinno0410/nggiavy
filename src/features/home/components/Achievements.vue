@@ -24,9 +24,12 @@ const content = computed(() => (locale.value ? achievements[locale.value] : null
           <h3 class="achievements-group-title">{{ t("education") }}</h3>
           <div class="achievements-list">
             <article v-for="item in content.education" :key="item.school" class="achievements-card">
+              <img v-if="item.logo" :src="item.logo" :alt="item.school" class="achievements-card-logo" />
               <p class="achievements-card-meta">{{ item.period }}</p>
               <h4 class="achievements-card-title">{{ item.school }}</h4>
-              <p class="achievements-card-subtitle">{{ item.major }}</p>
+              <p class="achievements-card-subtitle">
+                {{ item.major }}<template v-if="item.faculty"> · {{ item.faculty }}</template>
+              </p>
               <p v-if="item.note" class="achievements-card-badge">{{ item.note }}</p>
             </article>
           </div>
@@ -244,6 +247,23 @@ const content = computed(() => (locale.value ? achievements[locale.value] : null
     border-radius: var(--radius-lg);
     background-color: var(--color-beige-500);
     border: var(--stroke-md) solid var(--color-beige-700);
+
+    &-logo {
+      display: block;
+      height: 52px;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: left center;
+      margin-bottom: var(--space-sm);
+      padding-bottom: var(--space-sm);
+      border-bottom: 1px solid var(--color-beige-700);
+      box-sizing: content-box;
+
+      @include mixins.mq("md") {
+        height: 60px;
+      }
+    }
 
     &-image {
       width: 100%;

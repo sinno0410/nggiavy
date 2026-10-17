@@ -5,6 +5,8 @@ import certHubspotContent from "../assets/images/certificates/hubspot-content-ma
 import certMetaMeasure from "../assets/images/certificates/meta-measure-optimize.webp";
 import certMetaSocial from "../assets/images/certificates/meta-social-media-management.webp";
 import certMetaAnalytics from "../assets/images/certificates/meta-marketing-analytics.webp";
+import logoVanlangVi from "../assets/images/education/vanlang-vi.webp";
+import logoVanlangCommerce from "../assets/images/education/vanlang-commerce.webp";
 import awardEbuzz from "../assets/images/projects/ebuzz/award.webp";
 import awardSic from "../assets/images/projects/sic/pitch.webp";
 import awardResearch from "../assets/images/projects/research/presenting.webp";
@@ -19,6 +21,9 @@ export interface EducationItem {
   major: string;
   period: string;
   note?: string;
+  /** School / faculty logo shown at the top of the card. */
+  logo?: string;
+  faculty?: string;
 }
 
 export interface AwardItem {
@@ -50,6 +55,8 @@ export const achievements: Record<Locale, AchievementsContent> = {
     education: [
       {
         school: "Van Lang University",
+        logo: logoVanlangCommerce,
+        faculty: "Faculty of Commerce",
         major: "Marketing – Digital Marketing",
         period: "2021 – 2025",
         note: "GPA 3.5",
@@ -130,6 +137,8 @@ export const achievements: Record<Locale, AchievementsContent> = {
     education: [
       {
         school: "Đại học Văn Lang",
+        logo: logoVanlangVi,
+        faculty: "Khoa Thương mại",
         major: "Marketing – Digital Marketing",
         period: "2021 – 2025",
         note: "GPA 3.5",
