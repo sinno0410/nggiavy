@@ -112,6 +112,16 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
         </div>
         <div class="box-details-items">
           <div class="box-details-item">
+            <span class="box-details-bullet" aria-hidden="true">✦</span>
+            <AppearingText
+              class="box-details-content-copy"
+              :text="t('born')"
+              :steps="3"
+              :duration="0.35"
+              @timeline:created="(tl: gsap.core.Timeline) => handleTimelineCreated(tl, 0.05)"
+            />
+          </div>
+          <div class="box-details-item">
             <PinIcon class="box-details-icon" />
             <AppearingText
               v-if="t('country')"
@@ -209,6 +219,17 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
     // allow longer locations (e.g. "Ho Chi Minh City, Vietnam") to wrap inside the box
     white-space: normal;
     min-height: var(--icon-size-sm);
+  }
+
+  &-bullet {
+    width: var(--icon-size-xxs);
+    text-align: center;
+    font-size: 11px;
+    color: var(--color-white-400);
+
+    @include mixins.mq("md") {
+      width: var(--icon-size-xs);
+    }
   }
 
   &-icon {

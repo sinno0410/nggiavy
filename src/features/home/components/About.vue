@@ -4,12 +4,14 @@ import { transitions } from "../../../animations";
 import BoxDescription from "./BoxDescription.vue";
 import BoxServices from "./BoxServices.vue";
 import BoxDetails from "./BoxDetails.vue";
+import BoxPersonality from "./BoxPersonality.vue";
 import ProgressCount from "./ProgressCount.vue";
 
 const contentDescriptionRef = ref<HTMLDivElement | null>(null);
 const contentServicesRef = ref<HTMLDivElement | null>(null);
 const contentDetailsRef = ref<HTMLDivElement | null>(null);
 const contentProgressCountRef = ref<HTMLDivElement | null>(null);
+const contentPersonalityRef = ref<HTMLDivElement | null>(null);
 const tlDescriptionRef = ref<gsap.core.Timeline | null>(null);
 const tlServicesRef = ref<gsap.core.Timeline | null>(null);
 const tlDetailsRef = ref<gsap.core.Timeline | null>(null);
@@ -27,8 +29,10 @@ watchEffect((onInvalidate) => {
     contentServicesRef.value &&
     contentDetailsRef.value &&
     tlDetailsRef.value &&
-    contentProgressCountRef.value
+    contentProgressCountRef.value &&
+    contentPersonalityRef.value
   ) {
+    const personalityInline = contentDescriptionRef.value.querySelector<HTMLElement>(".box-description-personality");
     transitions.about.setup({
       about: props.spacerRef,
       contentDescription: contentDescriptionRef.value,
@@ -38,6 +42,8 @@ watchEffect((onInvalidate) => {
       contentDetails: contentDetailsRef.value,
       tlDetails: tlDetailsRef.value,
       contentProgressCount: contentProgressCountRef.value,
+      contentPersonality: contentPersonalityRef.value,
+      contentPersonalityInline: personalityInline,
     });
   }
 
@@ -57,6 +63,9 @@ watchEffect((onInvalidate) => {
     </div>
     <div ref="contentServicesRef" class="about-services">
       <BoxServices @timeline:created="(tl: gsap.core.Timeline) => (tlServicesRef = tl)" />
+    </div>
+    <div ref="contentPersonalityRef" class="about-personality">
+      <BoxPersonality />
     </div>
     <div ref="contentProgressCountRef" class="about-progress-count">
       <ProgressCount />
@@ -82,7 +91,8 @@ watchEffect((onInvalidate) => {
 
   &-details,
   &-description,
-  &-services {
+  &-services,
+  &-personality {
     display: flex;
     justify-content: center;
     align-items: center;

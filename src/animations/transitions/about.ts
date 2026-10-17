@@ -22,8 +22,12 @@ const setup = ({
   tlDetails,
   contentDetails,
   contentProgressCount,
+  contentPersonality,
+  contentPersonalityInline,
 }: {
   about: HTMLElement;
+  contentPersonality: HTMLDivElement;
+  contentPersonalityInline: HTMLElement | null;
   tlDescription: gsap.core.Timeline;
   contentDescription: HTMLDivElement;
   tlServices: gsap.core.Timeline;
@@ -43,6 +47,8 @@ const setup = ({
     tlDetails,
     contentDetails,
     contentProgressCount,
+    contentPersonality,
+    contentPersonalityInline,
   });
   setupOutAnimation(about);
   setupScenesAnimation(about);
@@ -187,8 +193,12 @@ const setupSectionsAnimation = ({
   tlDetails,
   contentDetails,
   contentProgressCount,
+  contentPersonality,
+  contentPersonalityInline,
 }: {
   about: HTMLElement;
+  contentPersonality: HTMLDivElement;
+  contentPersonalityInline: HTMLElement | null;
   contentDescription: HTMLDivElement;
   contentServices: HTMLDivElement;
   contentDetails: HTMLDivElement;
@@ -212,10 +222,22 @@ const setupSectionsAnimation = ({
     tl.to(completed, { value: true, duration: 0 }, 1);
 
     if (isLandscape) {
-      // Equal spacing between three animations: 0, 0.275, 0.55
+      // Four stages, matching the 25 / 50 / 75 / 100 % counter:
+      // details → skills → description → personality
       const DETAILS_DELAY = 0;
-      const DESCRIPTION_DELAY = 0.4;
-      const SERVICES_DELAY = 0.8;
+      const SERVICES_DELAY = 0.27;
+      const DESCRIPTION_DELAY = 0.54;
+      const PERSONALITY_DELAY = 0.81;
+
+      gsap.set(contentPersonality, { opacity: 0 });
+      if (contentPersonalityInline) {
+        tl.fromTo(
+          contentPersonalityInline,
+          { opacity: 0, y: 12 },
+          { opacity: 1, y: 0, duration: 0.15, ease: "power1.out" },
+          PERSONALITY_DELAY,
+        );
+      }
 
       // Details animation (first, only on landscape)
       tl.fromTo(contentDetails, { opacity: 0 }, { opacity: 1, duration: 0.15, ease: "power1.out" }, DETAILS_DELAY);
@@ -243,13 +265,11 @@ const setupSectionsAnimation = ({
         tlServices?.play();
       }, SERVICES_DELAY);
     } else {
-      // Mobile: only description and services (details hidden on portrait)
+      // Portrait: description (with name & location) → skills → personality
       const DESCRIPTION_DELAY = 0;
-      const SERVICES_DELAY = 0.6;
+      const SERVICES_DELAY = 0.33;
+      const PERSONALITY_DELAY = 0.66;
 
-      // Details animation disabled - BoxDetails is hidden on portrait
-
-      // Description animation
       tl.fromTo(
         contentDescription,
         { opacity: 0, y: "10vh" },
@@ -261,16 +281,23 @@ const setupSectionsAnimation = ({
         tlDescription?.play();
       }, DESCRIPTION_DELAY);
 
-      // Services animation
       tl.fromTo(
         contentServices,
         { opacity: 0, y: "10vh" },
         { opacity: 1, y: "0vh", duration: 0.15, ease: "power1.out" },
         SERVICES_DELAY,
       );
+      tl.to(contentServices, { opacity: 0, y: "-10vh", duration: 0.15, ease: "power1.out" }, PERSONALITY_DELAY - 0.075);
       tl.add(() => {
         tlServices?.play();
       }, SERVICES_DELAY);
+
+      tl.fromTo(
+        contentPersonality,
+        { opacity: 0, y: "10vh" },
+        { opacity: 1, y: "0vh", duration: 0.15, ease: "power1.out" },
+        PERSONALITY_DELAY,
+      );
 
       // ProgressCount animation - fade in on portrait, never fade out
       tl.fromTo(

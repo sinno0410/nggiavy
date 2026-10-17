@@ -99,7 +99,7 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
     <div ref="wrapperRef" class="box-description">
       <div class="box-description-content">
         <div class="box-description-details">
-          <p class="box-description-details-name">Da Vỹ</p>
+          <p class="box-description-details-name">Da Vỹ <span class="box-description-details-year">'03</span></p>
           <div class="box-description-details-location">
             <PinIcon class="box-description-details-location-icon" />
             <p class="box-description-details-location-copy">{{ t("country") }}</p>
@@ -113,6 +113,10 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
             :duration="0.7"
             @timeline:created="(tl: gsap.core.Timeline) => handleTimelineCreated(tl, 0)"
           />
+        </div>
+        <div class="box-description-personality">
+          <span class="box-description-personality-badge">INTP</span>
+          <p class="box-description-personality-copy">{{ t("personality") }}</p>
         </div>
       </div>
     </div>
@@ -168,6 +172,12 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
     &-name {
       font-size: var(--font-size-title-xs);
       font-weight: 700;
+    }
+
+    &-year {
+      font-size: var(--font-size-sm);
+      font-weight: 400;
+      opacity: 0.75;
     }
 
     &-location {
@@ -229,6 +239,41 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
 
       @include mixins.mq("md") {
         padding: var(--space-sm) var(--space-md);
+      }
+    }
+  }
+
+  &-personality {
+    display: none;
+
+    @include mixins.landscape {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-xs);
+      margin-top: var(--space-sm);
+      padding-top: var(--space-sm);
+      border-top: 1px dashed var(--color-cyan-400);
+      opacity: 0;
+    }
+
+    &-badge {
+      flex: none;
+      padding: 2px 8px;
+      border: var(--stroke-sm) solid var(--color-cyan-400);
+      border-radius: 999px;
+      font-size: var(--font-size-sm);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      background-color: var(--color-cyan-400);
+      color: var(--color-hologram-bottom, #0b2a33);
+    }
+
+    &-copy {
+      font-size: var(--font-size-xs);
+      line-height: 1.45;
+
+      @include mixins.landscape-large {
+        font-size: var(--font-size-sm);
       }
     }
   }

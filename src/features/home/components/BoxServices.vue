@@ -106,24 +106,49 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
   timelines.value = updatedTimelines;
 };
 
-const SERVICES_EN = [
-  { name: "Social Media" },
-  { name: "Content Creation" },
-  { name: "SEO On-Page" },
-  { name: "Market Research" },
-  { name: "Paid Advertising" },
-] as const satisfies { name: string }[];
+const SKILLS = {
+  en: {
+    core: [
+      "Social Media",
+      "Content Creation",
+      "On-page SEO Content",
+      "Market Research",
+      "Meta Advertising",
+      "Marketing Automation & AI Literacy",
+    ],
+    soft: [
+      "Customer-Centric Thinking",
+      "Cross-Functional Collaboration",
+      "Creative Problem-Solving",
+      "Time Management",
+      "Adaptability & Resilience",
+    ],
+  },
+  vi: {
+    core: [
+      "Social Media",
+      "Sáng tạo nội dung",
+      "SEO content On-page",
+      "Nghiên cứu thị trường",
+      "Meta Advertising",
+      "Marketing Automation & AI Literacy",
+    ],
+    soft: [
+      "Customer-Centric Thinking",
+      "Cross-Functional Collaboration",
+      "Creative Problem-Solving",
+      "Quản lý thời gian",
+      "Adaptability & Resilience",
+    ],
+  },
+} as const;
 
-const SERVICES_VI = [
-  { name: "Social Media" },
-  { name: "Sáng tạo nội dung" },
-  { name: "SEO On-Page" },
-  { name: "Nghiên cứu thị trường" },
-  { name: "Quảng cáo trả phí" },
-] as const satisfies { name: string }[];
-
-const services = computed(() => {
-  return locale.value === "en" ? SERVICES_EN : SERVICES_VI;
+const groups = computed(() => {
+  const skills = locale.value === "en" ? SKILLS.en : SKILLS.vi;
+  return [
+    { key: "core", title: t("core-skills"), items: skills.core },
+    { key: "soft", title: t("soft-skills"), items: skills.soft },
+  ];
 });
 </script>
 
@@ -139,16 +164,23 @@ const services = computed(() => {
             @timeline:created="(tl: gsap.core.Timeline) => handleTimelineCreated(tl, 0)"
           />
         </div>
-        <div class="box-services-list">
-          <div class="box-services-list-item" v-for="(service, index) in services" :key="service.name">
-            <p class="box-services-list-item-name">
-              <AppearingText
-                :text="service.name"
-                :steps="1"
-                :duration="0.35"
-                @timeline:created="(tl: gsap.core.Timeline) => handleTimelineCreated(tl, 0.15 + index * 0.1)"
-              />
-            </p>
+        <div class="box-services-groups">
+          <div v-for="(group, groupIndex) in groups" :key="group.key" class="box-services-group">
+            <p class="box-services-group-title">{{ group.title }}</p>
+            <div class="box-services-list">
+              <div class="box-services-list-item" v-for="(service, index) in group.items" :key="service">
+                <p class="box-services-list-item-name">
+                  <AppearingText
+                    :text="service"
+                    :steps="1"
+                    :duration="0.35"
+                    @timeline:created="
+                      (tl: gsap.core.Timeline) => handleTimelineCreated(tl, 0.15 + (groupIndex * 6 + index) * 0.06)
+                    "
+                  />
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -177,8 +209,8 @@ const services = computed(() => {
   }
 
   @include mixins.landscape-large {
-    width: 380px;
-    max-width: calc(var(--svw) * 36);
+    width: 460px;
+    max-width: calc(var(--svw) * 38);
   }
 
   &::after,
@@ -234,10 +266,31 @@ const services = computed(() => {
     }
   }
 
-  &-list {
+  &-groups {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+  }
+
+  &-group {
     display: flex;
     flex-direction: column;
     gap: var(--space-xs);
+    min-width: 0;
+
+    &-title {
+      font-size: var(--font-size-xs);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 
     &-item {
       display: flex;
@@ -257,14 +310,11 @@ const services = computed(() => {
       }
 
       &-name {
-        font-size: var(--font-size-md);
-
-        @include mixins.landscape {
-          font-size: var(--font-size-sm);
-        }
+        font-size: var(--font-size-sm);
+        line-height: 1.3;
 
         @include mixins.landscape-large {
-          font-size: var(--font-size-lg);
+          font-size: var(--font-size-md);
         }
       }
     }
