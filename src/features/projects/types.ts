@@ -14,6 +14,7 @@ import type { Props as DashboardProps } from "./components/Dashboard.vue";
 import type { Props as LiveProps } from "./components/LiveBanner.vue";
 import type { Props as SorProps } from "./components/SorDiagram.vue";
 import type { Props as ReelsProps } from "./components/Reels.vue";
+import type { Props as SpotlightProps } from "./components/Spotlight.vue";
 
 export interface ProjectComponents {
   imageText: ImageTextProps;
@@ -32,6 +33,7 @@ export interface ProjectComponents {
   live: LiveProps;
   sor: SorProps;
   reels: ReelsProps;
+  spotlight: SpotlightProps;
 }
 
 export type ProjectComponent = {

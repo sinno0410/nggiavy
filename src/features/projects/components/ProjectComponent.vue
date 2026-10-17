@@ -15,6 +15,7 @@ import Dashboard from "./Dashboard.vue";
 import LiveBanner from "./LiveBanner.vue";
 import SorDiagram from "./SorDiagram.vue";
 import Reels from "./Reels.vue";
+import Spotlight from "./Spotlight.vue";
 
 import type { ProjectComponents, ProjectComponentProps } from "../types";
 
@@ -41,6 +42,7 @@ const components = {
   live: LiveBanner,
   sor: SorDiagram,
   reels: Reels,
+  spotlight: Spotlight,
 } as const satisfies Record<keyof ProjectComponents, any>;
 
 const Component = components[type];

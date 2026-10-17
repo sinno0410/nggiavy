@@ -150,7 +150,20 @@ export default {
       type: "text",
       props: {
         title: "03 · “Nhớt lành cho lái sành” campaign",
-        text: "A campaign around ZIC's “clean oil” message: VHVI-technology lubricants that help reduce carbon emissions and urban air pollution. It combined a social post series with two green activations where riders could experience the brand in person.",
+        text: "A campaign built on ZIC's commitment to the environment: eco-friendly motorbike oils that cut carbon emissions while improving engine performance. It combined a social post series with two green activations where riders could experience the brand in person.",
+      },
+    },
+    {
+      type: "spotlight",
+      props: {
+        title: "The big idea",
+        strengthsTitle: "Root strength",
+        strengths: ["Fuel saving and engine cleanliness", "Advanced Yubase base-oil technology", "Longer oil-change intervals", "Less product waste", "Lower carbon emissions and air pollution"],
+        insightTitle: "Consumer insight",
+        insight: "I want to help protect the environment, but changing my daily habits feels hard and green products seem expensive. I want eco-friendly products at a fair price that don't disrupt my day or my work.",
+        taglineTitle: "Tagline",
+        tagline: "Chất chuyển động, xanh thời đại",
+        role: "<b>My role:</b> helped uncover the insight, came up with the tagline and wrote the campaign content. The tagline led to the “Nhớt lành cho lái sành” campaign, with Green Pop Up and ZIC Green Station as its on-ground activations.",
       },
     },
     {

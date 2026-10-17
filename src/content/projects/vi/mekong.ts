@@ -150,7 +150,20 @@ export default {
       type: "text",
       props: {
         title: "03 · Chiến dịch “Nhớt lành cho lái sành”",
-        text: "Chiến dịch truyền thông thông điệp nhớt “lành”: dầu nhớt ZIC công nghệ VHVI giúp giảm khí thải carbon và ô nhiễm không khí đô thị. Chiến dịch kết hợp chuỗi bài đăng social với hai hoạt động xanh để người dùng trải nghiệm thương hiệu trực tiếp.",
+        text: "Chiến dịch xuất phát từ cam kết bảo vệ môi trường của ZIC: dầu nhớt xe máy thân thiện với môi trường, giúp giảm khí thải carbon và nâng cao hiệu suất động cơ. Chiến dịch kết hợp chuỗi bài đăng social với hai hoạt động xanh để người dùng trải nghiệm thương hiệu trực tiếp.",
+      },
+    },
+    {
+      type: "spotlight",
+      props: {
+        title: "Ý tưởng lớn",
+        strengthsTitle: "Root strength",
+        strengths: ["Tiết kiệm nhiên liệu và độ sạch", "Công nghệ dầu gốc tiên tiến Yubase", "Chu kỳ thay dầu kéo dài", "Giảm rác thải sản phẩm", "Giảm khí thải carbon, giảm ô nhiễm không khí"],
+        insightTitle: "Insight",
+        insight: "Tôi muốn góp phần bảo vệ môi trường nhưng cảm thấy khó khăn trong việc thay đổi thói quen hằng ngày và lo ngại chi phí sản phẩm cao. Tôi mong muốn những sản phẩm thân thiện với môi trường, giá cả hợp lý mà không ảnh hưởng hoạt động hằng ngày và gián đoạn công việc.",
+        taglineTitle: "Tagline",
+        tagline: "Chất chuyển động, xanh thời đại",
+        role: "<b>Vai trò của tôi:</b> góp phần tìm kiếm insight, đề xuất tagline và viết nội dung truyền thông. Từ tagline ra đời chiến dịch “Nhớt lành cho lái sành”, với Green Pop Up và ZIC Green Station là hai hoạt động sự kiện trong chiến dịch.",
       },
     },
     {
