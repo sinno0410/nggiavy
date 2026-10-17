@@ -47,7 +47,7 @@ const props = defineProps<Props>();
     </div>
     <div
       v-else-if="props.variant === 'collage'"
-      class="project-gallery-collage"
+      :class="['project-gallery-collage', { 'project-gallery-collage-reels': props.images.every((image) => !!image.video) }]"
     >
       <template v-for="(image, index) in props.images" :key="index">
         <div v-if="image.video" class="project-gallery-sticker project-gallery-sticker-video">
@@ -334,6 +334,16 @@ const props = defineProps<Props>();
     }
   }
 
+  /* a pair: two equal tiles side by side (stacked on mobile) */
+  .project-gallery-sticker:nth-child(6n + 2):last-child {
+    grid-column: 1 / -1;
+    grid-row: span 2;
+
+    @media (min-width: 840px) {
+      grid-column: span 3;
+    }
+  }
+
   /* asterisk stickers */
   .project-gallery-sticker:nth-child(4n + 1)::after,
   .project-gallery-sticker:nth-child(4n + 3)::after {
@@ -358,6 +368,33 @@ const props = defineProps<Props>();
 
   .project-gallery-sticker-video video {
     background: #000;
+  }
+}
+
+/* all-video collage: a row of tilted 9:16 phones */
+.project-gallery-collage.project-gallery-collage-reels {
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  grid-auto-rows: auto;
+  gap: 30px 26px;
+
+  @media (min-width: 840px) {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 300px));
+  }
+
+  .project-gallery-sticker {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    aspect-ratio: 9 / 16;
+    border-radius: 22px;
+
+    video {
+      border-radius: 16px;
+    }
+  }
+
+  .project-gallery-tag {
+    top: 18px;
+    bottom: auto;
   }
 }
 

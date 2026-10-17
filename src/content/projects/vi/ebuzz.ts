@@ -191,6 +191,7 @@ export default {
     {
       type: "gallery",
       props: {
+        variant: "collage",
         title: "05 · Chiến dịch ra mắt phim",
         text: "Chuỗi 5 nội dung tạo tò mò trước và sau khi phim chính thức lên sóng: Poster → Coming soon → Trailer → Official → BTS. <a href=\"https://www.tiktok.com/@poeoenty_/video/7509836124106296584\" target=\"_blank\" rel=\"noopener\">Xem phim đầy đủ trên TikTok ↗</a>",
         columns: 3,
@@ -216,6 +217,7 @@ export default {
     {
       type: "gallery",
       props: {
+        variant: "collage",
         title: "06 · Đêm Chung kết",
         text: "Team Đẹp thuyết trình trên sân khấu và được vinh danh giải Video chất lượng cao.",
         columns: 2,

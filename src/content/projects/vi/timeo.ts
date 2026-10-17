@@ -532,6 +532,7 @@ export default {
     {
       type: "gallery",
       props: {
+        variant: "marquee",
         title: "Bài đăng tiêu biểu",
         text: "8 bài đăng Facebook tiêu biểu trong lịch nội dung. Bấm vào ảnh để mở bài gốc.",
         columns: 4,

@@ -532,6 +532,7 @@ export default {
     {
       type: "gallery",
       props: {
+        variant: "marquee",
         title: "Featured posts",
         text: "Eight Facebook posts from the calendar. Click an image to open the original post.",
         columns: 4,

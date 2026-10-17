@@ -191,6 +191,7 @@ export default {
     {
       type: "gallery",
       props: {
+        variant: "collage",
         columns: 2,
         images: [
           {

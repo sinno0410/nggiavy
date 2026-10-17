@@ -181,6 +181,7 @@ export default {
     {
       type: "gallery",
       props: {
+        variant: "marquee",
         columns: 9,
         mobileColumns: 3,
         aspect: "3 / 4",
@@ -218,6 +219,7 @@ export default {
     {
       type: "gallery",
       props: {
+        variant: "collage",
         title: "06 · Video tiêu biểu",
         text: "Hoàng hôn biển, mẹo tạo dáng và mẹo chụp ảnh — những dạng nội dung giúp kênh tăng trưởng. <a href=\"https://www.tiktok.com/@_ngththuyz\" target=\"_blank\" rel=\"noopener\">Xem thêm trên TikTok ↗</a>",
         columns: 3,

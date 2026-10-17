@@ -191,6 +191,7 @@ export default {
     {
       type: "gallery",
       props: {
+        variant: "collage",
         title: "05 · Launch campaign",
         text: "Five posts built anticipation before and after the official film: Poster → Coming soon → Trailer → Official → BTS. <a href=\"https://www.tiktok.com/@poeoenty_/video/7509836124106296584\" target=\"_blank\" rel=\"noopener\">Watch the full film on TikTok ↗</a>",
         columns: 3,
@@ -216,6 +217,7 @@ export default {
     {
       type: "gallery",
       props: {
+        variant: "collage",
         title: "06 · Grand final",
         text: "Team Đẹp presented on stage and was honoured with the High-Quality Video award.",
         columns: 2,

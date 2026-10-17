@@ -181,6 +181,7 @@ export default {
     {
       type: "gallery",
       props: {
+        variant: "marquee",
         columns: 9,
         mobileColumns: 3,
         aspect: "3 / 4",
@@ -218,6 +219,7 @@ export default {
     {
       type: "gallery",
       props: {
+        variant: "collage",
         title: "06 · Featured videos",
         text: "Beach sunsets, posing tips and camera tricks — the formats that drove the channel's growth. <a href=\"https://www.tiktok.com/@_ngththuyz\" target=\"_blank\" rel=\"noopener\">See more on TikTok ↗</a>",
         columns: 3,
