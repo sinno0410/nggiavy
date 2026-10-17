@@ -89,7 +89,7 @@ export default {
       type: "text",
       props: {
         title: "02 · Chiến dịch Zalo Mini App “Chăm Xe” – Tết 2026",
-        text: "Chiến dịch digital ra mắt Zalo Mini App <b>Chăm Xe</b> cho ZIC và Mekong, nơi người dùng đặt lịch thay nhớt, tích điểm đổi quà và nhận nhắc lịch thay nhớt. Big idea: <b>“Vui như Tết – Vui chăm xe – Tết chăm xe”</b>, với 5 content pillar xây theo “cái Tết” của từng nhóm khách hàng.<br/><br/>Tôi phụ trách xây dựng format nội dung và chọn kênh: tổng hợp điểm chạm theo hành trình của từng nhóm, chọn format và asset phù hợp, sau đó ước tính KPI và chi phí. Đồng thời theo dõi timeline đăng bài, gắn link UTM và đo lường kết quả từng bài.",
+        text: "Chiến dịch digital ra mắt Zalo Mini App <b>Chăm Xe</b> cho ZIC và Mekong, nơi người dùng đặt lịch thay nhớt, tích điểm đổi quà và nhận nhắc lịch thay nhớt. Big idea: <b>“Vui như Tết – Vui chăm xe – Tết chăm xe”</b>, với 5 content pillar xây theo “cái Tết” của từng nhóm khách hàng.<br/><br/><b>Vai trò của tôi:</b> Tôi tham gia chiến dịch từ khâu kế hoạch đến triển khai:<br/>✱ <b>Phân bổ KPI theo kênh</b>: chia mục tiêu đăng ký và ngân sách cho Facebook, Zalo, YouTube của từng thương hiệu.<br/>✱ <b>Lên kế hoạch hoạt động từng kênh</b>: điểm chạm theo hành trình khách hàng, format, asset và timeline đăng bài.<br/>✱ <b>Viết content</b> cho chuỗi bài ra mắt Mini App và các bài hướng dẫn đăng ký, tích điểm.<br/>✱ <b>Chạy quảng cáo</b>, gắn UTM và theo dõi kết quả từng bài.<br/><br/><b>Điều tôi học được:</b> đây là lần đầu tôi tự phân bổ KPI và ngân sách cho một chiến dịch đa kênh. Khi lập kế hoạch, tôi nhận ra chi phí dự kiến cho mỗi lượt đăng ký chênh lệch rất lớn giữa các kênh, và rút ra bài học phải thử nghiệm nhỏ trước khi dồn ngân sách vào một kênh.",
       },
     },
     {
@@ -139,8 +139,8 @@ export default {
     {
       type: "table",
       props: {
-        title: "Phễu Mini App & ngân sách quảng cáo",
-        text: "Mục tiêu: <b>2.000 lượt đăng ký Mini App</b> và <b>50 đơn hàng đầu tiên</b>. Phễu: tiếp cận → click → đăng ký → phát sinh đơn hàng.",
+        title: "Kế hoạch phân bổ KPI & ngân sách theo kênh",
+        text: "Kế hoạch tôi xây dựng cho chiến dịch. Mục tiêu: <b>2.000 lượt đăng ký Mini App</b> và <b>50 đơn hàng đầu tiên</b>. Phễu: tiếp cận → click → đăng ký → phát sinh đơn hàng. Số liệu là KPI kế hoạch, không phải kết quả thực tế.",
         columns: ["Thương hiệu · kênh", "Ngân sách (VNĐ)", "Click", "Đăng ký", "CAC (VNĐ)"],
         minWidth: 640,
         source: "https://docs.google.com/spreadsheets/d/1HUdr9yKnHrq64t7XiJX8VyP1Ui0to8lgl5cJNfRECuE/edit?usp=sharing",

@@ -89,7 +89,7 @@ export default {
       type: "text",
       props: {
         title: "02 · Zalo Mini App “Chăm Xe” – Tet 2026 campaign",
-        text: "A digital campaign to launch the <b>Chăm Xe</b> Zalo Mini App for ZIC and Mekong, where riders book oil changes, collect points for gifts and get oil-change reminders. Big idea: <b>“Vui như Tết – Vui chăm xe – Tết chăm xe”</b> (Happy as Tet – happy bike care), with five content pillars built around each customer group's Tet.<br/><br/>I worked on the content formats and channel selection: mapping touchpoints along each group's journey, choosing formats and assets, then estimating KPIs and costs. I also tracked the posting timeline, UTM links and the results of every post.",
+        text: "A digital campaign to launch the <b>Chăm Xe</b> Zalo Mini App for ZIC and Mekong, where riders book oil changes, collect points for gifts and get oil-change reminders. Big idea: <b>“Vui như Tết – Vui chăm xe – Tết chăm xe”</b> (Happy as Tet – happy bike care), with five content pillars built around each customer group's Tet.<br/><br/><b>My role:</b> I worked on the campaign from planning through execution:<br/>✱ <b>Allocating KPIs by channel</b>: splitting the registration targets and budget across Facebook, Zalo and YouTube for each brand.<br/>✱ <b>Planning each channel's activity</b>: touchpoints along the customer journey, formats, assets and the posting timeline.<br/>✱ <b>Writing content</b> for the Mini App launch series and the sign-up and points how-to posts.<br/>✱ <b>Running ads</b>, adding UTM links and tracking the results of every post.<br/><br/><b>What I learned:</b> this was my first time allocating KPIs and budget for a multi-channel campaign myself. The plan showed a very wide gap in expected cost per registration between channels, which taught me to test small before committing budget to any one channel.",
       },
     },
     {
@@ -139,8 +139,8 @@ export default {
     {
       type: "table",
       props: {
-        title: "Mini App funnel & ad budget",
-        text: "Target: <b>2,000 Mini App registrations</b> and <b>50 first orders</b>. Funnel: reach → click → registration → first order.",
+        title: "KPI & ad budget plan by channel",
+        text: "The plan I built for the campaign. Target: <b>2,000 Mini App registrations</b> and <b>50 first orders</b>. Funnel: reach → click → registration → first order. Figures are planned KPIs, not results.",
         columns: ["Brand · channel", "Budget (VND)", "Clicks", "Registrations", "CAC (VND)"],
         minWidth: 640,
         source: "https://docs.google.com/spreadsheets/d/1HUdr9yKnHrq64t7XiJX8VyP1Ui0to8lgl5cJNfRECuE/edit?usp=sharing",
