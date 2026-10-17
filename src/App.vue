@@ -12,7 +12,10 @@ import Home from "./features/home/components/Home.vue";
 import Project from "./features/projects/components/Project.vue";
 import { useProjectTransition } from "./composables/useProjectTransition";
 import { useScroll } from "./composables/useScroll";
-import { projectVisible } from "./composables/useRouteObserver";
+import { projectVisible, path } from "./composables/useRouteObserver";
+import NotFound from "./components/NotFound.vue";
+import { projectIds } from "./content/projects";
+import { computed } from "vue";
 import ProjectBackground from "./features/projects/components/ProjectBackground.vue";
 import { useClickSound } from "./features/sounds/composables/useClickSounds";
 //import { useHoverSound } from "./features/sounds/composables/useHoverSounds";
@@ -29,6 +32,13 @@ useRouteObserver();
 useClickSound();
 //useHoverSound();
 const { isTouch } = useAgent();
+
+const isNotFound = computed(() => {
+  const clean = path.value.replace(/\/+$/, "") || "/";
+  if (clean === "/") return false;
+  const match = clean.match(/^\/project\/([^/]+)$/);
+  return !(match && projectIds.includes(match[1]!));
+});
 </script>
 
 <template>
@@ -54,6 +64,8 @@ const { isTouch } = useAgent();
   </div>
 
   <Cursor v-if="!isTouch" />
+
+  <NotFound v-if="isNotFound" />
 </template>
 
 <style lang="scss">

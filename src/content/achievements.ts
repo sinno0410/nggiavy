@@ -83,12 +83,12 @@ export const achievements: Record<Locale, AchievementsContent> = {
       },
       {
         title: "Top 3",
-        event: "Scientific Research",
+        event: "Academic Research",
         year: "2024",
         image: awardResearch,
         link: "/project/research",
         description:
-          "“Research on Streamer Social Presence and Impulsive Buying Behavior” received the highest score from the defense panel. It was carried out over 5 months, with me working hands-on on every research task to keep the study scientifically sound and practical.",
+          "“Research on Streamer Social Presence and Impulsive Buying Behavior” received the highest score from the defence panel. It was carried out over 5 months, with me working hands-on on every research task to keep the study scientifically sound and practical.",
       },
     ],
     certificates: [

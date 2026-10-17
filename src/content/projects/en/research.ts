@@ -5,11 +5,11 @@ import rs_presenting_portrait from "../../../assets/images/projects/research/pre
 import type { ProjectContent } from "../../types";
 
 export default {
-  title: "Scientific Research",
+  title: "Academic Research",
   theme: "light",
   tags: ["research", "tiktok", "analytics"],
   description:
-    "Student research · Faculty of Commerce, Van Lang University · 2024<br/><br/>Author, under the direct supervision of MSc. Nguyễn Hữu Lan Thuỷ. The study received the highest score from the defense panel. It was carried out over 5 months, during which I worked hands-on on every research task, refining the content and results step by step to keep the study scientifically sound and practically useful.",
+    "Student research · Faculty of Commerce, Van Lang University · 2024<br/><br/>Author, under the direct supervision of MSc. Nguyễn Hữu Lan Thuỷ. The study received the highest score from the defence panel. It was carried out over 5 months, during which I worked hands-on on every research task, refining the content and results step by step to keep the study scientifically sound and practically useful.",
   components: [
     {
       type: "live",
@@ -64,7 +64,7 @@ export default {
           ["Consumer trust", "Lòng tin người tiêu dùng"],
           ["Flow state", "Trạng thái dòng chảy"],
         ],
-        response: ["Impulsive buying", "behaviour", "Hành vi mua hàng ngẫu hứng"],
+        response: ["Impulse buying", "behaviour", "Hành vi mua hàng ngẫu hứng"],
         supported: ["H1", "H3", "H4", "H5", "H7", "H8", "H9", "H10", "H11", "H12"],
         mediationLabels: ["H11 b, d ✓", "H12 b, d ✓"],
         legend: {
@@ -184,7 +184,7 @@ export default {
           "<b>Impulse buying:</b> flow is by far the strongest driver (0.556), ahead of trust (0.156).",
           "<b>Mediation:</b> only professionalism and entertainment reach the purchase through trust and flow — charisma and interactivity do not.",
           "<b>For produce sellers:</b> pair product expertise with an engaging, entertaining stream to turn viewers into buyers.",
-          "<b>Recognition:</b> highest score from the defense panel.",
+          "<b>Recognition:</b> highest score from the defence panel.",
         ],
       },
     },

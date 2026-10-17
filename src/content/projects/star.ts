@@ -186,7 +186,7 @@ export const star: Record<Locale, Record<string, StarSummary>> = {
       result:
         "The streamer's <b>professionalism</b> and <b>entertainment</b> build trust and flow, which in turn drive impulse buying.",
       metrics: [
-        { value: "Highest", label: "score from the defense panel" },
+        { value: "Highest", label: "score from the defence panel" },
         { value: "563", label: "valid responses" },
         { value: "0.556", label: "effect of flow → impulse buying" },
       ],

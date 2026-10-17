@@ -138,7 +138,7 @@ export default {
           ],
           [
             "Answer",
-            "<b>LopLoop</b> — high-fashion handbags from old tyres, recovering capital after <b>2 years</b>.",
+            "<b>LopLoop</b> — high-fashion handbags from old tyres, with a <b>2-year</b> payback.",
           ],
         ],
         source: "https://drive.google.com/file/d/1luVWu81kIVtgbojrTXti3rV8XJYzKzZ-/view?usp=sharing",
@@ -303,7 +303,7 @@ export default {
           },
           {
             value: "VND 905M",
-            label: "investment called for, for 23% equity",
+            label: "investment sought for 23% equity",
           },
           {
             value: "VND 3B",

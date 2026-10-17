@@ -186,7 +186,7 @@ export default {
       type: "gallery",
       props: {
         title: "Green Pop Up – Earth Day 2025",
-        text: "Parc Mall, District 8, HCMC · 19–22/04/2025, with Ve Chai Ơi. I handled communication before, during and after the event on the fanpage and website, and staffed the booth.",
+        text: "Parc Mall, District 8, HCMC · 19–22 Apr 2025, with Ve Chai Ơi. I handled communication before, during and after the event on the fanpage and website, and staffed the booth.",
         columns: 3,
         variant: "collage",
         images: [
@@ -203,14 +203,14 @@ export default {
       type: "gallery",
       props: {
         title: "ZIC Green Station – Earth Day 2026",
-        text: "13–24/04/2026, with Ve Chai Ơi, equo and Faith in Nature. Visitors brought 7 batteries, 10 cans or 10 plastic bottles to swap for a succulent or a sprout pencil.",
+        text: "13–24 Apr 2026, with Ve Chai Ơi, equo and Faith in Nature. Visitors brought 7 batteries, 10 cans or 10 plastic bottles to swap for a succulent or a sprout pencil.",
         columns: 4,
         variant: "collage",
         images: [
           { src: earth01, caption: "Choose clean oil, get a seedling" },
           { src: earth02, caption: "Double the good, spread the green vibe" },
           { src: earth03, caption: "Trade recyclables for green gifts" },
-          { src: earth04, caption: "ZIC Green Station x Faith in Nature" },
+          { src: earth04, caption: "ZIC Green Station × Faith in Nature" },
         ],
       },
     },
@@ -262,8 +262,8 @@ export default {
     {
       type: "gallery",
       props: {
-        title: "ZIC x Ashura – Vietnam Sport Show 2025",
-        text: "16/08/2025, SECC Hall B, with Decathlon and Coolmate.",
+        title: "ZIC × Ashura – Vietnam Sport Show 2025",
+        text: "16 Aug 2025, SECC Hall B, with Decathlon and Coolmate.",
         columns: 4,
         variant: "collage",
         images: [
@@ -278,7 +278,7 @@ export default {
       type: "gallery",
       props: {
         title: "Mekong Petrochem – Autumn Fair 2025",
-        text: "National Exhibition Center, 26/10/2025.",
+        text: "National Exhibition Center, 26 Oct 2025.",
         columns: 3,
         variant: "collage",
         images: [
@@ -296,7 +296,7 @@ export default {
       type: "list",
       props: {
         title: "Press & event links",
-        items: ["<a href=\"https://skzic.com.vn/vn/green-pop-up-2025.html\" target=\"_blank\" rel=\"noopener\">Green Pop Up – ZIC x Ve Chai Ơi</a>", "<a href=\"https://skzic.com.vn/vn/sk-zic-tai-ashura-calisthenics-battle-2025.html\" target=\"_blank\" rel=\"noopener\">ZIC x Ashura Calisthenics Battle</a>", "<a href=\"https://mekongpetro.com/vn/hoa-dau-mekong-tai-business-va-library-lan-thu-7.html\" target=\"_blank\" rel=\"noopener\">Mekong x YBA – Business & Library #7</a>", "<a href=\"https://tuoitre.vn/hoa-dau-mekong-tao-dau-an-tai-hoi-cho-mua-thu-2025-20251102140843013.htm\" target=\"_blank\" rel=\"noopener\">Mekong x Autumn Fair 2025</a>", "<a href=\"https://skzic.com.vn/vn/sk-zic-tai-cho-tet-cong-doan-xuan-2026.html\" target=\"_blank\" rel=\"noopener\">Trade Union Tet Fair 2026</a>"],
+        items: ["<a href=\"https://skzic.com.vn/vn/green-pop-up-2025.html\" target=\"_blank\" rel=\"noopener\">Green Pop Up – ZIC × Ve Chai Ơi</a>", "<a href=\"https://skzic.com.vn/vn/sk-zic-tai-ashura-calisthenics-battle-2025.html\" target=\"_blank\" rel=\"noopener\">ZIC × Ashura Calisthenics Battle</a>", "<a href=\"https://mekongpetro.com/vn/hoa-dau-mekong-tai-business-va-library-lan-thu-7.html\" target=\"_blank\" rel=\"noopener\">Mekong × YBA – Business & Library #7</a>", "<a href=\"https://tuoitre.vn/hoa-dau-mekong-tao-dau-an-tai-hoi-cho-mua-thu-2025-20251102140843013.htm\" target=\"_blank\" rel=\"noopener\">Mekong × Autumn Fair 2025</a>", "<a href=\"https://skzic.com.vn/vn/sk-zic-tai-cho-tet-cong-doan-xuan-2026.html\" target=\"_blank\" rel=\"noopener\">Trade Union Tet Fair 2026</a>"],
       },
     },
   ],

@@ -1,6 +1,6 @@
 {
   "rewrites": [
-    { "source": "/project/:id", "destination": "/project/:id.html" },
+    { "source": "/project/:id(mekong|semtek|timeo|ebuzz|sic|freelance|hatmuoi|research)", "destination": "/project/:id.html" },
     { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
   ]
 }

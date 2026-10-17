@@ -18,7 +18,7 @@ export default [
     title: "SEMTEK Agency",
     slug: "semtek",
     thumbnail: thumbnail_semtek,
-    description: "SEO on-page",
+    description: "On-page SEO",
   },
   {
     title: "TIMEO – Tufting Studio",

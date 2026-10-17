@@ -8,7 +8,7 @@ export default {
   theme: "light",
   tags: ["seo", "content", "research"],
   description:
-    "SEO On-page Intern · May 2024 – Dec 2024<br/><br/>Keyword research, SILO structure, an SEO content calendar and post-publication SEO audits for the agency's website, using Ahrefs, Google Search Console, Screaming Frog and Siteliner.",
+    "On-page SEO Intern · May 2024 – Dec 2024<br/><br/>Keyword research, SILO structure, an SEO content calendar and post-publication SEO audits for the agency's website, using Ahrefs, Google Search Console, Screaming Frog and Siteliner.",
   components: [
     {
       type: "stats",
@@ -105,7 +105,7 @@ export default {
       type: "text",
       props: {
         title: "02 · SEO content calendar",
-        text: "Built from keyword opportunities and search trends: <b>52 articles</b> across 7 topics, published 20/05 – 19/06/2024. I wrote SEO-optimised articles to improve organic visibility.<br/><br/>Content types – Informational: 33 · How-to guide: 12 · Informational + how-to: 7.",
+        text: "Built from keyword opportunities and search trends: <b>52 articles</b> across 7 topics, published 20 May – 19 Jun 2024. I wrote SEO-optimised articles to improve organic visibility.<br/><br/>Content types – Informational: 33 · How-to guide: 12 · Informational + how-to: 7.",
       },
     },
     {
@@ -192,7 +192,7 @@ export default {
       type: "text",
       props: {
         title: "03 · SEO audit",
-        text: "A post-publication audit of <b>37 checks</b> in 4 groups (01–22/07/2024): content quality, page titles and meta descriptions, heading structure, keyword placement and image optimisation. I used Screaming Frog to crawl the site and find incomplete elements, and Siteliner to detect duplicate content.",
+        text: "A post-publication audit of <b>37 checks</b> in 4 groups (1–22 Jul 2024): content quality, page titles and meta descriptions, heading structure, keyword placement and image optimisation. I used Screaming Frog to crawl the site and find incomplete elements, and Siteliner to detect duplicate content.",
       },
     },
     {
@@ -415,7 +415,7 @@ export default {
             "3.2",
             "Where does the site rank for its brand name?",
             "Keyword analysis",
-            "Google /Visual",
+            "Google / Visual",
             "10/07/2024",
             "✓",
           ],
