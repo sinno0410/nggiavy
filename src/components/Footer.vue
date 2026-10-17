@@ -47,16 +47,7 @@ const showAttribution = import.meta.env.VITE_SHOW_ATTRIBUTION !== "false";
           <p>
             {{ t("original-concept-by") }}
           </p>
-          <Clickable renderAs="div">
-            <Link
-              href="https://david-hckh.com"
-              class="footer-link children-unclickable"
-              external
-              data-cursor="circle-white"
-              data-hoversound="hover"
-              >David Heckhoff</Link
-            >
-          </Clickable>
+          <span class="footer-link">David Heckhoff</span>
         </div>
         <div class="footer-credits-music">
           <p>
@@ -166,6 +157,12 @@ const showAttribution = import.meta.env.VITE_SHOW_ATTRIBUTION !== "false";
       flex-direction: row;
       align-items: center;
       gap: var(--space-xxs);
+      font-size: var(--font-size-xs);
+      opacity: 0.75;
+    }
+
+    .footer-credits-built + .footer-credits-music {
+      margin-top: calc(var(--space-sm) * -0.6);
     }
   }
 
