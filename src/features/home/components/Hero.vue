@@ -18,6 +18,7 @@ import { cvLinks, cvFiles } from "../../../content/cv";
         <div v-if="!preloaderVisible && locale" class="hero-content-actions">
           <Button
             renderAs="a"
+            size="sm"
             variant="accent"
             :href="cvFiles[locale]"
             :download="cvFiles[locale].split('/').pop()"
@@ -28,6 +29,7 @@ import { cvLinks, cvFiles } from "../../../content/cv";
           >
           <Button
             renderAs="a"
+            size="sm"
             variant="border"
             :href="cvLinks[locale]"
             target="_blank"
@@ -105,6 +107,16 @@ import { cvLinks, cvFiles } from "../../../content/cv";
       flex-wrap: wrap;
       gap: var(--space-xs);
       align-self: flex-start;
+      // leave room for the tilted "Marketing Executive" banner above
+      margin-top: var(--space-sm);
+
+      :deep(.button) {
+        font-size: 13px;
+      }
+
+      @include mixins.mq("md") {
+        margin-top: var(--space-md);
+      }
     }
   }
 
