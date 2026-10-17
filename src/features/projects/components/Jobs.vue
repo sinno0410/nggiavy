@@ -121,11 +121,14 @@ const props = defineProps<Props>();
   }
 
   &-image {
+    position: relative;
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border-bottom: var(--stroke-md) solid var(--color-grayscale-400);
 
     img {
+      position: absolute;
+      inset: 0;
       display: block;
       width: 100%;
       height: 100%;

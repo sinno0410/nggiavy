@@ -233,11 +233,15 @@ const props = defineProps<Props>();
   color: inherit;
   text-decoration: none;
 
+  /* absolutely placed so the image can never stretch its tile (iOS Safari) */
   img,
   video {
+    position: absolute;
+    top: 8px;
+    left: 8px;
     display: block;
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
     object-fit: cover;
     border-radius: 9px;
     background: #000;
@@ -254,6 +258,7 @@ const props = defineProps<Props>();
 
 .project-gallery-tag {
   position: absolute;
+  z-index: 1;
   left: 14px;
   bottom: 14px;
   max-width: calc(100% - 28px);
@@ -418,10 +423,11 @@ const props = defineProps<Props>();
   .project-gallery-sticker {
     flex: none;
     width: 230px;
-    aspect-ratio: 4 / 5;
+    height: 288px;
 
     @media (min-width: 840px) {
       width: 280px;
+      height: 350px;
     }
 
     &:nth-child(odd) {

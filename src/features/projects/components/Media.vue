@@ -57,15 +57,23 @@ onMounted(async () => {
 <template>
   <div :class="wrapperClasses" ref="wrapperRef">
     <div class="project-media-content" ref="mediaContentRef">
-      <img
+      <a
         v-if="props.type === 'image'"
-        :src="props.src"
-        :alt="props.alt"
-        loading="lazy"
-        fetchpriority="high"
-        class="project-media-image"
-        ref="mediaRef"
-      />
+        :href="props.src"
+        target="_blank"
+        rel="noopener"
+        class="project-media-link"
+        data-cursor="arrow-external"
+      >
+        <img
+          :src="props.src"
+          :alt="props.alt"
+          loading="lazy"
+          fetchpriority="high"
+          class="project-media-image"
+          ref="mediaRef"
+        />
+      </a>
       <video
         v-else-if="props.controls"
         :src="props.src"
@@ -102,12 +110,21 @@ onMounted(async () => {
 <style scoped lang="scss">
 .project-media {
   width: 100%;
-  height: 100%;
   grid-column: 1 / 13;
+  align-self: start;
   max-width: 900px;
   justify-self: center;
   position: relative;
   aspect-ratio: 16 / 9;
+
+  /* older Safari without aspect-ratio: reserve the 16:9 box with padding */
+  @supports not (aspect-ratio: 16 / 9) {
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 56.25%;
+    }
+  }
 
   @include mixins.mq("md") {
     grid-column: 2 / 12;
@@ -165,21 +182,32 @@ onMounted(async () => {
   }
 
   &-image {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
   &-video {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
+  /* pinned to the 16:9 box so a large image can never stretch it (iOS Safari) */
   &-content {
+    position: absolute;
+    inset: 0;
     overflow: hidden;
     border-radius: var(--radius-lg);
     background-color: var(--color-background-300);
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    isolation: isolate;
+  }
+
+  &-link {
+    display: block;
     width: 100%;
     height: 100%;
   }
