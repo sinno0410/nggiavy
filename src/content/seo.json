@@ -1,0 +1,97 @@
+{
+  "site": "https://nggiavy.vercel.app",
+  "name": "Nguyễn Trần Da Vỹ",
+  "image": "https://nggiavy.vercel.app/og-image.jpg",
+  "pages": {
+    "/": {
+      "vi": {
+        "title": "Nguyễn Trần Da Vỹ – Marketing Executive | Portfolio",
+        "description": "Portfolio của Nguyễn Trần Da Vỹ (Da Vỹ) – Marketing Executive tại TP.HCM: Social Media, sáng tạo nội dung, SEO On-page, quảng cáo Meta và nghiên cứu thị trường."
+      },
+      "en": {
+        "title": "Nguyễn Trần Da Vỹ – Marketing Executive | Portfolio",
+        "description": "Portfolio of Nguyễn Trần Da Vỹ (Da Vỹ), a Ho Chi Minh City–based Marketing Executive: social media, content creation, on-page SEO, Meta Ads and market research."
+      }
+    },
+    "/project/mekong": {
+      "vi": {
+        "title": "SK ZIC & Hóa Dầu Mekong – Social Media Marketing | Nguyễn Trần Da Vỹ",
+        "description": "Social media in-house cho SK ZIC và Hóa Dầu Mekong (SK Group): chiến lược kênh, Zalo Mini App, chiến dịch Nhớt lành cho lái sành, Green Pop Up và sự kiện."
+      },
+      "en": {
+        "title": "SK ZIC & Mekong Petrochem – Social Media Marketing | Nguyễn Trần Da Vỹ",
+        "description": "In-house social media for SK ZIC and Mekong Petrochem (SK Group): channel strategy, a Zalo Mini App launch, the green-lubricant campaign, pop-ups and events."
+      }
+    },
+    "/project/semtek": {
+      "vi": {
+        "title": "SEMTEK Agency – SEO On-page | Nguyễn Trần Da Vỹ",
+        "description": "Thực tập SEO On-page tại SEMTEK: nghiên cứu từ khóa, cấu trúc SILO, lịch nội dung SEO và audit sau đăng bài với Ahrefs, Google Search Console, Screaming Frog."
+      },
+      "en": {
+        "title": "SEMTEK Agency – On-page SEO | Nguyễn Trần Da Vỹ",
+        "description": "On-page SEO internship at SEMTEK: keyword research, SILO structure, an SEO content calendar and post-publication audits with Ahrefs, Search Console and Screaming Frog."
+      }
+    },
+    "/project/timeo": {
+      "vi": {
+        "title": "TIMEO Tufting Studio – Digital Marketing | Nguyễn Trần Da Vỹ",
+        "description": "Digital marketing cho TIMEO, studio workshop tufting: hành trình khách hàng, mục tiêu social, lịch nội dung Facebook & Instagram và quản lý fanpage."
+      },
+      "en": {
+        "title": "TIMEO Tufting Studio – Digital Marketing | Nguyễn Trần Da Vỹ",
+        "description": "Digital marketing for TIMEO, a tufting workshop studio: customer journey, social objectives, a Facebook & Instagram content calendar and fanpage management."
+      }
+    },
+    "/project/ebuzz": {
+      "vi": {
+        "title": "E-Buzz Media 2025 – Top 4 & Video chất lượng cao | Nguyễn Trần Da Vỹ",
+        "description": "Cuộc thi video ngắn ĐH Văn Lang × Laneige × TikTok: quản lý dự án, đạo diễn, kịch bản và kế hoạch truyền thông. Top 4 chung cuộc, giải Video chất lượng cao."
+      },
+      "en": {
+        "title": "E-Buzz Media 2025 – Top 4 & High-Quality Video | Nguyễn Trần Da Vỹ",
+        "description": "Short-video competition by Van Lang University × Laneige × TikTok: project management, directing, scripting and the comms plan. Top 4 and the High-Quality Video award."
+      }
+    },
+    "/project/sic": {
+      "vi": {
+        "title": "Vietnam Swiss Innovation Challenge 2025 – LopLoop | Nguyễn Trần Da Vỹ",
+        "description": "Team Trashionistas với LopLoop – túi xách thời trang từ lốp xe cũ: ý tưởng, mô hình kinh doanh, nghiên cứu khách hàng và chiến lược truyền thông. Top 20."
+      },
+      "en": {
+        "title": "Vietnam Swiss Innovation Challenge 2025 – LopLoop | Nguyễn Trần Da Vỹ",
+        "description": "Team Trashionistas and LopLoop, fashion handbags made from old tyres: idea, business model, customer research and the communication strategy. Top 20."
+      }
+    },
+    "/project/freelance": {
+      "vi": {
+        "title": "Dự án Freelance – TikTok & Social | Nguyễn Trần Da Vỹ",
+        "description": "Các dự án freelance tôi đảm nhận toàn bộ kênh, từ chiến lược, nội dung, đăng tải đến báo cáo hiệu quả trên TikTok và mạng xã hội."
+      },
+      "en": {
+        "title": "Freelance Work – TikTok & Social | Nguyễn Trần Da Vỹ",
+        "description": "Freelance projects where I own the whole channel: strategy, content, publishing and performance reporting on TikTok and social media."
+      }
+    },
+    "/project/hatmuoi": {
+      "vi": {
+        "title": "Hạt Muối Của Biển – TikTok thời trang | Nguyễn Trần Da Vỹ",
+        "description": "Freelance Social Marketing cho kênh TikTok Hạt Muối Của Biển: content pillar, lịch nội dung, video check-in, mẹo tạo dáng và tăng trưởng kênh."
+      },
+      "en": {
+        "title": "Hạt Muối Của Biển – Fashion TikTok | Nguyễn Trần Da Vỹ",
+        "description": "Freelance social marketing for the Hạt Muối Của Biển fashion TikTok channel: content pillars, a content calendar, check-in and posing videos, and channel growth."
+      }
+    },
+    "/project/research": {
+      "vi": {
+        "title": "Nghiên cứu khoa học – Livestream TikTok | Nguyễn Trần Da Vỹ",
+        "description": "Nghiên cứu mô hình SOR về sự hiện diện xã hội của streamer, lòng tin và trạng thái dòng chảy đến hành vi mua hàng ngẫu hứng qua livestream TikTok ngành nông sản."
+      },
+      "en": {
+        "title": "Research – TikTok Livestreams & Impulse Buying | Nguyễn Trần Da Vỹ",
+        "description": "An S-O-R study of how streamer social presence, trust and flow drive impulse buying in TikTok agricultural-product livestreams (563 responses, PLS-SEM)."
+      }
+    }
+  }
+}

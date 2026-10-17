@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from "./components/Header.vue";
 import { useTranslations } from "./i18n/composables/useTranslations";
+import { useSeo } from "./composables/useSeo";
 import { usePreloader } from "./composables/usePreloader";
 import Cursor from "./components/Cursor.vue";
 import { useAgent } from "./composables/useAgent";
@@ -19,6 +20,7 @@ import { useClickSound } from "./features/sounds/composables/useClickSounds";
 const { isTransitioning } = useProjectTransition();
 
 useTranslations();
+useSeo();
 usePreloader();
 useMusic();
 useHowler();

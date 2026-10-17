@@ -40,7 +40,7 @@ const props = defineProps<Props>();
           :tabindex="index >= props.images.length ? -1 : undefined"
           data-cursor="arrow-external"
         >
-          <img :src="image.src" :alt="image.caption ?? ''" loading="lazy" decoding="async" />
+          <img :src="image.src" :alt="image.caption ?? props.title ?? 'Nguyễn Trần Da Vỹ – portfolio'" loading="lazy" decoding="async" />
           <span v-if="image.caption" class="project-gallery-tag">{{ image.caption }}</span>
         </a>
       </div>
@@ -62,7 +62,7 @@ const props = defineProps<Props>();
           class="project-gallery-sticker"
           data-cursor="arrow-external"
         >
-          <img :src="image.src" :alt="image.caption ?? ''" loading="lazy" decoding="async" />
+          <img :src="image.src" :alt="image.caption ?? props.title ?? 'Nguyễn Trần Da Vỹ – portfolio'" loading="lazy" decoding="async" />
           <span v-if="image.caption" class="project-gallery-tag">{{ image.caption }}</span>
         </a>
       </template>
@@ -99,7 +99,7 @@ const props = defineProps<Props>();
           class="project-gallery-item"
           data-cursor="arrow-external"
         >
-          <img :src="image.src" :alt="image.caption ?? ''" loading="lazy" decoding="async" />
+          <img :src="image.src" :alt="image.caption ?? props.title ?? 'Nguyễn Trần Da Vỹ – portfolio'" loading="lazy" decoding="async" />
           <span v-if="image.caption" class="project-gallery-caption">{{ image.caption }}</span>
         </a>
       </template>

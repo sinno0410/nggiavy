@@ -67,7 +67,7 @@ onMounted(async () => {
       >
         <img
           :src="props.src"
-          :alt="props.alt"
+          :alt="props.alt ?? props.caption ?? 'Nguyễn Trần Da Vỹ – portfolio'"
           loading="lazy"
           fetchpriority="high"
           class="project-media-image"

@@ -8,8 +8,11 @@ import type { Locale } from "../types";
 
 export const useTranslations = () => {
   onMounted(() => {
+    // ?lang=vi / ?lang=en (used by hreflang links) wins over the stored preference
+    const urlLocale = new URLSearchParams(window.location.search).get("lang");
     const storedLocale = window.localStorage.getItem("portfolio-locale");
-    locale.value = storedLocale && storedLocale in LOCALES ? (storedLocale as Locale) : null;
+    const initial = urlLocale && urlLocale in LOCALES ? urlLocale : storedLocale;
+    locale.value = initial && initial in LOCALES ? (initial as Locale) : null;
     if (!locale.value) {
       const preferredLocale = navigator.language.split("-")[0] as Locale;
 
