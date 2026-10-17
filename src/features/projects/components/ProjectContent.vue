@@ -4,6 +4,8 @@ import ProjectHero from "./ProjectHero.vue";
 import ProjectComponent from "./ProjectComponent.vue";
 import Link from "../../../components/Link.vue";
 import NextProject from "./NextProject.vue";
+import Star from "./Star.vue";
+import { star } from "../../../content/projects/star";
 import { locale } from "../../../i18n/store";
 import { t } from "../../../i18n/utils/translate";
 import { previews } from "../../../content/projects/previews";
@@ -38,6 +40,8 @@ const nextProject = computed(() => {
   return previews[nextIndex];
 });
 
+const starSummary = computed(() => star[(locale.value ?? "vi") as keyof typeof star]?.[projectId] ?? null);
+
 const isBackLink = computed(() => !!loadedPreviews.value && !loadedPreviews.value.some((p) => p.slug === projectId));
 
 watch(locale, loadPreviews);
@@ -49,6 +53,9 @@ onMounted(loadPreviews);
   <Layout class="project-content">
     <ProjectHero :content="content" :projectId="projectId" />
     <div class="project-content-components">
+      <div v-if="starSummary" class="grid project-content-grid">
+        <Star :summary="starSummary" />
+      </div>
       <div
         v-for="(component, index) in content.components"
         :key="`${component.type}-${index}`"
