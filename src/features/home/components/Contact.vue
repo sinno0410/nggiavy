@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 import { transitions } from "../../../animations";
 import { t } from "../../../i18n/utils/translate";
 import Social from "../../../components/Social.vue";
 import Button from "../../../components/Button.vue";
 import { locale } from "../../../i18n/store";
-import { cvLinks } from "../../../content/cv";
+import { cvLinks, cvFiles } from "../../../content/cv";
 
 const contactElement = ref<HTMLElement | null>(null);
-const cvLink = computed(() => (locale.value ? cvLinks[locale.value] : null));
 
 onMounted(() => {
   if (contactElement.value) {
@@ -26,19 +25,29 @@ onUnmounted(() => {
     <div class="contact-content">
       <h2 class="contact-title" v-html="t('lets-work-together')"></h2>
       <Social variant="background" />
-      <Button
-        v-if="cvLink"
-        renderAs="a"
-        variant="accent"
-        class="contact-cv"
-        :href="cvLink"
-        target="_blank"
-        rel="noopener"
-        data-cursor="circle-white"
-        data-sound="click"
-        data-hoversound="hover"
-        >{{ t("view-cv") }}</Button
-      >
+      <div v-if="locale" class="contact-actions">
+        <Button
+          renderAs="a"
+          variant="accent"
+          :href="cvFiles[locale]"
+          :download="cvFiles[locale].split('/').pop()"
+          data-cursor="circle-white"
+          data-sound="click"
+          data-hoversound="hover"
+          >{{ t("download-cv") }} ↓</Button
+        >
+        <Button
+          renderAs="a"
+          variant="border"
+          :href="cvLinks[locale]"
+          target="_blank"
+          rel="noopener"
+          data-cursor="circle-white"
+          data-sound="click"
+          data-hoversound="hover"
+          >{{ t("view-cv") }} ↗</Button
+        >
+      </div>
     </div>
   </div>
 </template>
@@ -79,8 +88,10 @@ onUnmounted(() => {
     }
   }
 
-  &-cv {
-    width: fit-content;
+  &-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
   }
 
   &-title {

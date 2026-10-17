@@ -28,7 +28,7 @@
   "switch-to-project": "Chuyển đến dự án {project}",
   "version": "Phiên bản",
   "view-project": "Xem dự án",
-  "view-cv": "Xem CV",
+  "view-cv": "Xem CV online",
   "journey": "Hành trình",
   "education-awards": "Học vấn & Giải thưởng",
   "education": "Học vấn",
@@ -41,5 +41,6 @@
   "born": "Sinh năm 2003",
   "core-skills": "Chuyên môn",
   "soft-skills": "Kỹ năng mềm",
-  "personality": "Là một INTP, tôi tiếp cận thử thách bằng tư duy phân tích, sự tò mò và tinh thần giải quyết vấn đề, luôn tìm kiếm những giải pháp sáng tạo và hiệu quả."
+  "personality": "Là một INTP, tôi tiếp cận thử thách bằng tư duy phân tích, sự tò mò và tinh thần giải quyết vấn đề, luôn tìm kiếm những giải pháp sáng tạo và hiệu quả.",
+  "download-cv": "Tải CV (PDF)"
 }

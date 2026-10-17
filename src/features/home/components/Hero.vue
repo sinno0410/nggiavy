@@ -4,7 +4,7 @@ import Banner from "../../../components/Banner.vue";
 import { preloaderVisible } from "../../../composables/usePreloader";
 import { t } from "../../../i18n/utils/translate";
 import { locale } from "../../../i18n/store";
-import { cvLinks } from "../../../content/cv";
+import { cvLinks, cvFiles } from "../../../content/cv";
 </script>
 
 <template>
@@ -15,19 +15,29 @@ import { cvLinks } from "../../../content/cv";
           <h1 class="hero-title">Nguyễn Trần<br />Da Vỹ</h1>
           <Banner class="hero-banner" :copy="t('job-title')" v-if="!preloaderVisible" animated />
         </div>
-        <Button
-          v-if="!preloaderVisible && locale"
-          renderAs="a"
-          variant="accent"
-          class="hero-content-button"
-          :href="cvLinks[locale]"
-          target="_blank"
-          rel="noopener"
-          data-cursor="circle-white"
-          data-sound="click"
-          data-hoversound="hover"
-          >{{ t("view-cv") }}</Button
-        >
+        <div v-if="!preloaderVisible && locale" class="hero-content-actions">
+          <Button
+            renderAs="a"
+            variant="accent"
+            :href="cvFiles[locale]"
+            :download="cvFiles[locale].split('/').pop()"
+            data-cursor="circle-white"
+            data-sound="click"
+            data-hoversound="hover"
+            >{{ t("download-cv") }} ↓</Button
+          >
+          <Button
+            renderAs="a"
+            variant="border"
+            :href="cvLinks[locale]"
+            target="_blank"
+            rel="noopener"
+            data-cursor="circle-white"
+            data-sound="click"
+            data-hoversound="hover"
+            >{{ t("view-cv") }} ↗</Button
+          >
+        </div>
       </div>
     </div>
   </div>
@@ -90,8 +100,10 @@ import { cvLinks } from "../../../content/cv";
       }
     }
 
-    &-button {
-      width: fit-content;
+    &-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs);
       align-self: flex-start;
     }
   }

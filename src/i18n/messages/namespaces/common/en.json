@@ -28,7 +28,7 @@
   "switch-to-project": "Switch to project {project}",
   "version": "Version",
   "view-project": "View project",
-  "view-cv": "View my CV",
+  "view-cv": "View CV online",
   "journey": "Journey",
   "education-awards": "Education & Awards",
   "education": "Education",
@@ -41,5 +41,6 @@
   "born": "Born 2003",
   "core-skills": "Core skills",
   "soft-skills": "Soft skills",
-  "personality": "As an INTP, I naturally approach challenges with analytical thinking, curiosity, and a problem-solving mindset, always seeking innovative and efficient solutions."
+  "personality": "As an INTP, I naturally approach challenges with analytical thinking, curiosity, and a problem-solving mindset, always seeking innovative and efficient solutions.",
+  "download-cv": "Download CV (PDF)"
 }
