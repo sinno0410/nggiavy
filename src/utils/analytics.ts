@@ -19,10 +19,19 @@ declare global {
 export function initAnalytics() {
   if (!GA_MEASUREMENT_ID || typeof window === "undefined") return;
 
-  const script = document.createElement("script");
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-  document.head.appendChild(script);
+  // Load the GA library only after the page has finished loading, so it never competes with
+  // the first paint. Events queued before that are kept in dataLayer and sent once it arrives.
+  const loadScript = () => {
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+    document.head.appendChild(script);
+  };
+  const idle = (window as unknown as { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => void })
+    .requestIdleCallback;
+  const schedule = () => (idle ? idle(loadScript, { timeout: 4000 }) : window.setTimeout(loadScript, 1500));
+  if (document.readyState === "complete") schedule();
+  else window.addEventListener("load", schedule, { once: true });
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = function gtag() {
