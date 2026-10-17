@@ -107,6 +107,7 @@ export default {
       props: {
         title: "Bài đăng trong chiến dịch",
         columns: 3,
+        variant: "marquee",
         images: [
           { src: zalo01, caption: "Ra mắt Mini App Chăm Xe" },
           { src: zalo02, caption: "Motion Tết & Mini App" },
@@ -171,6 +172,7 @@ export default {
       props: {
         title: "Chuỗi bài đăng",
         columns: 4,
+        variant: "marquee",
         images: [
           { src: lanh01, caption: "Chuyển động chất lượng – Bền vững tương lai" },
           { src: lanh02, caption: "Key visual chiến dịch" },
@@ -189,6 +191,7 @@ export default {
         title: "Green Pop Up – Earth Day 2025",
         text: "Parc Mall, Q.8, TP.HCM · 19–22/04/2025, kết hợp Ve Chai Ơi. Tôi phụ trách truyền thông trước, trong và sau sự kiện trên fanpage và website, đồng thời trực booth tại sự kiện.",
         columns: 3,
+        variant: "collage",
         images: [
           { src: green01, caption: "Tạo sự kiện trên fanpage" },
           { src: green02, caption: "Post hé lộ quà tặng" },
@@ -205,6 +208,7 @@ export default {
         title: "ZIC Green Station – Ngày Trái Đất 2026",
         text: "13–24/04/2026, kết hợp Ve Chai Ơi, equo và Faith in Nature. Người tham gia mang 7 viên pin, 10 lon nhôm hoặc 10 chai nhựa để đổi sen đá hoặc bút chì nảy mầm.",
         columns: 4,
+        variant: "collage",
         images: [
           { src: earth01, caption: "Chọn nhớt lành – Nhận mầm xanh" },
           { src: earth02, caption: "Gấp đôi sự lành – Lan tỏa vibe xanh" },
@@ -218,6 +222,7 @@ export default {
       props: {
         title: "Video tại booth",
         columns: 3,
+        variant: "collage",
         images: [
           { src: earthvideo01, caption: "Reels hướng dẫn dùng bút chì mầm cây", video: earthvideo01Video },
           { src: earthvideo02, caption: "Chai nhựa và pin khách mang đến đổi quà", video: earthvideo02Video },
@@ -236,6 +241,7 @@ export default {
       type: "gallery",
       props: {
         columns: 3,
+        variant: "marquee",
         images: [
           { src: page01, caption: "Meme “Luôn có 3 kiểu người khi thay nhớt”" },
           { src: page02, caption: "Ưu đãi Shopee mùa lạnh" },
@@ -262,6 +268,7 @@ export default {
         title: "ZIC x Ashura – Vietnam Sport Show 2025",
         text: "16/08/2025, SECC Hall B, phối hợp cùng Decathlon và Coolmate.",
         columns: 4,
+        variant: "collage",
         images: [
           { src: ashura01, caption: "Key visual & thông báo sự kiện" },
           { src: ashura02, caption: "Hé lộ trò chơi tại booth" },
@@ -276,6 +283,7 @@ export default {
         title: "Hóa Dầu Mekong – Hội chợ mùa Thu 2025",
         text: "Trung tâm Hội chợ Triển lãm Quốc gia, 26/10/2025.",
         columns: 3,
+        variant: "collage",
         images: [
           { src: mk01, caption: "Video chào mừng Mekong đến Hội chợ mùa Thu 2025" },
           { src: mk02, caption: "Tạo sự kiện trên fanpage" },

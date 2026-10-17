@@ -11,6 +11,11 @@ export interface Props {
   aspect?: string;
   /** Where to anchor the crop, e.g. "top". */
   focus?: string;
+  /**
+   * Layout style: "masonry" (default), "collage" (tilted polaroids on an asymmetric grid with sticker captions)
+   * or "marquee" (an endless, auto-scrolling strip that pauses on hover).
+   */
+  variant?: "masonry" | "collage" | "marquee";
 }
 
 const props = defineProps<Props>();
@@ -22,7 +27,48 @@ const props = defineProps<Props>();
       <h3 v-if="props.title" class="project-gallery-title">{{ props.title }}</h3>
       <p v-if="props.text" class="project-gallery-text" v-html="props.text"></p>
     </div>
+    <div v-if="props.variant === 'marquee'" class="project-gallery-marquee" data-lenis-prevent-horizontal>
+      <div class="project-gallery-marquee-track" :style="{ '--marquee-duration': `${props.images.length * 6}s` }">
+        <a
+          v-for="(image, index) in [...props.images, ...props.images]"
+          :key="index"
+          :href="image.href ?? image.src"
+          target="_blank"
+          rel="noopener"
+          class="project-gallery-sticker"
+          :aria-hidden="index >= props.images.length ? 'true' : undefined"
+          :tabindex="index >= props.images.length ? -1 : undefined"
+          data-cursor="arrow-external"
+        >
+          <img :src="image.src" :alt="image.caption ?? ''" loading="lazy" decoding="async" />
+          <span v-if="image.caption" class="project-gallery-tag">{{ image.caption }}</span>
+        </a>
+      </div>
+    </div>
     <div
+      v-else-if="props.variant === 'collage'"
+      class="project-gallery-collage"
+    >
+      <template v-for="(image, index) in props.images" :key="index">
+        <div v-if="image.video" class="project-gallery-sticker project-gallery-sticker-video">
+          <video :src="image.video" :poster="image.src" controls playsinline preload="none" :aria-label="image.caption"></video>
+          <span v-if="image.caption" class="project-gallery-tag">{{ image.caption }}</span>
+        </div>
+        <a
+          v-else
+          :href="image.href ?? image.src"
+          target="_blank"
+          rel="noopener"
+          class="project-gallery-sticker"
+          data-cursor="arrow-external"
+        >
+          <img :src="image.src" :alt="image.caption ?? ''" loading="lazy" decoding="async" />
+          <span v-if="image.caption" class="project-gallery-tag">{{ image.caption }}</span>
+        </a>
+      </template>
+    </div>
+    <div
+      v-else
       :class="['project-gallery-grid', { 'project-gallery-grid-uniform': !!props.aspect }]"
       :style="{
         '--gallery-columns': props.columns ?? 3,
@@ -165,6 +211,200 @@ const props = defineProps<Props>();
     font-size: var(--font-size-sm);
     font-weight: 700;
     line-height: 1.4;
+  }
+}
+
+/* ---------- GenZ variants: collage & marquee ---------- */
+.project-gallery-sticker {
+  --tilt: 0deg;
+  --tag: var(--color-accent-400);
+  position: relative;
+  display: block;
+  padding: 8px 8px 8px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.04),
+    0 18px 30px -18px rgba(20, 20, 60, 0.45);
+  transform: rotate(var(--tilt));
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1.2),
+    box-shadow 0.35s ease;
+  color: inherit;
+  text-decoration: none;
+
+  img,
+  video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+    background: #000;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transform: rotate(0deg) translateY(-6px) scale(1.03);
+      z-index: 2;
+      box-shadow: 0 28px 44px -20px rgba(20, 20, 60, 0.55);
+    }
+  }
+}
+
+.project-gallery-tag {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  max-width: calc(100% - 28px);
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: var(--tag);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  transform: rotate(-2.5deg);
+  box-shadow: 0 6px 14px -8px rgba(0, 0, 0, 0.5);
+}
+
+/* collage: asymmetric grid, tilted polaroids, asterisk stickers */
+.project-gallery-collage {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: 170px;
+  grid-auto-flow: dense;
+  gap: 18px 14px;
+  padding: 10px 4px 18px;
+
+  @media (min-width: 840px) {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-auto-rows: 190px;
+    gap: 26px 22px;
+  }
+
+  .project-gallery-sticker:nth-child(6n + 1) {
+    --tilt: -1.6deg;
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .project-gallery-sticker:nth-child(6n + 2) {
+    --tilt: 1.4deg;
+    --tag: var(--color-accent-2, var(--color-text-400));
+  }
+  .project-gallery-sticker:nth-child(6n + 3) {
+    --tilt: -0.8deg;
+  }
+  .project-gallery-sticker:nth-child(6n + 4) {
+    --tilt: 1.8deg;
+    --tag: var(--color-accent-2, var(--color-text-400));
+  }
+  .project-gallery-sticker:nth-child(6n + 5) {
+    --tilt: -1.2deg;
+  }
+  .project-gallery-sticker:nth-child(6n) {
+    --tilt: 0.9deg;
+    --tag: var(--color-text-400);
+  }
+
+  @media (min-width: 840px) {
+    .project-gallery-sticker:nth-child(6n + 1) {
+      grid-column: span 3;
+    }
+    .project-gallery-sticker:nth-child(6n + 2),
+    .project-gallery-sticker:nth-child(6n + 3) {
+      grid-column: span 3;
+    }
+    .project-gallery-sticker:nth-child(6n + 4),
+    .project-gallery-sticker:nth-child(6n + 5),
+    .project-gallery-sticker:nth-child(6n) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    /* close the gaps left by an unfinished cycle */
+    .project-gallery-sticker:nth-child(6n + 1):last-child,
+    .project-gallery-sticker:nth-child(6n + 4):last-child {
+      grid-column: 1 / -1;
+    }
+    .project-gallery-sticker:nth-child(6n + 4):nth-last-child(2),
+    .project-gallery-sticker:nth-child(6n + 5):last-child {
+      grid-column: span 3;
+    }
+  }
+
+  /* asterisk stickers */
+  .project-gallery-sticker:nth-child(4n + 1)::after,
+  .project-gallery-sticker:nth-child(4n + 3)::after {
+    content: "✱";
+    position: absolute;
+    top: -18px;
+    right: -10px;
+    font-size: 38px;
+    line-height: 1;
+    color: var(--color-accent-2, var(--color-accent-400));
+    transform: rotate(14deg);
+    pointer-events: none;
+  }
+  .project-gallery-sticker:nth-child(4n + 3)::after {
+    top: auto;
+    bottom: -16px;
+    right: auto;
+    left: -12px;
+    font-size: 28px;
+    color: var(--color-accent-400);
+  }
+
+  .project-gallery-sticker-video video {
+    background: #000;
+  }
+}
+
+/* marquee: endless strip of tilted posts */
+.project-gallery-marquee {
+  overflow: hidden;
+  padding: 22px 0 30px;
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+
+.project-gallery-marquee-track {
+  display: flex;
+  gap: 26px;
+  width: max-content;
+  animation: gallery-marquee var(--marquee-duration, 48s) linear infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+
+  .project-gallery-sticker {
+    flex: none;
+    width: 230px;
+    aspect-ratio: 4 / 5;
+
+    @media (min-width: 840px) {
+      width: 280px;
+    }
+
+    &:nth-child(odd) {
+      --tilt: -2deg;
+    }
+    &:nth-child(even) {
+      --tilt: 2deg;
+      --tag: var(--color-accent-2, var(--color-text-400));
+      margin-top: 18px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes gallery-marquee {
+  to {
+    transform: translateX(calc(-50% - 13px));
   }
 }
 </style>

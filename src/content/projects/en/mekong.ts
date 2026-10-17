@@ -107,6 +107,7 @@ export default {
       props: {
         title: "Campaign posts",
         columns: 3,
+        variant: "marquee",
         images: [
           { src: zalo01, caption: "Mini App launch" },
           { src: zalo02, caption: "Tet motion & Mini App" },
@@ -171,6 +172,7 @@ export default {
       props: {
         title: "Post series",
         columns: 4,
+        variant: "marquee",
         images: [
           { src: lanh01, caption: "Quality in motion, a sustainable future" },
           { src: lanh02, caption: "Campaign key visual" },
@@ -189,6 +191,7 @@ export default {
         title: "Green Pop Up – Earth Day 2025",
         text: "Parc Mall, District 8, HCMC · 19–22/04/2025, with Ve Chai Ơi. I handled communication before, during and after the event on the fanpage and website, and staffed the booth.",
         columns: 3,
+        variant: "collage",
         images: [
           { src: green01, caption: "Facebook event page" },
           { src: green02, caption: "Gift teaser post" },
@@ -205,6 +208,7 @@ export default {
         title: "ZIC Green Station – Earth Day 2026",
         text: "13–24/04/2026, with Ve Chai Ơi, equo and Faith in Nature. Visitors brought 7 batteries, 10 cans or 10 plastic bottles to swap for a succulent or a sprout pencil.",
         columns: 4,
+        variant: "collage",
         images: [
           { src: earth01, caption: "Choose clean oil, get a seedling" },
           { src: earth02, caption: "Double the good, spread the green vibe" },
@@ -218,6 +222,7 @@ export default {
       props: {
         title: "Booth videos",
         columns: 3,
+        variant: "collage",
         images: [
           { src: earthvideo01, caption: "Reel: how to use the sprout pencil", video: earthvideo01Video },
           { src: earthvideo02, caption: "Bottles and batteries visitors traded in", video: earthvideo02Video },
@@ -236,6 +241,7 @@ export default {
       type: "gallery",
       props: {
         columns: 3,
+        variant: "marquee",
         images: [
           { src: page01, caption: "“3 types of people when changing oil” meme" },
           { src: page02, caption: "Winter Shopee deal" },
@@ -262,6 +268,7 @@ export default {
         title: "ZIC x Ashura – Vietnam Sport Show 2025",
         text: "16/08/2025, SECC Hall B, with Decathlon and Coolmate.",
         columns: 4,
+        variant: "collage",
         images: [
           { src: ashura01, caption: "Key visual & announcement" },
           { src: ashura02, caption: "Mini-game teaser at the booth" },
@@ -276,6 +283,7 @@ export default {
         title: "Mekong Petrochem – Autumn Fair 2025",
         text: "National Exhibition Center, 26/10/2025.",
         columns: 3,
+        variant: "collage",
         images: [
           { src: mk01, caption: "Welcome video – Autumn Fair 2025" },
           { src: mk02, caption: "Facebook event page" },
