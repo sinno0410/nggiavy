@@ -183,6 +183,12 @@ const content = computed(() => (locale.value ? achievements[locale.value] : null
     @include mixins.mq("xl") {
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     }
+    &-awards {
+      @include mixins.mq("md") {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
     &-certificates {
       @include mixins.mq("md") {
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -290,6 +296,30 @@ const content = computed(() => (locale.value ? achievements[locale.value] : null
       font-weight: 700;
       color: var(--color-text-400);
     }
+  }
+}
+
+/* An odd card out (e.g. the research award) spans the full row and lays out horizontally:
+   the image lines up with the left card above, the text with the right one. */
+@media (min-width: 840px) {
+  .achievements-list-awards > .achievements-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-auto-rows: min-content;
+    column-gap: calc(var(--space-lg) * 3);
+    row-gap: var(--space-xs);
+    align-content: start;
+  }
+
+  .achievements-list-awards > .achievements-card:last-child:nth-child(odd) > * {
+    grid-column: 2;
+  }
+
+  .achievements-list-awards > .achievements-card:last-child:nth-child(odd) > .achievements-card-image {
+    grid-column: 1;
+    grid-row: 1 / span 6;
+    margin-bottom: 0;
   }
 }
 </style>
