@@ -32,7 +32,6 @@ watchEffect((onInvalidate) => {
     contentProgressCountRef.value &&
     contentPersonalityRef.value
   ) {
-    const personalityInline = contentDescriptionRef.value.querySelector<HTMLElement>(".box-description-personality");
     transitions.about.setup({
       about: props.spacerRef,
       contentDescription: contentDescriptionRef.value,
@@ -43,7 +42,6 @@ watchEffect((onInvalidate) => {
       tlDetails: tlDetailsRef.value,
       contentProgressCount: contentProgressCountRef.value,
       contentPersonality: contentPersonalityRef.value,
-      contentPersonalityInline: personalityInline,
     });
   }
 

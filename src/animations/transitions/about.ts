@@ -23,11 +23,9 @@ const setup = ({
   contentDetails,
   contentProgressCount,
   contentPersonality,
-  contentPersonalityInline,
 }: {
   about: HTMLElement;
   contentPersonality: HTMLDivElement;
-  contentPersonalityInline: HTMLElement | null;
   tlDescription: gsap.core.Timeline;
   contentDescription: HTMLDivElement;
   tlServices: gsap.core.Timeline;
@@ -48,8 +46,7 @@ const setup = ({
     contentDetails,
     contentProgressCount,
     contentPersonality,
-    contentPersonalityInline,
-  });
+    });
   setupOutAnimation(about);
   setupScenesAnimation(about);
 };
@@ -194,11 +191,9 @@ const setupSectionsAnimation = ({
   contentDetails,
   contentProgressCount,
   contentPersonality,
-  contentPersonalityInline,
 }: {
   about: HTMLElement;
   contentPersonality: HTMLDivElement;
-  contentPersonalityInline: HTMLElement | null;
   contentDescription: HTMLDivElement;
   contentServices: HTMLDivElement;
   contentDetails: HTMLDivElement;
@@ -229,15 +224,7 @@ const setupSectionsAnimation = ({
       const DESCRIPTION_DELAY = 0.54;
       const PERSONALITY_DELAY = 0.81;
 
-      gsap.set(contentPersonality, { opacity: 0 });
-      if (contentPersonalityInline) {
-        tl.fromTo(
-          contentPersonalityInline,
-          { opacity: 0, y: 12 },
-          { opacity: 1, y: 0, duration: 0.15, ease: "power1.out" },
-          PERSONALITY_DELAY,
-        );
-      }
+      tl.fromTo(contentPersonality, { opacity: 0 }, { opacity: 1, duration: 0.15, ease: "power1.out" }, PERSONALITY_DELAY);
 
       // Details animation (first, only on landscape)
       tl.fromTo(contentDetails, { opacity: 0 }, { opacity: 1, duration: 0.15, ease: "power1.out" }, DETAILS_DELAY);

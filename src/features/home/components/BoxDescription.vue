@@ -8,7 +8,7 @@ import { t } from "../../../i18n/utils/translate";
 import AppearingText from "../../../components/AppearingText.vue";
 import PinIcon from "../../../components/icons/Pin.vue";
 
-const point = new Vector3(-0.9, 2, 6.75);
+const point = new Vector3(-0.9, 1.8, 6.75);
 
 const wrapperRef = ref<HTMLDivElement | null>(null);
 const timelines = ref<{ timeline: gsap.core.Timeline; delay: number }[]>([]);
@@ -113,10 +113,6 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
             :duration="0.7"
             @timeline:created="(tl: gsap.core.Timeline) => handleTimelineCreated(tl, 0)"
           />
-        </div>
-        <div class="box-description-personality">
-          <span class="box-description-personality-badge">INTP</span>
-          <p class="box-description-personality-copy">{{ t("personality") }}</p>
         </div>
       </div>
     </div>
@@ -243,41 +239,6 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
     }
   }
 
-  &-personality {
-    display: none;
-
-    @include mixins.landscape {
-      display: flex;
-      align-items: flex-start;
-      gap: var(--space-xs);
-      margin-top: var(--space-sm);
-      padding-top: var(--space-sm);
-      border-top: 1px dashed var(--color-cyan-400);
-      opacity: 0;
-    }
-
-    &-badge {
-      flex: none;
-      padding: 2px 8px;
-      border: var(--stroke-sm) solid var(--color-cyan-400);
-      border-radius: 999px;
-      font-size: var(--font-size-sm);
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      background-color: var(--color-cyan-400);
-      color: var(--color-hologram-bottom, #0b2a33);
-    }
-
-    &-copy {
-      font-size: var(--font-size-xs);
-      line-height: 1.45;
-
-      @include mixins.landscape-large {
-        font-size: var(--font-size-sm);
-      }
-    }
-  }
-
   &-copy {
     will-change: opacity;
     font-size: var(--font-size-md);
@@ -289,7 +250,7 @@ const handleTimelineCreated = (timeline: gsap.core.Timeline, delay: number) => {
     }
 
     @include mixins.landscape-large {
-      font-size: var(--font-size-lg);
+      font-size: var(--font-size-md);
     }
   }
 }
