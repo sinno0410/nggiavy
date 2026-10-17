@@ -9,6 +9,8 @@ export interface Props {
   rows: string[][];
   /** Link to the original Google Sheet. */
   source?: string;
+  /** Plain-text source note shown under the table (no link). */
+  note?: string;
   /** Minimum table width in px before horizontal scrolling kicks in. */
   minWidth?: number;
 }
@@ -50,6 +52,7 @@ const props = defineProps<Props>();
       data-hoversound="hover"
       >{{ t("view-source-file") }} ↗</a
     >
+    <p v-if="props.note" class="project-table-note" v-html="props.note"></p>
   </div>
 </template>
 
@@ -144,6 +147,12 @@ const props = defineProps<Props>();
     @include mixins.mq("lg") {
       display: none;
     }
+  }
+
+  &-note {
+    font-size: var(--font-size-sm);
+    font-style: italic;
+    color: var(--color-text-300);
   }
 
   &-source {
